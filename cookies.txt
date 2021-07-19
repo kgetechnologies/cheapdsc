@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.cheapdsc.com	TRUE	/	FALSE	1999999999	XSRF-TOKEN	eyJpdiI6IlY3WDVxdWpxVjFFTVYyT2hPRFh2SUE9PSIsInZhbHVlIjoiQk5KNHJraThiYm9aOEU5V0tlZkF1QXFyVEhDdHZNOFJSOFdmRXNNQ0NETXB3V3VXazlKU1RwSnduT3llNFFyQSIsIm1hYyI6Ijk2OTdiMmZiNWEyMzk2YTQ0NTM5NTE0NTk4ZGQ4MmUwMzZlYzdjNmFiNGFiZDY4ZGQwMDE4NGNjNDQxNTVlNTUifQ%3D%3D
+www.cheapdsc.com	TRUE	/	FALSE	1999999999	smartend_session	YObhpiB3k66832AHooxNcl946EppKGDBdaNnKwxS
+

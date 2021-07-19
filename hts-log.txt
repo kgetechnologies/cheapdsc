@@ -1,0 +1,18 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 19 Jul 2021 22:36:15 at https://www.cheapdsc.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.cheapdsc.com/ -O1 "C:\Users\GADIGE NIKHIL\OneDrive\Desktop\test.cheap" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:37:49	Error: 	"Not Found" (404) at link https://raw.githubusercontent.com/kgetechnologies/kgesitecdn/blob/master/cheapdsc/uploads/banners/OgImage.jpg (from https://www.cheapdsc.com/)
+22:38:10	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/class3-organization-encryption (from https://www.cheapdsc.com/)
+22:38:16	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/cheapdsc-pricelist (from https://www.cheapdsc.com/)
+22:39:48	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/backEnd/assets/material-design-icons/iconfont/MaterialIcons-Regular.woff2 (from https://www.cheapdsc.com/backEnd/assets/material-design-icons/material-design-icons.css)
+22:45:25	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/cheap-class-2-dsc-in-Amroha-at-just-385 (from https://www.cheapdsc.com/user/1?page=6)
+23:02:32	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/user/1?page=30 (from https://www.cheapdsc.com/user/1?page=33)
+23:03:02	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.cheapdsc.com/cheap-dgft-in-Amritsar-at-just-2500 (from https://www.cheapdsc.com/user/1?page=34)
+
+HTTrack Website Copier/3.49-2 mirror complete in 30 minutes 36 seconds : 1101 links scanned, 1093 files written (51635258 bytes overall) [12562734 bytes received at 6842 bytes/sec], 46779630 bytes transferred using HTTP compression in 1092 files, ratio 14%, 1.3 requests per connection
+(1 errors, 6 warnings, 0 messages)
