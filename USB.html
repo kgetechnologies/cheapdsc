@@ -1,428 +1,442 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
-	<title>USB TOKEN</title>
+    <title>USB TOKEN</title>
 
 
-<style>
-
-#collapsibleNavbar a {
-    color: grey;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 15px;
-}
-
-#collapsibleNavbar a:hover {
-    color: #0cbaa4;
-}
-
-
-#nav {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-#background1 {
-    background-color: #fff;
-    box-shadow: 0px 0px 13px lightgrey;
-    padding-top: 3ch;
-}
-
-.dropdown-menu {
-    width: 400px !important;
-    height: 100px ;
-    font-weight: normal;
-}
-
-#token{
-    width: 400px !important;
-    height: 50px ;
-    font-weight: normal;
-}
-
-#top{
-    width: 1000px !important;
-    height: 100px ;
-   
-}
-#token1{
-    width: 500px !important;
-    height: 100px ;
-    font-weight: normal;
-}
-
-.button {
-  background-color: lightgray;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-left: 8ch;
-  margin-top: 3ch;
-  margin-bottom: 3ch;
-  height: 5ch;
-}
-
-.button1 {border-radius: 8px;}
-
-ul li:hover ul {
-    display: block;
-    background-color: #0cbaa4;
-    
-}
-
-ul li ul li a {
-    color: black !important;
-    
-}
-
- a:hover{
-    text-decoration: black;
-    color: black;
-}
-
-    .i{     
-          color: white;
-    }
-
-    #foot a,i {
-    color: white;
-    background-color: #0cbaa4
-    ;
-}
-
-#arrow {
-    align-items: center;
-    font-size: 70%;
-    color: white;
-    padding: 1ch;
-}
-
-.blue-color {
-color:blue;
-padding-top: 0.5ch;
-
-}
-
-.blue {
-color:lightskyblue;
-align-content: center;
-}
-
-.blue1 {
-    
-color: #0976b4;
-}
-.red-color{
-   
-color:red;
-
-}
-
-.icon{
-    color: lightslategrey;
-    padding: 2ch;
-}
-
-.share{
-    padding-right: 3ch;
-   
-}
-
-#bg {
-    background-color: #0cbaa4;
-}
-#bg i {
-    padding-top: 5px;
-    color: white;
-    font-size: 18px;
-    /* padding: 2px; */
-    padding-bottom: 6px;
-}
-
-#bg i:hover {
-    color: black;
-}
-#dashboard {
-    padding-top: 7px;
-    font-weight: 700;
-}
-</style>
+    <style>
+        #collapsibleNavbar a {
+            color: grey;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 15px;
+        }
+        
+        #collapsibleNavbar a:hover {
+            color: #0cbaa4;
+        }
+        
+        #nav {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        #background1 {
+            background-color: #fff;
+            box-shadow: 0px 0px 13px lightgrey;
+            padding-top: 3ch;
+        }
+        
+        .dropdown-menu {
+            width: 400px !important;
+            height: 100px;
+            font-weight: normal;
+        }
+        
+        #token {
+            width: 400px !important;
+            height: 50px;
+            font-weight: normal;
+        }
+        
+        #top {
+            width: 1000px !important;
+            height: 100px;
+        }
+        
+        #token1 {
+            width: 500px !important;
+            height: 100px;
+            font-weight: normal;
+        }
+        
+        .button {
+            background-color: lightgray;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 8ch;
+            margin-top: 3ch;
+            margin-bottom: 3ch;
+            height: 5ch;
+        }
+        
+        .button1 {
+            border-radius: 8px;
+        }
+        
+        ul li:hover ul {
+            display: block;
+            background-color: #0cbaa4;
+        }
+        
+        ul li ul li a {
+            color: black !important;
+        }
+        
+        a:hover {
+            text-decoration: black;
+            color: black;
+        }
+        
+        .i {
+            color: white;
+        }
+        
+        #foot a,
+        i {
+            color: white;
+            background-color: #0cbaa4;
+        }
+        
+        #arrow {
+            align-items: center;
+            font-size: 70%;
+            color: white;
+            padding: 1ch;
+        }
+        
+        .blue-color {
+            color: blue;
+            padding-top: 0.5ch;
+        }
+        
+        .blue {
+            color: lightskyblue;
+            align-content: center;
+        }
+        
+        .blue1 {
+            color: #0976b4;
+        }
+        
+        .red-color {
+            color: red;
+        }
+        
+        .icon {
+            color: lightslategrey;
+            padding: 2ch;
+        }
+        
+        .share {
+            padding-right: 3ch;
+        }
+        
+        #bg {
+            background-color: #0cbaa4;
+        }
+        
+        #bg i {
+            padding-top: 5px;
+            color: white;
+            font-size: 18px;
+            /* padding: 2px; */
+            padding-bottom: 6px;
+        }
+        
+        #bg i:hover {
+            color: black;
+        }
+        
+        #dashboard {
+            padding-top: 7px;
+            font-weight: 700;
+        }
+    </style>
 
 
-<!-- Favicon and Touch Icons -->
+    <!-- Favicon and Touch Icons -->
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-	
+
 </head>
+
 <body>
-<div id="wrapper">
-    <!-- start header -->
-<div style="display:none"><h1>e-Pass 2003 Auto Token, emudhra Certificate Token, Digital USB Token, </h1></div>
-
-
-<!----header---->
-<header >
-    <div id="bg" class="fixed-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <a href="#"><i id="phone" class="fa fa-phone"> +91- 777777777</i> </a>
-                    <a href="#"> <i id="mail" class="fa fa-envelope-o"> aaaaaaa@enquiry.com </i></a>
-
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="float-right"> <i id="dashboard" class="fa fa-cog"> Dashboard </i> </a>
-                </div>
-            </div>
-
+    <div id="wrapper">
+        <!-- start header -->
+        <div style="display:none">
+            <h1>e-Pass 2003 Auto Token, emudhra Certificate Token, Digital USB Token, </h1>
         </div>
-    
 
-    <div id="background1" >
-        <div class="container">
-            <nav class="navbar navbar-full navbar-expand-md navbar-dark" id="nav">
-                <a class="navbar-brand" href="#" id="logo"><img src="2.jpg" class="img-fluid" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+
+        <!----header---->
+        <header>
+            <div id="bg" class="fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <a href="#"><i id="phone" class="fa fa-phone"> +91- 777777777</i> </a>
+                            <a href="#"> <i id="mail" class="fa fa-envelope-o"> aaaaaaa@enquiry.com </i></a>
+
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" class="float-right"> <i id="dashboard" class="fa fa-cog"> Dashboard </i> </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="background1">
+                    <div class="container">
+                        <nav class="navbar navbar-full navbar-expand-md navbar-dark" id="nav">
+                            <a class="navbar-brand" href="#" id="logo"><img src="2.jpg" class="img-fluid" alt=""></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon icon"></span>
                       </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav navbar-right" id="navigation">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> HOME </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> WHY US </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">CLASS 3 <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL ENCRYPTION CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE COMBO CERTIFICATE</a></li>
-                                <li class="divider"></li>
-                        </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> DGFT </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">USB TOKEN <b class="caret"></b></a>
-                            <ul class="dropdown-menu" id="token">
-                                <li><i class="fa fa-dribbble" style="color: black; margin-left: 2ch;"></i>&nbsp;&nbsp;E-PASS 2003 AUTO TOKEN</li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> VIDEO </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"> APPLICATION <b class="caret"></b></a>
-                            <ul class="dropdown-menu" id="token1">
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;"><i class="fa fa-file-text-o" style="color: black; margin-right: 2ch;"></i>CHEAP DSC -DIGITAL SIGNATURE CERTIFICATE APPLICATION CHECKLIST</a></li>
-                                <li><a href="#" style="font-weight: normal;"><i class="fa fa-video-camera" style="color: black; margin-right: 2ch;"></i>AADHAR KYC MODE - CHEAP DSC APPLICATION MODE</a></li>
-                                <li><a href="#" style="font-weight: normal;"><i class="fa fa-paypal" style="color: black; margin-right: 2ch;"></i>PAYMENT DETAILS - CHEAP DSC PURCHASE OPTION</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> PRICE LIST </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> REACH US </a>
-                        </li>
-                    </ul>
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav navbar-right" id="navigation">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> HOME </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> WHY US </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">CLASS 3 <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE CERTIFICATE</a></li>
+                                            <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL ENCRYPTION CERTIFICATE</a></li>
+                                            <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE COMBO CERTIFICATE</a></li>
+                                            <li class="divider"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="dgft.html"> DGFT </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">USB TOKEN <b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="token">
+                                            <a href="USB.html">
+                                                <li><i class="fa fa-dribbble" style="color: black; margin-left: 2ch;"></i>&nbsp;&nbsp;E-PASS 2003 AUTO TOKEN</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> VIDEO </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"> APPLICATION <b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="token1">
+                                            <li><a href="#" style="font-weight: normal; font-size: 80%;"><i class="fa fa-file-text-o" style="color: black; margin-right: 2ch;"></i>CHEAP DSC -DIGITAL SIGNATURE CERTIFICATE APPLICATION CHECKLIST</a></li>
+                                            <li><a href="#" style="font-weight: normal;"><i class="fa fa-video-camera" style="color: black; margin-right: 2ch;"></i>AADHAR KYC MODE - CHEAP DSC APPLICATION MODE</a></li>
+                                            <li><a href="#" style="font-weight: normal;"><i class="fa fa-paypal" style="color: black; margin-right: 2ch;"></i>PAYMENT DETAILS - CHEAP DSC PURCHASE OPTION</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> PRICE LIST </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="ReachUs.html"> REACH US </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-            </nav>
-        </div>
-        </div>
-    </div>
-
-<!------------Content-------------------->
-
-<div id="top" style="background-color: black;">
-    
-    <button class="button button1"><i class="fa fa-home" style="background: none;"></i> / backLang.DGFT</button>
-
-    </div>
-
-<section id="content" style="padding-bottom: 15ch;">
-<div class="container">
-<div class="row">
-    <div class="col-lg-12">
-        <article>                         
-                <div class="post-image">
-                    <div class="post-heading">
-                        <h1>
-                            <i class="fa fa-dribbble" style="font-size:36px; color: black;  padding-top: 3ch; background: none;"></i>&nbsp;&nbsp;E-PASS 2003 AUTO TOKEN
-                        </h1>
-                    </div>
-                        <img src="https://www.cheapdsc.com/uploads/topics/15802771948751.jpg" alt="E-PASS" title="E-PASS" style="padding-top: 2ch; padding-bottom:2ch"/>
-                    </div>
-            <h2 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: 700; line-height: 1.2; color: rgb(35, 35, 35); font-size: 26px; padding: 0px;">
-                <font face="Times New Roman">e-Pass 2003 Auto Token – User Access Control Token>           
-                </font>
-            </h2>
-            <div class="price" style="box-sizing: border-box; color: rgb(0, 26, 87); font-size: 28px; font-weight: 600; margin: 5px 0px 12px;">
-                <font face="Times New Roman"><del style="box-sizing: border-box; font-size: 20px; font-weight: normal; color: rgb(175, 175, 175); margin-right: 5px;">Rs. 1000</del>Rs. 312*</font>
             </div>
-            <p style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; line-height: 27px; color: rgb(85, 85, 85); font-size: 18px; text-align: justify;">
-                <font face="Times New Roman">eToken PRO is a USB-based authenticator that provides strong user authentication and cost-effective password management. With this two-factor authentication token solution, organizations can easily and effectively expand business opportunities by providing secure network access, improve data security through enhanced encryption and digital signing, and reduce costs and vulnerabilities through superior password management.</font>
-            </p>
-            <h2 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; line-height: 27px; color: rgb(85, 85, 85); font-size: 18px; text-align: justify;">
-                <font face="Times New Roman"><br></font></h2><h2><font face="Times New Roman">
-                    <b>HIGHLIGHTS:</b>
-                </font>
-            </h2>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><b><span style="box-sizing: border-box;">Extremely Portable</span> </b>: eToken PRO is a USB device that users can carry with them wherever they go. Digital credentials are securely stored and easily available.</font>
-            </p>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><span style="box-sizing: border-box;"><b>Easy to Use </b></span>: In order to authenticate with eToken PRO, users simply plug the device into the USB port and enter their eToken password.</font>
-            </p>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><span style="box-sizing: border-box;"><b>Highly Flexible </b></span>: eToken PRO supports all eToken PKI and password management applications, as well as software development tools for seamless integration with third-party applications. In addition, eToken PRO can be customized to include RFID, logo printing, and unique colors for branding purposes.</font>
-            </p>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><span style="box-sizing: border-box; font-weight: bolder;">Easy to Implement </span>: By supporting industry standard security interfaces and systems, the eToken PRO USB device ensures easy integration with your organization’s current infrastructure and security strategy.</font>
-            </p>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><span style="box-sizing: border-box; font-weight: bolder;">Cost-Effective </span>: The eToken PRO USB device allows strong user authentication and a variety of flexible security solutions without requiring any special readers or complex back-end infrastructure.</font>
-            </p>
 
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman"><br></font></p>
-                  <h3 style="box-sizing: border-box;">
-                    <font face="Times New Roman"> <b>BENEFITS:</b>
-                    </font>
-                </h3>
-                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                    <font face="Times New Roman">Enables advanced certificate-based applications such as digital signature and pre-boot authentication
-                    <br> Enables compliance with security and privacy standards (FIPS 140-2, Common Criteria (CC)
-                    <br> Improves productivity by allowing employees and partners to securely access corporate resources  
-                    <br> Enables compliance with security and privacy standards (FIPS 140-2, Common Criteria (CC)
-                    <br> Portable USB device: no special reader needed
-                    <br> Simple and easy to use – no training or technical know-how needed
-                    <br> Expand security applications through on-board Java applets
-                    <br> Enhance marketing and branding initiatives with private labelling and color options</font>
-                </p>
-                
-                <h3 style="box-sizing: border-box;"><b>
-                    <font face="Times New Roman"><br></font></b></h3><h3 style="box-sizing: border-box;">
-                        <font face="Times New Roman"><b>VALIDITY:</b></font>
-                </h3>
-                <h5 style="box-sizing: border-box; font-size: 85%; font-weight: bold; ">
-                    <font face="Times New Roman">e-token are valid time time until there is a change requested by Govt to use minimum Version in Device.</font>
-                </h5>
-                <p style="box-sizing: border-box;">
-                    <font face="Times New Roman"><br>
-                    </font>
-                </p>
-                <h3 style="box-sizing: border-box;"><b>
+            <!------------Content-------------------->
+
+            <div id="top" style="background-color: black;">
+
+                <button class="button button1"><i class="fa fa-home" style="background: none;"></i> / backLang.DGFT</button>
+
+            </div>
+
+            <section id="content" style="padding-bottom: 15ch;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <article>
+                                <div class="post-image">
+                                    <div class="post-heading">
+                                        <h1>
+                                            <i class="fa fa-dribbble" style="font-size:36px; color: black;  padding-top: 3ch; background: none;"></i>&nbsp;&nbsp;E-PASS 2003 AUTO TOKEN
+                                        </h1>
+                                    </div>
+                                    <img src="https://www.cheapdsc.com/uploads/topics/15802771948751.jpg" alt="E-PASS" title="E-PASS" style="padding-top: 2ch; padding-bottom:2ch" />
+                                </div>
+                                <h2 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: 700; line-height: 1.2; color: rgb(35, 35, 35); font-size: 26px; padding: 0px;">
+                                    <font face="Times New Roman">e-Pass 2003 Auto Token – User Access Control Token>
+                                    </font>
+                                </h2>
+                                <div class="price" style="box-sizing: border-box; color: rgb(0, 26, 87); font-size: 28px; font-weight: 600; margin: 5px 0px 12px;">
+                                    <font face="Times New Roman"><del style="box-sizing: border-box; font-size: 20px; font-weight: normal; color: rgb(175, 175, 175); margin-right: 5px;">Rs. 1000</del>Rs. 312*</font>
+                                </div>
+                                <p style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; line-height: 27px; color: rgb(85, 85, 85); font-size: 18px; text-align: justify;">
+                                    <font face="Times New Roman">eToken PRO is a USB-based authenticator that provides strong user authentication and cost-effective password management. With this two-factor authentication token solution, organizations can easily and effectively expand
+                                        business opportunities by providing secure network access, improve data security through enhanced encryption and digital signing, and reduce costs and vulnerabilities through superior password management.</font>
+                                </p>
+                                <h2 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; line-height: 27px; color: rgb(85, 85, 85); font-size: 18px; text-align: justify;">
+                                    <font face="Times New Roman"><br></font>
+                                </h2>
+                                <h2>
+                                    <font face="Times New Roman">
+                                        <b>HIGHLIGHTS:</b>
+                                    </font>
+                                </h2>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><b><span style="box-sizing: border-box;">Extremely Portable</span> </b>: eToken PRO is a USB device that users can carry with them wherever they go. Digital credentials are securely stored and easily available.</font>
+                                </p>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><span style="box-sizing: border-box;"><b>Easy to Use </b></span>: In order to authenticate with eToken PRO, users simply plug the device into the USB port and enter their eToken password.</font>
+                                </p>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><span style="box-sizing: border-box;"><b>Highly Flexible </b></span>: eToken PRO supports all eToken PKI and password management applications, as well as software development tools for seamless integration with third-party
+                                        applications. In addition, eToken PRO can be customized to include RFID, logo printing, and unique colors for branding purposes.</font>
+                                </p>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><span style="box-sizing: border-box; font-weight: bolder;">Easy to Implement </span>: By supporting industry standard security interfaces and systems, the eToken PRO USB device ensures easy integration with your organization’s
+                                        current infrastructure and security strategy.</font>
+                                </p>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><span style="box-sizing: border-box; font-weight: bolder;">Cost-Effective </span>: The eToken PRO USB device allows strong user authentication and a variety of flexible security solutions without requiring any special
+                                        readers or complex back-end infrastructure.</font>
+                                </p>
+
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman"><br></font>
+                                </p>
+                                <h3 style="box-sizing: border-box;">
+                                    <font face="Times New Roman"> <b>BENEFITS:</b>
+                                    </font>
+                                </h3>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman">Enables advanced certificate-based applications such as digital signature and pre-boot authentication
+                                        <br> Enables compliance with security and privacy standards (FIPS 140-2, Common Criteria (CC)
+                                        <br> Improves productivity by allowing employees and partners to securely access corporate resources
+                                        <br> Enables compliance with security and privacy standards (FIPS 140-2, Common Criteria (CC)
+                                        <br> Portable USB device: no special reader needed
+                                        <br> Simple and easy to use – no training or technical know-how needed
+                                        <br> Expand security applications through on-board Java applets
+                                        <br> Enhance marketing and branding initiatives with private labelling and color options</font>
+                                </p>
+
+                                <h3 style="box-sizing: border-box;"><b>
+                    <font face="Times New Roman"><br></font></b></h3>
+                                <h3 style="box-sizing: border-box;">
+                                    <font face="Times New Roman"><b>VALIDITY:</b></font>
+                                </h3>
+                                <h5 style="box-sizing: border-box; font-size: 85%; font-weight: bold; ">
+                                    <font face="Times New Roman">e-token are valid time time until there is a change requested by Govt to use minimum Version in Device.</font>
+                                </h5>
+                                <p style="box-sizing: border-box;">
+                                    <font face="Times New Roman"><br>
+                                    </font>
+                                </p>
+                                <h3 style="box-sizing: border-box;"><b>
                     <font face="Times New Roman">FEATURES:</font>
                 </b>
-            </h3>
-            <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
-                <font face="Times New Roman">eToken PRO <br> FIPS 140-2 and 3 <br> Common Criteria EAL4+ (smart card chip) <br> Tamper-resistant casing</font>
-        </p>
-                
+                                </h3>
+                                <p style="box-sizing: border-box; color: rgb(85, 85, 85); font-size: 18px;">
+                                    <font face="Times New Roman">eToken PRO <br> FIPS 140-2 and 3 <br> Common Criteria EAL4+ (smart card chip) <br> Tamper-resistant casing</font>
+                                </p>
 
-            <div class="container " style="background-color: rgb(247, 241, 241); color:lightslategray; ">
-                    <i class="fa fa-calendar icon" style="background: none;"></i> <a >2019-09-20</a>
-                        <i class="fa fa-user icon" style="background: none;"></i> 
-                            <a>admin</a>
-                    
-                    <i class="fa fa-eye icon" style="background: none;"></i> <a>Visits : 1127</a>
-                
-                <div class=" pull-right share" >
-                    Share : &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href=""><i class="fa fa-facebook-square blue-color fa-2x " style="background: none;"></i></a>
-                        <a href=""><i  class="fa fa-twitter-square blue fa-2x" style="background: none;"></i></a>
-                        <a href=""><i  class="fa fa-google-plus-square red-color fa-2x" style="background: none;"></i></a>
-                        <a href=""><i class="fa fa-linkedin-square blue1 fa-2x" style="background: none;"></i></a>
-                        <a href=""><i class="fa fa-pinterest-square red-color fa-2x" style="background: none;"></i></a>
-                    
+
+                                <div class="container " style="background-color: rgb(247, 241, 241); color:lightslategray; ">
+                                    <i class="fa fa-calendar icon" style="background: none;"></i> <a>2019-09-20</a>
+                                    <i class="fa fa-user icon" style="background: none;"></i>
+                                    <a>admin</a>
+
+                                    <i class="fa fa-eye icon" style="background: none;"></i> <a>Visits : 1127</a>
+
+                                    <div class=" pull-right share">
+                                        Share : &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href=""><i class="fa fa-facebook-square blue-color fa-2x " style="background: none;"></i></a>
+                                        <a href=""><i  class="fa fa-twitter-square blue fa-2x" style="background: none;"></i></a>
+                                        <a href=""><i  class="fa fa-google-plus-square red-color fa-2x" style="background: none;"></i></a>
+                                        <a href=""><i class="fa fa-linkedin-square blue1 fa-2x" style="background: none;"></i></a>
+                                        <a href=""><i class="fa fa-pinterest-square red-color fa-2x" style="background: none;"></i></a>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-            </div>                                                        
-        </article>
+            </section>
     </div>
-                </div>
-</div>
-</section>
-</div>
-<!-- end of Content Section -->
+    <!-- end of Content Section -->
 
 
-<!-------------------------Footer----------------------------------------->
-<footer style="background-color: #0cbaa4; color: white; "  >
-    <div class="container" id="foot">
-<div class="row">
-    <div class="col-lg-6" >
-        <div class="widget contacts">
-            <h4 class="widgetheading" style="padding-top: 5ch;">
-                <i class="fa fa-phone-square"></i>&nbsp; Contact Details</h4>
-                  <hr style="padding-bottom: 3ch;">
-                <address>
+    <!-------------------------Footer----------------------------------------->
+    <footer style="background-color: #0cbaa4; color: white; ">
+        <div class="container" id="foot">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="widget contacts">
+                        <h4 class="widgetheading" style="padding-top: 5ch;">
+                            <i class="fa fa-phone-square"></i>&nbsp; Contact Details</h4>
+                        <hr style="padding-bottom: 3ch;">
+                        <address>
                     <strong>Address:</strong><br>
                     <i class="fa fa-map-marker"></i>
                     &nbsp;Anywhere in India
                 </address>
-                <p>
-                    <strong>Call Us:</strong><br>
-                    <i class="fa fa-phone"></i> &nbsp;
-                    <a href="tel:+(91) - 9445944601" ><span dir="ltr">+(91) - 9445944601</span></a></p>
-                <p style="padding-bottom: 3ch;">
-                    <strong >Email:</strong><br>
-                    <i class="fa fa-envelope"></i> &nbsp;
-                    <a href="mailto:enquiry@cheapdsc.com" >enquiry@cheapdsc.com</a>
-                </p>
+                        <p>
+                            <strong>Call Us:</strong><br>
+                            <i class="fa fa-phone"></i> &nbsp;
+                            <a href="tel:+(91) - 9445944601"><span dir="ltr">+(91) - 9445944601</span></a></p>
+                        <p style="padding-bottom: 3ch;">
+                            <strong>Email:</strong><br>
+                            <i class="fa fa-envelope"></i> &nbsp;
+                            <a href="mailto:enquiry@cheapdsc.com">enquiry@cheapdsc.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="foot">
+                        <h4 style="padding-top: 5ch;"><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
+                        <hr style="padding-bottom: 3ch;">
+
+                        <a href=""><span id="arrow">></span>Home</a><br>
+                        <a href=""><span id="arrow">></span>About Us</a><br>
+                        <a href=""><span id="arrow">></span>Privacy</a><br>
+                        <a href=""><span id="arrow">></span>Terms &amp; Conditions</a><br>
+                        <a href=""><span id="arrow">></span>Contact Us</a><br>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-    
-            <div class="col-lg-6">
-                <div  id="foot">
-                    <h4  style="padding-top: 5ch;"><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
-                    <hr style="padding-bottom: 3ch;">
-                    
-                    <a href=""><span id="arrow">></span>Home</a><br>
-                    <a href=""><span id="arrow">></span>About Us</a><br>
-                    <a href=""><span id="arrow">></span>Privacy</a><br>
-                    <a href=""><span id="arrow">></span>Terms &amp; Conditions</a><br>
-                    <a href=""><span id="arrow">></span>Contact Us</a><br>
+        <div style="background-color: rgb(80, 77, 77); color: white; padding: 2ch;">
+            <div class="container">
+                <div class="row" style="margin-right: 0%;">
+                    <div class="col-12 col-lg-6 ">
+                        <p style=" font-size: 80%; padding-top: 2ch; ">
+                            &copy; 2021 All Rights Reserved.Cheap Dsc, Class 2 DSC, Class 3 DSC, Cheap DSC, DGFT, Class 2 Signature DSC, Cheap Class 2 Signature, digital Signature Certificate, cheap digital certificate
+                        </p>
+                    </div>
+
+                    <div class=" col-12 col-lg-6 py-3 ">
+                        <a href="#"><i class="fa fa-whatsapp float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-flickr float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-tumblr float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-pinterest float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-instagram float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play float-right p-1" style="background: none;"></i></a>
+                        <a href="#"><i class="fa fa-linkedin float-right p-1" style="background: none;"></i></a>
+                        <a href="#"> <i class="fa fa-google-plus float-right p-1" style="background: none;"></i></a>
+                        <a href="#"> <i class="fa fa-twitter float-right p-1" style="background: none;"></i></a>
+                        <a href="#"> <i class="fa fa-facebook-official float-right p-1" style="background: none;"></i></a>
+                    </div>
+
+
+
                 </div>
             </div>
-                                        
-</div>
-</div>
-<div style="background-color: rgb(80, 77, 77); color: white; padding: 2ch;">
-<div class="container" >
-<div class="row" style="margin-right: 0%;">
-    <div class="col-12 col-lg-6 " >
-        <p style=" font-size: 80%; padding-top: 2ch; ">
-            &copy; 2021 All Rights Reserved.Cheap Dsc, Class 2 DSC, Class 3 DSC, Cheap DSC, DGFT, Class 2 Signature DSC, Cheap Class 2 Signature, digital Signature Certificate, cheap digital certificate
-        </p>
-    </div>
-    
-     <div class=" col-12 col-lg-6 py-3 " >
-        <a href="#" ><i class="fa fa-whatsapp float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-flickr float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-tumblr float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-pinterest float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-instagram float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-youtube-play float-right p-1" style="background: none;"></i></a>
-        <a href="#" ><i class="fa fa-linkedin float-right p-1" style="background: none;"></i></a>
-        <a href="#"> <i class="fa fa-google-plus float-right p-1" style="background: none;"></i></a>
-        <a href="#"> <i class="fa fa-twitter float-right p-1" style="background: none;"></i></a>
-        <a href="#" > <i class="fa fa-facebook-official float-right p-1"style="background: none;" ></i></a>        
-    </div>
-                
-            
-    
-</div>
-</div>
-</div>
-</footer><!-- end footer -->
-</header><!-- end header -->
+        </div>
+    </footer>
+    <!-- end footer -->
+    </header>
+    <!-- end header -->
 </body>
+
 </html>
