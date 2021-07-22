@@ -1,0 +1,66 @@
+#reachUs {
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+#para1 {
+    padding-top: 100px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #656565;
+}
+
+.bottom-article {
+    overflow: hidden;
+    border: 1px solid #ececec;
+    padding: 10px;
+    margin-top: 20px;
+    background: #f5f5f5;
+}
+
+#form input {
+    margin-top: 15px;
+}
+
+#form textarea {
+    margin-top: 15px;
+}
+
+#captcha {
+    margin-top: 15px;
+}
+
+.btn-secondary {
+    background-color: #0cbaa4;
+}
+
+#address i {
+    padding: 12px 10px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    background: #0cbaa4;
+    color: #fff;
+    text-align: center;
+}
+
+#address {
+    padding: 10px;
+}
+
+#detail {
+    overflow: hidden;
+    border: 1px solid #ececec;
+    padding: 10px;
+    margin-top: 20px;
+    background: #f5f5f5;
+    color: black;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#env {
+    color: #0cbaa4;
+}
