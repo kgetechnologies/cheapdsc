@@ -9,6 +9,11 @@
     color: #0cbaa4;
 }
 
+.dropdown-menu {
+    width: 450px !important;
+    height: 170px;
+}
+
 #phone {
     padding-right: 15px !important;
     border-right: 1px solid white;

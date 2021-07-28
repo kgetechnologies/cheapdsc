@@ -1,0 +1,7 @@
+.tbllinks li {
+    list-style-type: none;
+}
+
+.tbllinks li a {
+    color: #0cbaa4;
+}
