@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<style>
+
+  *{
+
+    width:400px;
+    text-align:center;
+
+
+  }
+  .card {
+
+padding:0 20px 20px 430px;
+    border-radius: 6px;
+border-color: white;
+    display: inline-block;
+    margin: 0 auto;
+  }
+.top{
+  text-align:center;
+  color: black;
+  top:50px;
+  padding: 3px 23px 23px 23px;
+}
+.summ{
+  left: 70px;
+}
+.first{
+  text-align:center;
+  color: black;
+  border-radius:7px;
+  top:50px;
+background-size: 40px 80px;
+  background-color: lightgrey;
+}
+.last{
+border-radius:7px;
+    text-align:center;
+
+    top:80px;
+border-radius:7px;
+background: grey;
+  background-size: 40px 80px;
+
+    background-color: lightgrey;
+}
+.email{
+  text-align:center;
+border-radius:7px;
+  top:80px;
+
+background: grey;
+background-size: 40px 80px;
+
+  background-color: lightgrey;
+}
+.mob{
+  text-align:center;
+border-radius:7px;
+  top:80px;
+
+background: grey;
+background-size: 40px 80px;
+
+  background-color: lightgrey;
+}
+.status{
+  text-align:center;
+border-radius:7px;
+  top:80px;
+
+background: Limegreen;
+background-size: 40px 80px;
+
+  background-color: Limegreen;
+}
+.note{
+  text-align:center;
+left:50px;
+  top:80px;
+
+background: lightgrey;
+background-size: 40px 80px;
+border-radius:7px;
+  background-color: lightgrey;
+}
+  </style>
+<body>
+<div class="card">
+<div class="top">
+  <h3><b>Dear Vendor $CompanyName$</b></h3><br>
+  <p>Your Customer $FullName$ payment of ₹ <br>$Amount$<b> <span style ="color:chartreuse">successfully</span>.</b>
+     Transaction ID is<i> <b>$RequestId$</b></i></p><br>
+     <b><p class="summ">Customer Summary</p></b>
+</div>
+<div class="first">
+  <p><b> First Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$First name$</p>
+</div>
+<div class="last">
+  <p><b> Last Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Last name$</p>
+</div>
+<div class="email">
+  <p><b> Email Address :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Email Address$</p>
+</div>
+<div class="mob">
+  <p><b> Mobile Number :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Mobile Number$</p>
+</div>
+<div class="note">
+  <p><br>
+    <b> Customer Note :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Customer Note$</p><br>
+</div><br>
+ <b><h3 class="bot">Transaction Summary</h3></b>
+ <br>
+ <div class="first">
+   <p><b> Order Id :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Request id$</p>
+ </div>
+ <div class="first">
+   <p><b> Bank ref no. :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$bank_ref_no$</p>
+ </div>
+ <div class="first">
+   <p><b> Card Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$card name$</p>
+ </div>
+ <div class="first">
+   <p><b> Payment Mode :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Payment_mode:$</p>
+ </div>
+ <div class="last">
+   <p><b> Request Amount :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Request_amount$</p>
+ </div>
+ <div class="email">
+   <p><b> Amount Paid :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Amount_paid$</p>
+ </div>
+ <div class="status">
+   <p>
+     <br><b> Payment Status :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Successful$</p>
+ <br></div> <br>
+ <br>
+ <br>
+</div>
+</body>
