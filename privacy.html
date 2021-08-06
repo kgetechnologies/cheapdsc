@@ -10,81 +10,44 @@
 <link rel="stylesheet" href="./Assets/style1.css">
 	
 </head>
+
+<script>
+    function includeHTML() {
+        var elements, i, element, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        elements = document.getElementsByTagName("*");
+        for (i = 0; i < elements.length; i++) {
+            element = elements[i];
+            /*search for elements with a certain atrribute:*/
+            file = element.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            element.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            element.innerHTML = "Page not found.";
+                        }
+                        /*remove the attribute, and call this function once more:*/
+                        element.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+
 <body>
 <!----header---->
-    <div id="bg" class="fixed-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <a href="#"><i id="phone" class="fa fa-phone"> +(91) - 9445944601   | </i> </a>
-                    <a href="#"> <i id="mail" class="fa fa-envelope-o"> enquiry@cheapdsc.com </i></a>    
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="float-right"> <i id="dashboard" class="fa fa-cog"> Dashboard </i> </a>
-                </div>
-            </div>
-        </div>
-    
-
-    <div id="background1" >
-        <div class="container">
-            <nav class="navbar navbar-full navbar-expand-md navbar-dark" id="nav">
-                <a class="navbar-brand" href="#" id="logo"><img src="2.jpg" class="img-fluid" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon icon"></span>
-                      </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav navbar-right" id="navigation">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> HOME </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> WHY US </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">CLASS 3 <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL ENCRYPTION CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL DIGITAL SIGNATURE COMBO CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL ORGANIZATION SIGNATURE CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL ORGANIZATION ENCRYPTION CERTIFICATE</a></li>
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;">CLASS 3 INDIVIDUAL ORGANIZATION SIGNATURE COMBO CERTIFICATE</a></li>
-                                <li class="divider"></li>
-                        </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> DGFT </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">USB TOKEN <b class="caret"></b></a>
-                            <ul class="dropdown-menu" id="token">
-                                <li><i class="fa fa-dribbble" style="color: black; margin-left: 2ch;"></i>&nbsp;&nbsp;E-PASS 2003 AUTO TOKEN</li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> VIDEO </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle nav-link" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"> APPLICATION <b class="caret"></b></a>
-                            <ul class="dropdown-menu" id="token1">
-                                <li><a href="#" style="font-weight: normal; font-size: 80%;"><i class="fa fa-file-text-o" style="color: black; margin-right: 2ch;"></i>CHEAP DSC -DIGITAL SIGNATURE CERTIFICATE APPLICATION CHECKLIST</a></li>
-                                <li><a href="#" style="font-weight: normal;"><i class="fa fa-video-camera" style="color: black; margin-right: 2ch;"></i>AADHAR KYC MODE - CHEAP DSC APPLICATION MODE</a></li>
-                                <li><a href="#" style="font-weight: normal;"><i class="fa fa-paypal" style="color: black; margin-right: 2ch;"></i>PAYMENT DETAILS - CHEAP DSC PURCHASE OPTION</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> PRICE LIST </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> REACH US </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        </div>
-    </div>
+<div w3-include-html="header.html"></div>
 
 <!------------Content-------------------->
 
@@ -125,71 +88,12 @@
 
 
 <!-------------------------Footer----------------------------------------->
-<footer id="footer1"  >
-    <div class="container" id="foot">
-<div class="row">
-    <div class="col-lg-6" >
-        <div class="widget contacts">
-            <h4 class="widgetheading" id="p1">
-                <i class="fa fa-phone-square"></i>&nbsp; Contact Details</h4>
-                  <hr id="p">
-                <address>
-                    <strong>Address:</strong><br>
-                    <i class="fa fa-map-marker"></i>
-                    &nbsp;Anywhere in India
-                </address>
-                <p>
-                    <strong>Call Us:</strong><br>
-                    <i class="fa fa-phone"></i> &nbsp;
-                    <a href="tel:+(91) - 9445944601" ><span dir="ltr">+(91) - 9445944601</span></a></p>
-                <p id="p">
-                    <strong >Email:</strong><br>
-                    <i class="fa fa-envelope"></i> &nbsp;
-                    <a href="mailto:enquiry@cheapdsc.com" >enquiry@cheapdsc.com</a>
-                </p>
-        </div>
-    </div>
-    
-            <div class="col-lg-6">
-                <div  id="foot">
-                    <h4  id="p1"><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
-                    <hr id="p">
-                    
-                    <a href=""><span id="arrow">></span>Home</a><br>
-                    <a href=""><span id="arrow">></span>About Us</a><br>
-                    <a href=""><span id="arrow">></span>Privacy</a><br>
-                    <a href=""><span id="arrow">></span>Terms &amp; Conditions</a><br>
-                    <a href=""><span id="arrow">></span>Contact Us</a><br>
-                </div>
-            </div>
-                                        
-</div>
-</div>
-<div id="footers">
-    <div class="container" >
-        <div class="row" style="margin-right: 0%;">
-            <div class="col-12 col-lg-6 " >
-                <p id="footcpy">
-                    &copy; 2021 All Rights Reserved.Cheap Dsc, Class 2 DSC, Class 3 DSC, Cheap DSC, DGFT, Class 2 Signature DSC, Cheap Class 2 Signature, digital Signature Certificate, cheap digital certificate
-                </p>
-            </div>
-    
-            <div class=" col-12 col-lg-6 py-3" >
-                <a href="#" ><i class="fa fa-whatsapp float-right p-1" id="footicon"></i></a>
-                <a href="#" ><i class="fa fa-flickr float-right p-1" id="footicon"></i></a>
-                <a href="#" ><i class="fa fa-tumblr float-right p-1" id="footicon"></i></a>
-                <a href="#" ><i class="fa fa-pinterest float-right p-1" id="footicon" ></i></a>
-                <a href="#" ><i class="fa fa-instagram float-right p-1" id="footicon"></i></a>
-                <a href="#" ><i class="fa fa-youtube-play float-right p-1" id="footicon"></i></a>
-                <a href="#" ><i class="fa fa-linkedin float-right p-1" id="footicon"></i></a>
-                <a href="#"> <i class="fa fa-google-plus float-right p-1" id="footicon"></i></a>
-                <a href="#"> <i class="fa fa-twitter float-right p-1" id="footicon"></i></a>
-                <a href="#" > <i class="fa fa-facebook-official float-right p-1" id="footicon" ></i></a>        
-            </div>
-        </div>
-    </div>
-</div>
-</footer><!-- end footer -->
+<div w3-include-html="footer.html"></div>
+<!-- end footer -->
+<script>
+    includeHTML();
+</script>
+
 
 </body>
 </html>
