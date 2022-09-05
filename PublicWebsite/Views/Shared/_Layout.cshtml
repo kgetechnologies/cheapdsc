@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@Html.Partial("_Seo")
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="~/css/style.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+
+	<header id="header">
+		<div class="d-flex site-top site-text">
+			<span> <i class='fa fa-phone'></i><a class="site-text-tel" href="tel:+91-9445944601">+91- 9445 9446 01</a></span>
+			<span class="cash-pie">|</span>
+			<span> <i class='fa fa-whatsapp'></i><a class="site-text-tel" href="https://wa.me/919445944601?text=Reg%20Cheap%20Dsc" target="_blank">+91- 9445 9446 01</a></span>
+			<span class="cash-pie">|</span>
+			<span><i class="fa fa-envelope"></i><a class="site-text-email" href="mailto:enquiry@cheapdsc.com">enquiry@cheapdsc.com</a></span>
+
+		</div>
+		<!-- navbar for webpage -->
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<!-- navbar brand image on navbar -->
+				<a class="navbar-brand mr-auto" href="/"><img src="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Logo/Logo.png" height="60" width="200" alt="Credit Card to Cash"></a>
+
+				<!-- collapse button in navbar -->
+				<button class="navbar-toggler site-top" type="button" data-toggle="collapse" data-target="#Navbar">
+					<span class="fa fa-regular fa-bars"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="Navbar">
+					<ul class="navbar-nav ml-auto">
+						<!-- navbar list -->
+						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/">Why Us</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Products
+								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Services">
+								<a class="dropdown-item" href="~/Product/CheapClass3Dsc">Class 3 Dsc</a>
+								<a class="dropdown-item" href="~/Product/CheapDgft">DGFT</a>
+								<a class="dropdown-item" href="~/Product/CheapUsbToken">USB Auto Token</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Coverages
+								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
+								@foreach (var eachState in cheapdscin.Helper.States)
+								{
+									<a class="dropdown-item" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+								}
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="~/about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="~/contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	@RenderBody()
+
+	<div class="d-none hide">
+		<!-- SEO Starts -->
+		<h1>Credit Card to Cash</h1>
+		<h2>Instant Cash on any Credit Card</h2>
+		<h3>Spot Cash on Credit Card</h3>
+		<h4>Credit Card to Spot Cash</h4>
+		<h4>Card to Cash</h4>
+	</div>
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 w-50">
+					<div class="widget">
+						<h4> <i class="fa fa-phone-square" style="font-size: 18px;"></i>&nbsp;Contact Details</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-map-marker"></i><span class="address-location">All over India</span></li>
+							<li><i class="fa fa-phone"></i><span dir="ltr"><a href="tel:+91-9498393812">+91- 9498 3938 12</a></span></li>
+							<li><i class="fa fa-whatsapp"></i><span dir="ltr"><a href="https://wa.me?919498393812">+91- 9498 3938 12</a></span></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="col-md-3 w-50">
+					<div class="widget">
+						<h4><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-chevron-right"></i><a href="~/home">Home</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/about">About Us</a> </li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/Contact">Contact Us</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-3 w-50">
+					<div class="widget">
+						<h4><i class="fa fa-bookmark"></i>&nbsp; Services</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/SpotCashOnCreditCard">Spot Cash on Credit Card</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/CreditCardToCash">Credit Card to Cash</a> </li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/InstantCashOnCreditCard">Instant cash on Credit Card</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-3 w-50">
+					<div class="widget">
+						<h4><i class="fa fa-envelope-open"></i>&nbsp; Our Presence</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-chevron-right"></i><a target="_blank" href="https://jd.card2cash.in">Just Dial</a></li>
+							<li><i class="fa fa-chevron-right"></i><a target="_blank" href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html?ref=card2cash.in">India Mart</a> </li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/contact">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="copyright">
+							© 2021 All Rights Reserved. <a>Credit Card to Cash | Instant Cash on any Credit Card</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 ">
+						<ul class="social-icon pull-right">
+							<li><a href="https://www.facebook.com/creditcardtospotcash" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/CardToCash" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/credit-card-2-cash/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.youtube.com/watch?v=xzx7UbZC-PU" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+							<li><a href="https://www.instagram.com/card2cash.in" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://in.pinterest.com/card2cash/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="https://creditcardtocash.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+							<li><a href="https://credit-card-to-cash.blogspot.com/" target="_blank"><img src="https://cdn.card2cash.in/uploads/blogger.svg" style="width: 7% !important;align-items: center !important;margin-bottom: 0.8% !important;"></a></li>
+
+							<li><a href="https://wa.me?919498393812" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js" integrity="sha512-6UofPqm0QupIL0kzS/UIzekR73/luZdC6i/kXDbWnLOJoqwklBK6519iUnShaYceJ0y4FaiPtX/hRnV/X/xlUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

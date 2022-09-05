@@ -1,0 +1,5 @@
+﻿User-agent: *
+Disallow: 
+Disallow: /bin
+Disallow: /web.config
+Sitemap: https://www.card2cash.in/sitemap.xml
