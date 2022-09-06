@@ -10,8 +10,8 @@ namespace cheapdscin.Controllers
 			ViewBag.LinkValue = "Home";
 
 			ViewBag.CanonicalUri = "";
-			ViewBag.desc = "Instant Cash on Credit Card | Spot Cash on Credit Card | Credit Card to Cash | Cash on Credit card";
-			ViewBag.Title = "Instant Cash | Spot Cash | Credit Card to Cash | Cash on Credit Card";
+			ViewBag.desc = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
+			ViewBag.Title = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 
 
 			return View();
@@ -24,8 +24,8 @@ namespace cheapdscin.Controllers
 			ViewBag.LinkValue = "About";
 
 			ViewBag.CanonicalUri = "About";
-			ViewBag.desc = "About Instant Cash on Credit Card | About Spot Cash on Credit Card | About Credit Card to Cash | About Cash on Credit card";
-			ViewBag.Title = "About Instant Cash | About Spot Cash | About Credit Card to Cash | About Cash on Credit Card";
+			ViewBag.desc = "About Instant Dsc | About Spot DSC | About Class 3 DSC | About DGFT | About USB Token";
+			ViewBag.Title = "About Instant Dsc | About Spot DSC | About Class 3 DSC | About DGFT | About USB Token";
 			return View();
 		}
 
@@ -35,8 +35,8 @@ namespace cheapdscin.Controllers
 			ViewBag.LinkValue = "Contact";
 
 			ViewBag.CanonicalUri = "contact";
-			ViewBag.desc = "Contact Instant Cash on Credit Card | Contact Spot Cash on Credit Card | Contact Credit Card to Cash | Contact Cash on Credit card";
-			ViewBag.Title = "Contact Instant Cash | Contact Spot Cash | Contact Credit Card to Cash | Contact Cash on Credit Card";
+			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
 			return View();
 		}
 
@@ -46,8 +46,8 @@ namespace cheapdscin.Controllers
 			ViewBag.LinkValue = "Error";
 
 			ViewBag.CanonicalUri = "home/error";
-			ViewBag.desc = "Error page on Credit card to Cash, card2cash.in error page";
-			ViewBag.Title = "Credit card to cash Error page, card2cash.in error page";
+			ViewBag.desc = "Error page on Cheap DSC, cheapdsc.com error page";
+			ViewBag.Title = "Error page on Cheap DSC, cheapdsc.com error page";
 			return View();
 		}
 
@@ -57,8 +57,8 @@ namespace cheapdscin.Controllers
 			ViewBag.LinkValue = "Not Found";
 
 			ViewBag.CanonicalUri = "home/notfound";
-			ViewBag.desc = "Not Found page on Credit card to Cash, card2cash.in Not Found page";
-			ViewBag.Title = "Credit card to cash Not Found page, card2cash.in Not Found page";
+			ViewBag.desc = "Page Not found on Cheap DSC, cheapdsc.com Page Not found";
+			ViewBag.Title = "Page Not found on Cheap DSC, cheapdsc.com Page Not found";
 			return View();
 		}
 	}
