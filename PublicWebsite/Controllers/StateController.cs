@@ -7,6 +7,7 @@ namespace cheapdscin.Controllers
        
         public ActionResult Index(string stateName)
         {
+
             var prefix = "credit-card-to-cash-in-";
             if (stateName?.ToLower().StartsWith(prefix)??false) {
                 stateName = stateName.Replace(prefix, "");

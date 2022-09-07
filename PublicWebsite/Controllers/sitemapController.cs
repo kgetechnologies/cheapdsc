@@ -23,7 +23,7 @@ namespace cheapdscin.Controllers
 				Frequency = SitemapFrequency.Daily,
 				LastModified = DateTime.UtcNow.AddDays(-1),
 				Priority = 0.8,
-				Url = $"https://www.card2cash.in{f}"
+				Url = $"https://www.cheapdsc.com{f}"
 			}).ToList();
 
 			foreach (var eachState in Helper.States)
@@ -33,7 +33,7 @@ namespace cheapdscin.Controllers
 					Frequency = SitemapFrequency.Daily,
 					LastModified = DateTime.UtcNow.AddDays(-1),
 					Priority = 0.8,
-					Url = $"https://www.card2cash.in/credit-card-to-cash-in-{eachState.Key}"
+					Url = $"https://www.cheapdsc.com/credit-card-to-cash-in-{eachState.Key}"
 				});
 
 				foreach (var eachCity in Helper.CitiesByStateName(eachState.Key))
@@ -43,7 +43,7 @@ namespace cheapdscin.Controllers
 						Frequency = SitemapFrequency.Daily,
 						LastModified = DateTime.UtcNow.AddDays(-1),
 						Priority = 0.8,
-						Url = $"https://www.card2cash.in{eachCity.Key}"
+						Url = $"https://www.cheapdsc.com/credit-card-to-cash-in-{eachCity.Key}"
 					});
 				}
 			}
@@ -84,10 +84,12 @@ namespace cheapdscin.Controllers
 				"/",
 				"/contact",
 				"/about",
-				"/services/CreditCardToCash",
-				"/services/InstantCashOnCreditCard",
-				"/services/SpotCashOnCreditCard",
-				"/credit-card-to-cash-in-India"
+				"/product/CheapClass3Dsc",
+				"/product/CheapDgft",
+				"/product/CheapUsbToken",
+				"/Cheap-class-3-dsc-in-India",
+				"/Cheap-Dgft-in-India",
+				"/Cheap-usb-token-in-India",
 			};
 
 		}
