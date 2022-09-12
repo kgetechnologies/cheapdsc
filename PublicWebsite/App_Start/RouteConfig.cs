@@ -31,9 +31,9 @@ namespace cheapdscin
 			 new[] { "cheapdscin.Controllers" }
 		);
 		
-			Register(routes, "state1", "Class-3-dsc-in-{stateName}", "Index");
+			Register(routes, "state1", "Class-3-dsc-in-{stateName}", "ClassDscIn");
 
-			Register(routes, "state2", "cheap-Class-3-dsc-in-{stateName}", "Index");
+			Register(routes, "state2", "cheap-Class-3-dsc-in-{stateName}", "CheapClassDscIn");
 
 			Register(routes, "state3", "cheap-dgft-in-{stateName}", "Index");
 
@@ -52,14 +52,22 @@ namespace cheapdscin
 			);
 		}
 
-		private static void Register(RouteCollection routes, string name, string url, string action)
+		private static void Register(RouteCollection routes, string routeName, string customUrl, string actionMethod)
 		{
 			routes.MapRoute(
-				name: name,
-				url: url,
-				defaults: new { controller = "state", action = action, id = UrlParameter.Optional },
+				name: routeName,
+				url: customUrl,
+				defaults: new { controller = "state", action = actionMethod, stateName = UrlParameter.Optional },
 			 new[] { "cheapdscin.Controllers" }
 			);
+
+
+			//	routes.MapRoute(
+			//	name: "state",
+			//	url: "credit-card-to-cash-in-{stateName}",
+			//	defaults: new { controller = "state", action = "Index", stateName = UrlParameter.Optional },
+			//new[] { "Card2cashin.Controllers" }
+			//);
 		}
 	}
 }

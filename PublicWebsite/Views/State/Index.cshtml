@@ -1,212 +1,213 @@
 ﻿@using System.Linq
+@using System
 @{
-    var displayName = ViewBag.DisplayName;
-    var linkValue = ViewBag.LinkValue;
-    var url = $"https://cdn.card2cash.in/LocationBanner/{ViewBag.Id}.jpg";
+	string location = ViewBag.DisplayName; //Chennai
+	string displayName = ViewBag.PageTitle; //Class 3 Dsc In Chennai
+	string prefix = ViewBag.Prefix;//Class 3 Dsc
+	string seoTitle = @ViewBag.Title;//Class 3 Dsc in chennai | Cheap Class 3 Dsc Sales in chennai | Cheap Dsc in chennai
+	string pageType = @ViewBag.pageType;
+	var linkValue = ViewBag.LinkValue;
+	var price = ViewBag.Price;
+	var url = $"https://cdn.card2cash.in/LocationBanner/{ViewBag.Id}.jpg";
+
 
 }
 <div class="contact-page">
 	<section>
 		<div class="col-md-12">
-            <div class="container mt-2">
-                <article>
-                    <div class="post-image">
-                        <div class="post-heading">
-                            <h1 class="site-text-center">
-                                Credit Card to Cash in @displayName
-                            </h1>
-                        </div>
-                        <img src="@url"
-                             onerror="this.onerror=null; this.src='https://cdn.card2cash.in/LocationBanner/default.jpg'"
-                             class="w-100 responsive"
-                             alt="Credit Card to Cash in @displayName" title="Credit Card to Cash in @displayName" />
-                    </div>
-                    <h1 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; line-height: 46px; color: rgb(73, 73, 73); font-size: 40px; transition-timing-function: ease-in-out; transition-duration: 0.2s; padding: 0px;">
-                        <span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;">We </span>
-                        <font color="#00ff00" style="background-color: white; font-family: inherit; font-size: 2.5rem;">Encash </font>
-                        <span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;">Your </span><font color="#00ff00" style="font-family: inherit; font-size: 2.5rem;">Credit Card</font>
-                        <span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;"> Limit & we credit your bank account </span>
-                        <font color="#00ff00" style="font-family: inherit; font-size: 2.5rem;">instantly at 1.95% in @displayName</font><br>
-                    </h1>
-                    <p class="xs-margin-lr-auto margin-20px-bottom" style="box-sizing: border-box; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; transition-timing-function: ease-in-out; transition-duration: 0.2s;" open="" sans",="" sans-serif;="" font-size:="" 16px;="" background-color:="" rgb(248,="" 248,="" 248);"="">
-                        Do you have a credit limit and want to encash the limit to cash at the very low cost of 1.95% in @displayName, <span style="font-size: 0.87rem;">
-                            <b style="">
-                                <span style="background-color: rgb(255, 255, 0);"><font color="#ff0000">Credit Card to Cash in @displayName at 1.95%</font></span>
-                            </b>Helps you to do at your location.
-                        </span>
-                    </p>
-                    <ul>
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Card to Cash</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Spot Cash on Credit Card</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Spot Cash on Card</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Credit Card to cash</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
+			<div class="container mt-2">
+				<article>
+					<div class="post-image">
+						<div class="post-heading">
+							<h1 class="site-text-center">
+								@displayName
+							</h1>
+						</div>
+						<img src="@url"
+							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/LocationBanner/default.jpg'"
+							 class="w-100 responsive"
+							 alt="@displayName" title="@displayName" />
+					</div>
+					<h1 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; line-height: 46px; color: rgb(73, 73, 73); font-size: 40px; transition-timing-function: ease-in-out; transition-duration: 0.2s; padding: 0px;">
+						<span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;">You</span>
+						<font color="#00ff00" style="background-color: white; font-family: inherit; font-size: 2.5rem;">Can</font>
+						<span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;">Get</span>
+						<font color="#00ff00" style="font-family: inherit; font-size: 2.5rem;">@displayName</font>
+						<span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;"> at Just </span>
+						<font color="#00ff00" style="font-family: inherit; font-size: 2.5rem;">@price Today</font><br>
+					</h1>
+					<p class="xs-margin-lr-auto margin-20px-bottom" style="box-sizing: border-box; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; transition-timing-function: ease-in-out; transition-duration: 0.2s;" open="" sans",="" sans-serif;="" font-size:="" 16px;="" background-color:="" rgb(248,="" 248,="" 248);"="">
+						Are you looking for @prefix at the very low cost of @price  in @location<span style="font-size: 0.87rem;">
+							<b style="">
+								<span style="background-color: rgb(255, 255, 0);"><font color="#ff0000">@displayName at @price</font></span>
+							</b>Helps you to do at your location.
+						</span>
+					</p>
+					<ul>
+						@foreach (var eachTitle in seoTitle.Split('|'))
+						{
+							var val = @eachTitle.Trim();
+							<li>
+								<font color="#0000ff">
+									<span style="font-weight: 700;">@val</span>
+								</font>
+							</li>
+							<li>
+								<font color="#0000ff">
+									<span style="font-weight: 700;">@val at @price Only</span>
+								</font>
+							</li>
+						}
+					</ul>
+					<h4 class="site-text-center area-title alt-font text-dark-gray margin-20px-bottom font-weight-300 sm-width-100 xs-width-100" style="box-sizing: border-box; transition-timing-function: ease-in-out; transition-duration: 0.2s; font-family: Raleway, sans-serif; line-height: 46px; color: rgb(73, 73, 73); margin-right: 0px; margin-bottom: 20px; margin-left: 0px; font-size: 40px; padding: 0px;">
+						<span style="background-color: rgb(255, 156, 0);">
+							<span class="text-blue font-weight-500" style="box-sizing: border-box; transition-timing-function: ease-in-out; transition-duration: 0.2s; color: rgb(255, 255, 255);">@displayName at Just @price</span>
+						</span>
+					</h4>
 
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Instant Cash on Card</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
+					<p>
+						Get <b>@displayName</b> from <b>CheapDsc.com</b> with Paperless Process. <b>CheapDsc.com</b> allows users to buy <b>@prefix</b> online for Just <b>@price</b> who are located in and around <b>@location</b>.
+						You can use your <b>@prefix</b> for below
+					</p>
+					@if (pageType == "Dsc")
+					{
+						<ul>
+							<li>MCA e-filing</li>
+							<li>Income Tax e-filing</li>
+							<li>LLP Registration</li>
+							<li>GST Application</li>
+							<li>IE Code Registration</li>
+							<li>Patent and TM e-filing</li>
+							<li>Customs e-filing</li>
+							<li>Form 16, etc</li>
+						</ul>
+					}
+					else if (pageType == "Dgft")
+					{
+						<ul>
+							<li>Import &Aacute; Export</li>
+						</ul>
+					}
+					else if (pageType == "Usb")
+					{
+						<ul>
+							<li>Store Class 3 DSC</li>
+							<li>Store DGFT DSC</li>
+						</ul>
+					}
 
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Instant Cash on Credit Card</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
-
-                        <li>
-                            <font color="#0000ff"><span style="font-weight: 700;">Swipe Credit Card to Instant Cash</span></font><span style="font-weight: 700; font-size: 13.92px;">
-                                <font color="#0000ff"> in @displayName at 1.95%</font>
-                            </span>
-                        </li>
-                    </ul>
-                    <h4 class="site-text-center area-title alt-font text-dark-gray margin-20px-bottom font-weight-300 sm-width-100 xs-width-100" style="box-sizing: border-box; transition-timing-function: ease-in-out; transition-duration: 0.2s; font-family: Raleway, sans-serif; line-height: 46px; color: rgb(73, 73, 73); margin-right: 0px; margin-bottom: 20px; margin-left: 0px; font-size: 40px; padding: 0px;"><span style="background-color: rgb(255, 156, 0);">Instant <span class="text-red font-weight-500" style="box-sizing: border-box; transition-timing-function: ease-in-out; transition-duration: 0.2s; color: rgb(203, 52, 43);">1.95%</span> for Credit Card to cash in <span class="text-blue font-weight-500" style="box-sizing: border-box; transition-timing-function: ease-in-out; transition-duration: 0.2s; color: rgb(0, 171, 201);">@displayName</span></span></h4>
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr>
-                                <td>1.95%</td>
-                                <td><span style="color: rgb(35, 35, 35); font-family: Raleway, sans-serif; font-size: 13.92px;">All Domestic Personal Master & Visa Credit Card in <b>@displayName</b></span><br></td>
-                            </tr>
-                            <tr>
-                                <td><span style="font-size: 13.92px;">1.95%</span><br></td>
-                                <td><span style="color: rgb(35, 35, 35); font-family: Raleway, sans-serif; font-size: 13.92px;">Some Business & Corporate Credit Card</span> in <b>@displayName</b><br></td>
-                            </tr>
-                            <tr>
-                                <td><span style="font-size: 13.92px;">1.95%</span><br></td>
-                                <td><span style="color: rgb(35, 35, 35); font-family: Raleway, sans-serif; font-size: 13.92px;">Some Business & Corporate Credit Card</span> in <b>@displayName</b><br></td>
-                            </tr>
-                            <tr>
-                                <td>4.00%</td>
-                                <td><span style="color: rgb(35, 35, 35); font-family: Raleway, sans-serif; font-size: 13.92px;">All American Express Credit Card</span> in <b>@displayName</b><br></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h1 class="site-text-center"><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">We do </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">Credit Card to Cash </span><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">in </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@displayName</span></h1>
-                    <p><iframe class="responsive-iframe w-100" style="height:450px" src="//www.youtube.com/embed/_NZV6WEe51g"></iframe><br></p>
-                    <ul>
-                        <li>
-                            <a href="https://www.justdial.com/Chennai/Credit-Card-to-Cash-Near-Railway-Station-Guindy/044PXX44-XX44-200801110524-P3R2_BZDET" target="_blank" style="font-size: 0.87rem; background-color: white;">
-                                <font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for Credit Card to Cash</b></font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff">
-                                    <b>India Mart Reference for Credit Card to Cash</b>
-                                </font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/instant-cash-on-master-visa-credit-card-22460610791.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Master Credit Card to Cash</b></font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/instant-cash-on-amex-diner-club-credit-card-22460610691.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff">
-                                    <b>India Mart Reference for American Express Credit Card to Cash</b>
-                                </font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/get-spot-cash-on-credit-card-22461649130.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff">
-                                    <b>
-                                        India Mart Reference for Spot Cash on Credit Card
-                                    </b>
-                                </font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/instant-cash-on-master-visa-amex-diner-club-credit-card-22460610533.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Visa/Master/Diner Club/Amex Credit Card to Cash</b></font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/master-credit-card-services-22472278773.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Credit Card</b></font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.indiamart.com/proddetail/amex-credit-card-services-22472294430.html" target="_blank">
-                                <font face="Times New Roman" color="#0000ff"><b>India Mart Reference for American Express Credit Card to Cash</b></font>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/CardToCash" target="_blank">
-                                <font face="Times New Roman" color="#0000ff"><b style="">Twitter Reference for Credit Card to Cash</b></font>
-                            </a><br><span style="color: rgb(0, 0, 0); font-size: 0.87rem;">
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-                @{
-                    var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
-                    Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key);
-                    var _city1 = citiesList.Skip(citiesList.Count() / 2);
-                    var _city2 = citiesList.Take(citiesList.Count() / 2);
-                }
-                <h5 class="widgetheading">@SD.Value</h5>
-                <div class="row w-100">
-                    @if (_city2.Any())
-                    {
-                        <div class="col w-100">
-                            @foreach (var eachState in _city2)
-                            {
-                                <a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
-                            }
-                        </div>
-                    }
-                    @if (_city1.Any())
-                    {
-                        <div class="col w-100">
-                            @foreach (var eachState in _city1)
-                            {
-                                <a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
-                            }
-                        </div>
-                    }
-                </div>
-                    <h5 class="widgetheading">Servicing States</h5>
-                    @{
-                        var _states = cheapdscin.Helper.States;
-                        var _states1 = _states.Skip(_states.Count() / 2);
-                        var _states2 = _states.Take(_states.Count() / 2);
-                    }
-                    <div class="row w-100">
-                        @if (_states2.Any())
-                        {
-                            <div class="col w-100">
-                                @foreach (var eachState in _states2)
-                                {
-                                    <a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
-                                }
-                            </div>
-                        }
-                        @if (_states1.Any())
-                        {
-                            <div class="col w-100">
-                                @foreach (var eachState in _states1)
-                                {
-                                    <a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
-                                }
-                            </div>
-                        }
-                    </div>
-</section>
+					
+					<h1 class="site-text-center"><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">We do </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@displayName </span><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">in </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@location</span></h1>
+					<p><iframe class="responsive-iframe w-100" style="height:450px" src="//www.youtube.com/embed/_NZV6WEe51g"></iframe><br></p>
+					<ul>
+						<li>
+							<a href="https://www.justdial.com/Chennai/Credit-Card-to-Cash-Near-Railway-Station-Guindy/044PXX44-XX44-200801110524-P3R2_BZDET" target="_blank" style="font-size: 0.87rem; background-color: white;">
+								<font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for Credit Card to Cash</b></font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff">
+									<b>India Mart Reference for Credit Card to Cash</b>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/instant-cash-on-master-visa-credit-card-22460610791.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Master Credit Card to Cash</b></font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/instant-cash-on-amex-diner-club-credit-card-22460610691.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff">
+									<b>India Mart Reference for American Express Credit Card to Cash</b>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/get-spot-cash-on-credit-card-22461649130.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff">
+									<b>
+										India Mart Reference for Spot Cash on Credit Card
+									</b>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/instant-cash-on-master-visa-amex-diner-club-credit-card-22460610533.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Visa/Master/Diner Club/Amex Credit Card to Cash</b></font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/master-credit-card-services-22472278773.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff"><b>India Mart Reference for Credit Card</b></font>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.indiamart.com/proddetail/amex-credit-card-services-22472294430.html" target="_blank">
+								<font face="Times New Roman" color="#0000ff"><b>India Mart Reference for American Express Credit Card to Cash</b></font>
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/CardToCash" target="_blank">
+								<font face="Times New Roman" color="#0000ff"><b style="">Twitter Reference for Credit Card to Cash</b></font>
+							</a><br><span style="color: rgb(0, 0, 0); font-size: 0.87rem;">
+							</span>
+						</li>
+					</ul>
+				</article>
+				@{
+					var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
+					Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key);
+					var _city1 = citiesList.Skip(citiesList.Count() / 2);
+					var _city2 = citiesList.Take(citiesList.Count() / 2);
+				}
+				<h5 class="widgetheading">@SD.Value</h5>
+				<div class="row w-100">
+					@if (_city2.Any())
+					{
+						<div class="col w-100">
+							@foreach (var eachState in _city2)
+							{
+								<a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
+							}
+						</div>
+					}
+					@if (_city1.Any())
+					{
+						<div class="col w-100">
+							@foreach (var eachState in _city1)
+							{
+								<a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
+							}
+						</div>
+					}
+				</div>
+				<h5 class="widgetheading">Servicing States</h5>
+				@{
+					var _states = cheapdscin.Helper.States;
+					var _states1 = _states.Skip(_states.Count() / 2);
+					var _states2 = _states.Take(_states.Count() / 2);
+				}
+				<div class="row w-100">
+					@if (_states2.Any())
+					{
+						<div class="col w-100">
+							@foreach (var eachState in _states2)
+							{
+								<a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+							}
+						</div>
+					}
+					@if (_states1.Any())
+					{
+						<div class="col w-100">
+							@foreach (var eachState in _states1)
+							{
+								<a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+							}
+						</div>
+					}
+				</div>
+	</section>
 </div>
