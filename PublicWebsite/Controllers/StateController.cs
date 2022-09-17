@@ -58,6 +58,7 @@ namespace cheapdscin.Controllers
 			{
 				stateName = stateName.Replace(prefix, "");
 			}
+
 			ViewBag.DisplayName = stateName?.Replace("-", " ");
 			ViewBag.LinkValue = stateName?.Replace(" ", "-");
 			ViewBag.Id = Helper.GetIdByName(stateName);
