@@ -8,10 +8,10 @@
 	<link rel="stylesheet" href="~/css/style.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js" integrity="sha512-6UofPqm0QupIL0kzS/UIzekR73/luZdC6i/kXDbWnLOJoqwklBK6519iUnShaYceJ0y4FaiPtX/hRnV/X/xlUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </head>
 <body>
 
@@ -29,7 +29,10 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<!-- navbar brand image on navbar -->
-				<a class="navbar-brand mr-auto" href="/"><img src="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Logo/Logo.png" height="60" width="200" alt="Credit Card to Cash"></a>
+				<a class="navbar-brand mr-auto" href="/">
+					<img class="lazy" data-lazysrc1="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Logo/Logo.png"
+						 height="60" width="200" alt="Credit Card to Cash">
+				</a>
 
 				<!-- collapse button in navbar -->
 				<button class="navbar-toggler site-top" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -151,7 +154,7 @@
 							<li><a href="https://cheapdsc.tumblr.com/" target="_blank"><i class="fab fa-tumblr"></i></a></li>
 							<li>
 								<a href="https://cheapdsc.blogspot.com/" target="_blank">
-									<img src="https://cdn.card2cash.in/uploads/blogger.svg" style="width: 7% !important;align-items: center !important;margin-bottom: 0.8% !important;">
+									<img class="lazy" data-lazysrc1="https://cdn.card2cash.in/uploads/blogger.svg" loading="lazy" style="width: 7% !important;align-items: center !important;margin-bottom: 0.8% !important;">
 								</a>
 							</li>
 
@@ -166,5 +169,15 @@
 
 
 </body>
-
 </html>
+<script>
+	function ReLoadImages() {
+		setTimeout(() => {
+			$('img[data-lazysrc1]').each(function () {
+				$(this).attr('src', $(this).attr('data-lazysrc1'));
+				$(this).removeAttr('data-lazysrc1');
+			})
+		}, 40);
+	}
+	$(document).ready(ReLoadImages);
+</script>

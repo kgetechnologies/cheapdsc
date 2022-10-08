@@ -123,11 +123,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\product.css" />
-    <Content Include="css\services.css" />
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="images\about.png" />
     <Content Include="images\blog1.jpg" />
     <Content Include="images\blogger.svg" />
