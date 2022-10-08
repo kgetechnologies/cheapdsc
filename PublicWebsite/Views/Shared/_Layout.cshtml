@@ -61,7 +61,7 @@
 								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
-								@foreach (var eachState in cheapdscin.Helper.States)
+								@foreach (var eachState in cheapdscin.Helper.States)//StatesGroupedByAlphabet to have 2 level menu
 								{
 									<a class="dropdown-item" href="~/cheap-Class-3-dsc-in-@eachState.Key">@eachState.Value</a>
 								}

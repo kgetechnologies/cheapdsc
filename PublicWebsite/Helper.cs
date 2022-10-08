@@ -12,6 +12,20 @@ namespace cheapdscin
 {
 	public class Helper
 	{
+		public static List<StateGroupByAlpha> StatesGroupedByAlphabet
+		{
+			get
+			{
+				var grp = States.GroupBy(f => f.Key.Substring(0, 1));
+				var op = new List<StateGroupByAlpha>();
+				foreach (var g in grp)
+				{
+					var val = States.Where(w => w.Key.StartsWith(g.Key)).ToDictionary(s => s.Key, y => y.Value);
+					op.Add(new StateGroupByAlpha() { Alpha = g, Locations = val });
+				}
+				return op;
+			}
+		}
 		public static Dictionary<string, String> States
 		{
 			get

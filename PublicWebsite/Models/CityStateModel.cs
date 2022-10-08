@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.SqlServer.Server;
+using System.Collections.Generic;
 
 namespace cheapdscin.Models
 {  
@@ -19,4 +20,10 @@ namespace cheapdscin.Models
 		public string id { get; set; }
 	}
 
+
+    public class StateGroupByAlpha
+    {
+        public string Alpha { get; set; }
+        public Dictionary<string, string> Locations { get; set; }
+	}
 }
