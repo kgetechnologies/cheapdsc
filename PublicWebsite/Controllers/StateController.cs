@@ -28,27 +28,73 @@ namespace cheapdscin.Controllers
 
 		public ActionResult ClassDscIn(string stateName)
 		{
-			var prefix = "Class-3-dsc-in-";
-			var desc = "Class 3 Dsc in {0}, Cheap Class 3 Dsc Sales in {0}, Cheap Dsc in {0}";
-			var title = "Class 3 Dsc in {0} | Cheap Class 3 Dsc Sales in {0} | Cheap Dsc in {0}";
+			var prefix = "Class-3-DSC-in-";
+			var desc = "Class 3 Dsc in {0}, Class 3 Dsc Sales in {0}, Class 3 Dsc near {0}";
+			var title = "Class 3 Dsc in {0} | Class 3 Dsc Sales in {0} | Class 3 Dsc near {0}";
 			ViewBag.pageType = "Dsc";
-
+			ViewBag.CdnFolder = "Class3Individual";
 			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
 		public ActionResult CheapClassDscIn(string stateName)
 		{
-			var prefix = "cheap-Class-3-dsc-in-";
-			var desc = "Cheap Class 3 Dsc in {0}, Class 3 Dsc Sales in {0}, Cheap Dsc in {0}, Cheap Class 3 Dsc near {0}";
-			var title = "Cheap Class 3 Dsc in {0} | Class 3 Dsc Sales in {0} | Cheap Dsc in {0} | Cheap Class 3 Dsc near {0}";
+			var prefix = "cheap-Class-3-DSC-in-";
+			var desc = "Cheap Class 3 Dsc in {0}, Cheap Class 3 Dsc Sales in {0}, Cheap Class 3 Dsc near {0}";
+			var title = "Cheap Class 3 Dsc in {0} | Cheap Class 3 Dsc Sales in {0} | Cheap Class 3 Dsc near {0}";
 			ViewBag.pageType = "Dsc";
-
+			ViewBag.CdnFolder = "Class3Individual";
 			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
 
+		public ActionResult Dgft(string stateName)
+		{
+			var prefix = "Dgft-in-";
+			var desc = "DGFT in {0}, DGFT Sales in {0}, DGFT near {0}";
+			var title = "DGFT in {0} | DGFT Sales in {0} | DGFT near {0}";
+			ViewBag.pageType = "Dgft";
+			ViewBag.CdnFolder = "Class3Individual";
+			return Process(prefix, desc, title, stateName, "Index", "999*");
+		}
+
+		public ActionResult CheapDgft(string stateName)
+		{
+			var prefix = "cheap-DGFT-in-";
+			var desc = "Cheap DGFT in {0}, Cheap DGFT Sales in {0}, Cheap DGFT near {0}";
+			var title = "Cheap DGFT in {0} | Cheap DGFT Sales in {0} | Cheap DGFT near {0}";
+			ViewBag.pageType = "Dgft";
+			ViewBag.CdnFolder = "Class3Individual";
+			return Process(prefix, desc, title, stateName, "Index", "999*");
+		}
+
+
+		public ActionResult Usb(string stateName)
+		{
+			var prefix = "Usb-Token-in-";
+			var desc = "Usb Token in {0}, Usb Token Sales in {0}, Usb Token near {0}";
+			var title = "Usb Token in {0} | Usb Token Sales in {0} | Usb Token near {0}";
+			ViewBag.pageType = "Usb";
+			ViewBag.CdnFolder = "Class3Individual";
+			return Process(prefix, desc, title, stateName, "Index", "312*");
+		}
+
+		public ActionResult CheapUsb(string stateName)
+		{
+			var prefix = "cheap-Usb-Token-in-";
+			var desc = "Cheap Usb Token in {0}, Cheap Usb Token Sales in {0}, Cheap Usb Token near {0}";
+			var title = "Cheap Usb Token in {0} | Cheap Usb Token Sales in {0} | Cheap Usb Token near {0}";
+			ViewBag.pageType = "Usb";
+			ViewBag.CdnFolder = "Class3Individual";
+			return Process(prefix, desc, title, stateName, "Index", "312*");
+		}
+
+
+
+
+
 		private ActionResult Process(string prefix, string desc, string title, string stateName, string viewName, string price)
 		{
+			ViewBag.UriPrefix = prefix;
 			ViewBag.PageTitle = CultureInfo.CurrentCulture.TextInfo.ToTitleCase((prefix + stateName)?.Replace("-", " "));
 
 			ViewBag.Prefix = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(prefix?.Replace("-in-", "")?.Replace("-", " "));

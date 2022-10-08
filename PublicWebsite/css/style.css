@@ -67,7 +67,7 @@ a:hover {
     position: absolute;
     background: #0cbaa4;
     min-width: 160px;
-    margin-top: 25px;
+    margin-top: 2px;
     border-radius: 0;
 }
 
@@ -134,7 +134,7 @@ a:hover {
 
 
 footer {
-    padding: 50px 0 0 0;
+    padding: 15px 0 0 0;
     color: #f8f8f8;
     background: #0cbaa4;
 }
@@ -332,7 +332,7 @@ ol {
 }
 
 article {
-    margin: 40px 0 40px 0;
+    margin: 10px 0 10px 0;
 }
 
 .about-image-heading h1 {
@@ -451,7 +451,7 @@ a:hover {
     position: absolute;
     background: #0cbaa4;
     min-width: 160px;
-    margin-top: 25px;
+    margin-top: 2px;
     border-radius: 0;
 }
 
@@ -497,7 +497,7 @@ a:hover {
 
 
 footer {
-    padding: 50px 0 0 0;
+    padding: 15px 0 0 0;
     color: #f8f8f8;
     background: #0cbaa4;
 }
@@ -777,7 +777,7 @@ a:hover {
     position: absolute;
     background: #0cbaa4;
     min-width: 160px;
-    margin-top: 25px;
+    margin-top: 2px;
     border-radius: 0;
 }
 
@@ -823,7 +823,7 @@ a:hover {
 
 
 footer {
-    padding: 50px 0 0 0;
+    padding: 15px 0 0 0;
     color: #f8f8f8;
     background: #0cbaa4;
 }
@@ -1054,6 +1054,9 @@ ul li {
 
 /*   servicescc css end  */
 
+.Mobile-footer-leftPadding{
+    padding-left:1px!important;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -1119,7 +1122,7 @@ ul li {
         position: absolute;
         background: #0cbaa4;
         min-width: 160px;
-        margin-top: 25px;
+        margin-top: 2px;
         border-radius: 0;
     }
 
@@ -1186,7 +1189,7 @@ ul li {
 
 
     footer {
-        padding: 50px 0 0 0;
+        padding: 15px 0 0 0;
         color: #f8f8f8;
         background: #0cbaa4;
     }
@@ -1384,7 +1387,7 @@ ul li {
     }
 
     article {
-        margin: 40px 0 40px 0;
+        margin: 10px 0 10px 0;
     }
 
     .about-image-heading h1 {
@@ -1504,7 +1507,7 @@ ul li {
         position: absolute;
         background: #0cbaa4;
         min-width: 160px;
-        margin-top: 25px;
+        margin-top: 2px;
         border-radius: 0;
     }
 
@@ -1550,7 +1553,7 @@ ul li {
 
 
     footer {
-        padding: 50px 0 0 0;
+        padding: 15px 0 0 0;
         color: #f8f8f8;
         background: #0cbaa4;
     }
@@ -1825,7 +1828,7 @@ ul li {
         position: absolute;
         background: #0cbaa4;
         min-width: 160px;
-        margin-top: 25px;
+        margin-top: 2px;
         border-radius: 0;
     }
 
@@ -1871,7 +1874,7 @@ ul li {
 
 
     footer {
-        padding: 50px 0 0 0;
+        padding: 15px 0 0 0;
         color: #f8f8f8;
         background: #0cbaa4;
     }
@@ -2106,4 +2109,5 @@ ul li {
     }
     /*   servicescc css end  */
 }
+
 

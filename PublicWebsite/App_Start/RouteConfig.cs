@@ -30,18 +30,26 @@ namespace cheapdscin
 			defaults: new { controller = "Home", action = "about", id = UrlParameter.Optional },
 			 new[] { "cheapdscin.Controllers" }
 		);
-		
+
+			routes.MapRoute(
+		name: "sitemap",
+		url: "sitemap/{id}",
+		defaults: new { controller = "sitemap", action = "Index", id = UrlParameter.Optional },
+		 new[] { "cheapdscin.Controllers" }
+	);
+
+
 			Register(routes, "state1", "Class-3-dsc-in-{stateName}", "ClassDscIn");
 
 			Register(routes, "state2", "cheap-Class-3-dsc-in-{stateName}", "CheapClassDscIn");
 
-			Register(routes, "state3", "cheap-dgft-in-{stateName}", "Index");
+			Register(routes, "state3", "cheap-dgft-in-{stateName}", "CheapDgft");
 
-			Register(routes, "state4", "dgft-in-{stateName}", "Index");
+			Register(routes, "state4", "dgft-in-{stateName}", "Dgft");
 
-			Register(routes, "state5", "cheap-usb-token-in-{stateName}", "Index");
+			Register(routes, "state5", "cheap-usb-token-in-{stateName}", "CheapUsb");
 
-			Register(routes, "state6", "usb-token-in-{stateName}", "Index");
+			Register(routes, "state6", "usb-token-in-{stateName}", "Usb");
 
 
 			routes.MapRoute(

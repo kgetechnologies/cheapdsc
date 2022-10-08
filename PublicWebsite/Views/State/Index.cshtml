@@ -4,11 +4,12 @@
 	string location = ViewBag.DisplayName; //Chennai
 	string displayName = ViewBag.PageTitle; //Class 3 Dsc In Chennai
 	string prefix = ViewBag.Prefix;//Class 3 Dsc
+	string uriPrefix = ViewBag.UriPrefix;//cheap-Usb-Token-in-
 	string seoTitle = @ViewBag.Title;//Class 3 Dsc in chennai | Cheap Class 3 Dsc Sales in chennai | Cheap Dsc in chennai
 	string pageType = @ViewBag.pageType;
 	var linkValue = ViewBag.LinkValue;
 	var price = ViewBag.Price;
-	var url = $"https://cdn.card2cash.in/LocationBanner/{ViewBag.Id}.jpg";
+	var url = $"https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Location/{ViewBag.CdnFolder}/{ViewBag.Id}.jpg";
 
 
 }
@@ -24,7 +25,7 @@
 							</h1>
 						</div>
 						<img src="@url"
-							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/LocationBanner/default.jpg'"
+							 onerror="this.onerror='https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Location/Class3Individual/default.jpg'; this.src='@url'"
 							 class="w-100 responsive"
 							 alt="@displayName" title="@displayName" />
 					</div>
@@ -86,6 +87,7 @@
 					{
 						<ul>
 							<li>Import &Aacute; Export</li>
+							<li>Wordwide Trade Business</li>
 						</ul>
 					}
 					else if (pageType == "Usb")
@@ -93,6 +95,7 @@
 						<ul>
 							<li>Store Class 3 DSC</li>
 							<li>Store DGFT DSC</li>
+							<li>Store minimum 1 and Max 10* Certificate in each Usb Token</li>
 						</ul>
 					}
 
@@ -102,76 +105,50 @@
 
 					<ul>
 						<li>
-							<a href="https://www.justdial.com/jdmart/chennai/Cheap-Dsc/044PXX44-XX44-190316080520-X6F9_BZDET/catalogue?ref=cheapdsc.com/@ViewBag.CanonicalUri" target="_blank" style="font-size: 0.87rem; background-color: white;">
-								<font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for Cheap Dsc</b></font>
+							<a href="https://www.justdial.com/jdmart/chennai/Cheap-Dsc/044PXX44-XX44-190316080520-X6F9_BZDET/catalogue?ref=cheapdsc.com/@ViewBag.CanonicalUri"
+							   target="_blank" style="font-size: 0.87rem; background-color: white;">
+								<font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for @prefix</b></font>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.indiamart.com/cheap-dsc/?ref=cheapdsc.com" target="_blank">
+							<a href="https://www.indiamart.com/cheap-dsc/?ref=cheapdsc.com/@ViewBag.CanonicalUri" target="_blank">
 								<font face="Times New Roman" color="#0000ff">
-									<b>India Mart Reference for Cheap Dsc</b>
+									<b>India Mart Reference for @prefix</b>
 								</font>
-							</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/CardToCash" target="_blank">
-								<font face="Times New Roman" color="#0000ff"><b style="">Twitter Reference for Cheap Dsc</b></font>
 							</a>
 						</li>
 					</ul>
 				</article>
 				@{
 					var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
-					Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key);
-					var _city1 = citiesList.Skip(citiesList.Count() / 2);
-					var _city2 = citiesList.Take(citiesList.Count() / 2);
+					Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key, @uriPrefix);
+
 				}
 				<h5 class="widgetheading">@SD.Value</h5>
-				<div class="row w-100">
-					@if (_city2.Any())
-					{
-						<div class="col w-100">
-							@foreach (var eachState in _city2)
-							{
-								<a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
-							}
-						</div>
-					}
-					@if (_city1.Any())
-					{
-						<div class="col w-100">
-							@foreach (var eachState in _city1)
-							{
-								<a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
-							}
-						</div>
-					}
+				<div class="container">
+					<div class="row">
+						@foreach (var eachState in citiesList.OrderBy(f => f.Value.ToString().Length))
+						{
+							<div class="col-4">
+								<a class="dropdown-item" title="@eachState.Value.name"
+								   href="@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value.name</a>
+							</div>
+						}
+					</div>
 				</div>
+
 				<h5 class="widgetheading">Servicing States</h5>
-				@{
-					var _states = cheapdscin.Helper.States;
-					var _states1 = _states.Skip(_states.Count() / 2);
-					var _states2 = _states.Take(_states.Count() / 2);
-				}
-				<div class="row w-100">
-					@if (_states2.Any())
-					{
-						<div class="col w-100">
-							@foreach (var eachState in _states2)
-							{
-								<a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
-							}
-						</div>
-					}
-					@if (_states1.Any())
-					{
-						<div class="col w-100">
-							@foreach (var eachState in _states1)
-							{
-								<a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
-							}
-						</div>
-					}
+				<div class="container">
+					<div class="row">
+						@foreach (var eachState in cheapdscin.Helper.States.OrderBy(f => f.Value))
+						{
+							<div class="col-4">
+								<a class="dropdown-item" title="@eachState.Value" href="/@uriPrefix@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value</a>
+							</div>
+						}
+					</div>
 				</div>
+
+
 	</section>
 </div>

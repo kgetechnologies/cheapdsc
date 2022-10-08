@@ -109,7 +109,7 @@ namespace cheapdscin
 				id = op.SelectMany(x => x.cities?.Where(f => !string.IsNullOrEmpty(f.name) && f.name?.Replace(" ", "-").ToLower() == stateName))?.FirstOrDefault()?.id ?? "";
 			return id;
 		}
-		public static Dictionary<string, City> CitiesByStateName(string stateName)
+		public static Dictionary<string, City> CitiesByStateName(string stateName, string uriPrefix = "cheap-Class-3-dsc-in-")
 		{
 			List<CityStateModel> op = GetStateByCache();
 			var result = new Dictionary<string, City>();
@@ -139,7 +139,7 @@ namespace cheapdscin
 				{
 					op1.ForEach(a =>
 					{
-						var key = $"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}";
+						var key = $"/{uriPrefix}{a.name.Replace(" ", "-")}";
 						if (!result.ContainsKey(key))
 							result.Add(key, a);
 					});

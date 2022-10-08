@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Web;
 using System.Web.Mvc;
 using System.Xml.Linq;
 
@@ -15,42 +16,92 @@ namespace cheapdscin.Controllers
 	public class sitemapController : Controller
 	{
 		// GET: sitemap
-		public ActionResult Index(string id = "")
+		public ActionResult Index(string id)
 		{
-			var citiesList = Pages();
-			var op = citiesList.Select(f => new SitemapNode()
+			var op = new List<SitemapNode>();
+			if (string.IsNullOrEmpty(id))
 			{
-				Frequency = SitemapFrequency.Daily,
-				LastModified = DateTime.UtcNow.AddDays(-1),
-				Priority = 0.8,
-				Url = $"https://www.cheapdsc.com{f}"
-			}).ToList();
-
-			foreach (var eachState in Helper.States)
-			{
-				op.Add(new SitemapNode()
+				var citiesList = Pages();
+				op = citiesList.Select(f => new SitemapNode()
 				{
 					Frequency = SitemapFrequency.Daily,
 					LastModified = DateTime.UtcNow.AddDays(-1),
 					Priority = 0.8,
-					Url = $"https://www.cheapdsc.com/credit-card-to-cash-in-{eachState.Key}"
-				});
+					Url = $"https://www.cheapdsc.com{f}"
+				}).ToList();
+			}
+			else
+			{
+				op = GenerateForProductPages(op, id);
+			}
+			
+			return this.Content(GetSitemapDocument(op), "application/xml", Encoding.UTF8);
+		}
 
-				foreach (var eachCity in Helper.CitiesByStateName(eachState.Key))
+		private List<SitemapNode> GenerateForProductPages(List<SitemapNode> op,string id)
+		{
+			var uri = string.Empty;//Class-3-dsc-in-
+			switch (id)
+			{
+				case "ClassDscIn":
+					{
+						uri = "Class-3-dsc-in-";
+						break;
+					}
+				case "CheapClassDscIn":
+					{
+						uri = "cheap-Class-3-dsc-in-";
+						break;
+					}
+				case "CheapDgft":
+					{
+						uri = "cheap-dgft-in-";
+						break;
+					}
+				case "Dgft":
+					{
+						uri = "dgft-in-";
+						break;
+					}
+				case "CheapUsb":
+					{
+						uri = "cheap-usb-token-in-";
+						break;
+					}
+				case "Usb":
+					{
+						uri = "usb-token-in-";
+						break;
+					}
+			}
+			if (!string.IsNullOrEmpty(uri))
+			{
+				foreach (var eachState in Helper.States)
 				{
 					op.Add(new SitemapNode()
 					{
 						Frequency = SitemapFrequency.Daily,
 						LastModified = DateTime.UtcNow.AddDays(-1),
 						Priority = 0.8,
-						Url = $"https://www.cheapdsc.com/credit-card-to-cash-in-{eachCity.Key}"
+						Url = $"https://www.cheapdsc.com/{uri}{eachState.Key}"
 					});
+
+					foreach (var eachCity in Helper.CitiesByStateName(eachState.Key,uri))
+					{
+						op.Add(new SitemapNode()
+						{
+							Frequency = SitemapFrequency.Daily,
+							LastModified = DateTime.UtcNow.AddDays(-1),
+							Priority = 0.8,
+							Url = $"https://www.cheapdsc.com{eachCity.Key}"
+						});
+					}
 				}
 			}
-			return this.Content(GetSitemapDocument(op), "application/xml", Encoding.UTF8);
+
+			return op;
 		}
 
-		//
 		public string GetSitemapDocument(IEnumerable<SitemapNode> sitemapNodes)
 		{
 			XNamespace xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9";
