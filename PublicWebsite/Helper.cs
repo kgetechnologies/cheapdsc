@@ -21,7 +21,7 @@ namespace cheapdscin
 				foreach (var g in grp)
 				{
 					var val = States.Where(w => w.Key.StartsWith(g.Key)).ToDictionary(s => s.Key, y => y.Value);
-					op.Add(new StateGroupByAlpha() { Alpha = g, Locations = val });
+					op.Add(new StateGroupByAlpha() { Alpha = g.Key, Locations = val });
 				}
 				return op;
 			}

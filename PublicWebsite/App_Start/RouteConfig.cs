@@ -19,15 +19,15 @@ namespace cheapdscin
 
 			routes.MapRoute(
 			name: "contact",
-			url: "contact",
-			defaults: new { controller = "Home", action = "contact", id = UrlParameter.Optional },
+			url: "ContactUs",
+			defaults: new { controller = "Home", action = "ContactUs", id = UrlParameter.Optional },
 			 new[] { "cheapdscin.Controllers" }
 		);
 
 			routes.MapRoute(
 			name: "about",
-			url: "about",
-			defaults: new { controller = "Home", action = "about", id = UrlParameter.Optional },
+			url: "AboutUs",
+			defaults: new { controller = "Home", action = "AboutUs", id = UrlParameter.Optional },
 			 new[] { "cheapdscin.Controllers" }
 		);
 
@@ -51,6 +51,8 @@ namespace cheapdscin
 
 			Register(routes, "state6", "usb-token-in-{stateName}", "Usb");
 
+			RegisterProduct(routes, "cheap-class3-individual-signature", "cheap-class3-individual-signature", "CheapClass3IndividualSignature");
+
 
 			routes.MapRoute(
 				name: "Default",
@@ -68,14 +70,16 @@ namespace cheapdscin
 				defaults: new { controller = "state", action = actionMethod, stateName = UrlParameter.Optional },
 			 new[] { "cheapdscin.Controllers" }
 			);
+		}
 
-
-			//	routes.MapRoute(
-			//	name: "state",
-			//	url: "credit-card-to-cash-in-{stateName}",
-			//	defaults: new { controller = "state", action = "Index", stateName = UrlParameter.Optional },
-			//new[] { "Card2cashin.Controllers" }
-			//);
+		private static void RegisterProduct(RouteCollection routes, string routeName, string customUrl, string actionMethod)
+		{
+			routes.MapRoute(
+				name: routeName,
+				url: customUrl,
+				defaults: new { controller = "Product", action = actionMethod, stateName = UrlParameter.Optional },
+			 new[] { "cheapdscin.Controllers" }
+			);
 		}
 	}
 }

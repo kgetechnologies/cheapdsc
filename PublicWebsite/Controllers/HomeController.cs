@@ -2,7 +2,7 @@
 
 namespace cheapdscin.Controllers
 {
-	public class HomeController : Controller
+	public class HomeController : BaseController
 	{
 		public ActionResult Index()
 		{
@@ -13,11 +13,11 @@ namespace cheapdscin.Controllers
 			ViewBag.desc = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 			ViewBag.Title = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 
-
+		//	Resources.Get.Content();
 			return View();
 		}
 
-		public ActionResult About()
+		public ActionResult AboutUs()
 		{
 			
 			ViewBag.DisplayName = "About";
@@ -29,7 +29,7 @@ namespace cheapdscin.Controllers
 			return View();
 		}
 
-		public ActionResult Contact()
+		public ActionResult ContactUs()
 		{
 			ViewBag.DisplayName = "Contact";
 			ViewBag.LinkValue = "Contact";

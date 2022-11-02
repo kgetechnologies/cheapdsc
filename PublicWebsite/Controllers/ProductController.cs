@@ -9,7 +9,11 @@ namespace cheapdscin.Controllers
         {
           return  Redirect("/CheapClass3Dsc");
         }
-        public ActionResult CheapClass3Dsc()
+        public ActionResult CheapClass3IndividualSignature()
+        {
+            return View();
+        }
+		public ActionResult CheapClass3Dsc()
         {
             ViewBag.DisplayName = "Cheap Class 3 DSC";
             ViewBag.LinkValue = "";

@@ -1,0 +1,117 @@
+﻿<nav class="menu-classic menu-fixed" data-menu-anima="fade-in">
+	<div class="menu-mini scroll-hide">
+		<div class="container">
+			<ul>
+				<li><i class="im-phone"></i> (02) 1234556789</li>
+				<li><i class="im-envelope"></i> example@company.com</li>
+			</ul>
+			<div class="menu-right">
+				<div class="icon-links icon-social social-colors-hover">
+					<a target="_blank" class="facebook" href="#"><i class="icon-facebook"></i></a>
+					<a target="_blank" class="twitter" href="#"><i class="icon-twitter"></i></a>
+					<a target="_blank" class="linkedin" href="#"><i class="icon-linkedin"></i></a>
+				</div>
+				<ul class="lan-menu">
+					<li class="dropdown">
+						<a href="#"><img src="/themekit/media/en.png" />EN </a>
+						<ul>
+							<li><a href="#"><img src="/themekit/media/it.png" />IT</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="menu-brand">
+			<a href="#">
+				<img class="logo-default" src="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Logo/Logo.png" alt="logo" />
+				<img class="logo-retina" src="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Logo/Logo.png" alt="logo" />
+			</a>
+		</div>
+		<i class="menu-btn"></i>
+		<div class="menu-cnt">
+			<ul>
+				<li>
+					<a href="/?ref=mainMenu">Home</a>
+				</li>
+				<li class="dropdown">
+					<a href="#">Products</a>
+					<ul>
+						<li class="dropdown-submenu">
+							<a>Class 3</a>
+							<ul>
+								<li class="dropdown-submenu">
+									<a href="#">Individual</a>
+									<ul>
+										<li><a href="/cheap-class3-individual-signature">Signature</a></li>
+										<li><a href="#">Signature With Usb Token</a></li>
+										<li><a href="#">Encryption</a></li>
+										<li><a href="#">Encryption With Usb Token</a></li>
+										<li><a href="#">Combo</a></li>
+										<li><a href="#">Combo With Usb Token</a></li>
+
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="#">Organisation</a>
+									<ul>
+										<li><a href="#">Signature</a></li>
+										<li><a href="#">Signature With Usb Token</a></li>
+										<li><a href="#">Encryption</a></li>
+										<li><a href="#">Encryption With Usb Token</a></li>
+										<li><a href="#">Combo</a></li>
+										<li><a href="#">Combo With Usb Token</a></li>
+
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown-submenu">
+							<a>Import &amp; Export</a>
+							<ul>
+								<li><a href="#">DGFT Certificate</a></li>
+								<li><a href="#">DGFT With Usb Token</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Usb Token</a></li>
+					</ul>
+				</li>
+
+
+				<li class="mega-dropdown">
+					<a href="#">Servicing Areas</a>
+					<div class="mega-menu fade-in" style="transition-duration: 0ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms;">
+						<div class="col">
+							<h5></h5>
+							<ul class="icon-list">
+								@{ int count = 1;}
+								@foreach (var eachState in cheapdscin.Helper.StatesGroupedByAlphabet)//StatesGroupedByAlphabet to have 2 level menu
+								{
+									foreach (var _location in eachState.Locations)
+									{
+										<li><i class="im-paper-plane"></i> <a href="/Class-3-dsc-in-@_location.Key">@_location.Value</a></li>
+										count = count + 1;
+
+										if (count == 10 || count == 19 || count == 28)
+										{
+											@Html.Raw("</ul></div><div class=\"col\"><h5></h5><ul class=\"icon-list\">")
+										}
+									}
+								}
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="/AboutUs?ref=mainMenu">About Us</a>
+				</li>
+				<li>
+					<a href="/ContactUs?ref=mainMenu">Contact Us</a>
+				</li>
+
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+</nav>

@@ -111,6 +111,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\sitemapController.cs" />
@@ -120,7 +121,21 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Models\CityStateModel.cs" />
+    <Compile Include="Models\Languages.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceFile\en-GB.Designer.cs">
+      <DependentUpon>en-GB.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ResourceFile\en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CultureHelper.cs" />
+    <Compile Include="Resources\Get.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
@@ -137,6 +152,81 @@
     <Content Include="images\swipe.png" />
     <Content Include="images\topic6.png" />
     <Content Include="images\topic7.jpg" />
+    <Content Include="themekit\css\bootstrap-grid.css" />
+    <Content Include="themekit\css\contact-form.css" />
+    <Content Include="themekit\css\content-box.css" />
+    <Content Include="themekit\css\glide.css" />
+    <Content Include="themekit\css\magnific-popup.css" />
+    <Content Include="themekit\css\media-box.css" />
+    <Content Include="themekit\css\prettify.css" />
+    <Content Include="themekit\css\rtl.css" />
+    <Content Include="themekit\css\skin.css" />
+    <Content Include="themekit\css\social.css" />
+    <Content Include="themekit\css\style.css" />
+    <Content Include="themekit\media\en.png" />
+    <Content Include="themekit\media\favicon.png" />
+    <Content Include="themekit\media\hd-empty.png" />
+    <Content Include="themekit\media\hd-mk.png" />
+    <Content Include="themekit\media\hd.png" />
+    <Content Include="themekit\media\icons\fontawesome\all.css" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="themekit\media\icons\icons.svg" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\icomoon.svg" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\social.svg" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons.min.css" />
+    <Content Include="themekit\media\icons\iconsmind\solid-icons-fonts\icomoon.svg" />
+    <Content Include="themekit\media\icons\iconsmind\solid-icons.min.css" />
+    <Content Include="themekit\media\it.png" />
+    <Content Include="themekit\media\loader.svg" />
+    <Content Include="themekit\media\logo.svg" />
+    <Content Include="themekit\media\long-empty.png" />
+    <Content Include="themekit\media\long.png" />
+    <Content Include="themekit\media\marker.png" />
+    <Content Include="themekit\media\preview.png" />
+    <Content Include="themekit\media\square-empty.png" />
+    <Content Include="themekit\media\square.png" />
+    <Content Include="themekit\media\user.png" />
+    <Content Include="themekit\media\video-poster.png" />
+    <Content Include="themekit\media\video.mp4" />
+    <Content Include="themekit\media\wide-empty.png" />
+    <Content Include="themekit\media\wide.png" />
+    <Content Include="themekit\scripts\contact-form.js" />
+    <Content Include="themekit\scripts\contact-form\contact-form.js" />
+    <Content Include="themekit\scripts\contact-form\datepicker.min.js" />
+    <Content Include="themekit\scripts\custom.js" />
+    <Content Include="themekit\scripts\glide.min.js" />
+    <Content Include="themekit\scripts\imagesloaded.min.js" />
+    <Content Include="themekit\scripts\isotope.min.js" />
+    <Content Include="themekit\scripts\jquery.min.js" />
+    <Content Include="themekit\scripts\magnific-popup.min.js" />
+    <Content Include="themekit\scripts\main.js" />
+    <Content Include="themekit\scripts\maps.min.js" />
+    <Content Include="themekit\scripts\miniTip.min.js" />
+    <Content Include="themekit\scripts\pagination.min.js" />
+    <Content Include="themekit\scripts\parallax.min.js" />
+    <Content Include="themekit\scripts\prettify.js" />
+    <Content Include="themekit\scripts\progress.js" />
+    <Content Include="themekit\scripts\slimscroll.min.js" />
+    <Content Include="themekit\scripts\social.min.js" />
+    <Content Include="themekit\scripts\source\glide.js" />
+    <Content Include="themekit\scripts\source\imagesloaded.js" />
+    <Content Include="themekit\scripts\source\isotope.js" />
+    <Content Include="themekit\scripts\source\magnific-popup.js" />
+    <Content Include="themekit\scripts\source\main.js" />
+    <Content Include="themekit\scripts\source\maps.js" />
+    <Content Include="themekit\scripts\source\miniTip.js" />
+    <Content Include="themekit\scripts\source\pagination.js" />
+    <Content Include="themekit\scripts\source\parallax.js" />
+    <Content Include="themekit\scripts\source\prettify.js" />
+    <Content Include="themekit\scripts\source\progress.js" />
+    <Content Include="themekit\scripts\source\slimscroll.js" />
+    <Content Include="themekit\scripts\source\social.js" />
+    <Content Include="themekit\scripts\source\sticky-kit.js" />
+    <Content Include="themekit\scripts\source\tab-accordion.js" />
+    <Content Include="themekit\scripts\sticky-kit.min.js" />
+    <Content Include="themekit\scripts\tab-accordion.js" />
     <Content Include="Robots.txt" />
     <Content Include="site.webmanifest" />
     <Content Include="sitemap.xml" />
@@ -151,14 +241,47 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\sitemap\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="themekit\media\icons\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="themekit\media\icons\icons.eot" />
+    <Content Include="themekit\media\icons\icons.ttf" />
+    <Content Include="themekit\media\icons\icons.woff" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\icomoon.eot" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\icomoon.ttf" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\icomoon.woff" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\social.ttf" />
+    <Content Include="themekit\media\icons\iconsmind\line-icons-fonts\social.woff" />
+    <Content Include="themekit\media\icons\iconsmind\solid-icons-fonts\icomoon.eot" />
+    <Content Include="themekit\media\icons\iconsmind\solid-icons-fonts\icomoon.ttf" />
+    <Content Include="themekit\media\icons\iconsmind\solid-icons-fonts\icomoon.woff" />
+    <Content Include="themekit\scripts\contact-form\contact-form.php" />
+    <Content Include="themekit\scripts\contact-form\phpmailer\class.phpmailer.php" />
+    <Content Include="themekit\scripts\contact-form\phpmailer\class.smtp.php" />
+    <Content Include="themekit\scripts\contact-form\phpmailer\config.php" />
+    <Content Include="themekit\scripts\contact-form\phpmailer\PHPMailerAutoload.php" />
+    <Content Include="themekit\scripts\tweetie\api\config.php" />
+    <Content Include="themekit\scripts\tweetie\api\tweet.php" />
+    <Content Include="themekit\scripts\tweetie\api\twitteroauth\OAuth.php" />
+    <Content Include="themekit\scripts\tweetie\api\twitteroauth\twitteroauth.php" />
     <None Include="packages.config" />
     <Content Include="Views\Product\CheapClass3Dsc.cshtml" />
     <Content Include="Views\Product\CheapUsbToken.cshtml" />
@@ -168,6 +291,20 @@
     <Content Include="Views\Shared\_Seo.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
+    <Content Include="Views\Shared\NewTheme\_LayoutNew.cshtml" />
+    <Content Include="Views\Shared\NewTheme\_Nav.cshtml" />
+    <Content Include="Views\Shared\NewTheme\_Footer.cshtml" />
+    <Content Include="Views\Product\CheapClass3IndividualSignature.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceFile\en-GB.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en-GB.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFile\en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
