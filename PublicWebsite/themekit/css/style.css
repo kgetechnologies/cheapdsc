@@ -3055,6 +3055,8 @@ STEPS - COMPONENTS
 
 .box-steps-vertical {
 	display: block;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
 	.box-steps-vertical > .step-item:not(:last-child) {

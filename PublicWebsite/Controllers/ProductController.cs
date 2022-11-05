@@ -11,7 +11,14 @@ namespace cheapdscin.Controllers
         }
         public ActionResult CheapClass3IndividualSignature()
         {
-            return View();
+			ViewBag.DisplayName = "Cheap Class 3 Individual Signature";
+			ViewBag.LinkValue = "";
+
+			ViewBag.CanonicalUri = "cheap-class3-individual-signature";
+			ViewBag.desc = "Cheap Class 3 Individual Signature, Class 3 Individual Signature, Class 3 Individual Signature DSC";
+			ViewBag.Title = "Cheap Class 3 Individual Signature, Class 3 Individual Signature";
+
+			return View();
         }
 		public ActionResult CheapClass3Dsc()
         {
