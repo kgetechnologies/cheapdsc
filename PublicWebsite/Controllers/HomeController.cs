@@ -31,12 +31,12 @@ namespace cheapdscin.Controllers
 
 		public ActionResult ContactUs()
 		{
-			ViewBag.DisplayName = "Contact";
-			ViewBag.LinkValue = "Contact";
+			ViewBag.DisplayName = "Contact Us";
+			ViewBag.LinkValue = "ContactUs";
 
-			ViewBag.CanonicalUri = "contact";
-			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+			ViewBag.CanonicalUri = "ContactUs";
+			ViewBag.desc = "Contact Us | Contact Cheap Dsc | Contact Cheap Usb Token | Contact Cheap DGFT";
+			ViewBag.Title = "Contact Us | Contact Cheap Dsc | Contact Cheap Usb Token";
 			return View();
 		}
 

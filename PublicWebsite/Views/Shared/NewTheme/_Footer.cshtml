@@ -1,34 +1,34 @@
-﻿<footer>
+﻿@using cheapdscin.Resources
+<footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
-				<h3>Blueprint</h3>
-				<p>A blueprint is a reproduction of a technical drawing using a contact print process on light-sensitive sheets. The process allowed rapid production of an unlimited copies.</p>
+				<h3>Cheap Dsc</h3>
+				<p>@Get.Content("Footer_Description", "One Stop Place for All Digital Signature Certificate, DGFT, Usb Token at cheap price with best service.")</p>
 			</div>
 			<div class="col-lg-4">
-				<h3>Contacts</h3>
+				<h3>@Get.Content("Footer_HowToReachUs", "How to Reach Us")</h3>
 				<ul class="icon-list icon-line">
-					<li>The world wide web</li>
-					<li>support@schiocco.com</li>
-					<li>02 123 333 444</li>
+					<li>@Get.Content("Footer_AllOverIndia", "All Over India")</li>
+					<li>enquiry@cheapdsc.com</li>
+					<li>(044) 22 41 6011</li>
 				</ul>
 			</div>
 			<div class="col-lg-4">
 				<div class="icon-links icon-social icon-links-grid">
-					<a class="facebook"><i class="icon-facebook"></i></a>
-					<a class="twitter"><i class="icon-twitter"></i></a>
-					<a class="instagram"><i class="icon-instagram"></i></a>
-					<a class="google"><i class="icon-google"></i></a>
+					<a href="https://www.facebook.com/cheapdsc?ref=cheapdsc.com" target="_blank" class="facebook"><i class="icon-facebook"></i></a>
+					<a target="_blank" class="twitter" href="https://www.twitter.com/cheapdsc?ref=cheapdsc.com"><i class="icon-twitter"></i></a>
+					<a target="_blank" class="linkedin" href="https://www.linkedin.com/company/cheap-dsc?ref=cheapdsc.com"><i class="icon-linkedin"></i></a>
 				</div>
 				<hr class="space-sm" />
-				<p>Subscribe to our newsletter of follow us on the social channels to stay tuned.</p>
+				<p>@Get.Content("Footer_FollowUsOnSocial", "Follow Us on Above Social Media Platform")</p>
 			</div>
 		</div>
 	</div>
 	<div class="footer-bar">
 		<div class="container">
-			<span>© 2019 Blueprint - White label template handmade by <a href="https://schiocco.com" target="_blank">schiocco.com</a>.</span>
-			<span><a href="#">Contact us</a> | <a href="#">Privacy policy</a></span>
+			<span>@Get.Content("Footer_CopyRights", "© 2021 cheapdsc.com Designed & Developed by") <a href="https://kgetechnologies.com" target="_blank">Kgetechnologies Pvt Ltd</a>.</span>
+			<span><a href="/ContactUs?ref=FooterMenu">@Get.Content("Footer_ContactUs", "Contact us")</a> | <a href="/privacyPolicy?ref=FooterMenu">@Get.Content("Footer_PrivacyPolicy", "Privacy policy")</a></span>
 		</div>
 	</div>
 	<link rel="stylesheet" href="/themekit/media/icons/iconsmind/line-icons.min.css">
@@ -40,6 +40,6 @@
 	<script src="/themekit/scripts/pagination.min.js"></script>
 	<script src="/themekit/scripts/contact-form/contact-form.js"></script>
 	<script src="/themekit/scripts/maps.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7p8SWg-5kLe7i-usdYCu5m3eVllMDTs"></script>
+	@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuT3KBsP1x15YfMXhwim_7g8p3TJReH7g"></script>*@
 
 </footer>

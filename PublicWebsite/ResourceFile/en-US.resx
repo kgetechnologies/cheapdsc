@@ -117,7 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Footer_AllOverIndia" xml:space="preserve">
+    <value>All Over India</value>
+  </data>
+  <data name="Footer_ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Footer_CopyRights" xml:space="preserve">
+    <value>© 2021 cheapdsc.com Designed &amp; Developed by</value>
+  </data>
+  <data name="Footer_Description" xml:space="preserve">
+    <value>One Stop Place for All Digital Signature Certificate, DGFT, Usb Token at cheap price with best service.</value>
+  </data>
+  <data name="Footer_FollowUsOnSocial" xml:space="preserve">
+    <value>Follow Us on Above Social Media Platform</value>
+  </data>
+  <data name="Footer_HowToReachUs" xml:space="preserve">
+    <value>How to Reach Us</value>
+  </data>
+  <data name="Footer_PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="Menu_AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="Menu_Class3" xml:space="preserve">
+    <value>Class 3</value>
+  </data>
+  <data name="Menu_Combo" xml:space="preserve">
+    <value>Combo</value>
+  </data>
+  <data name="Menu_ComboWithUsbToken" xml:space="preserve">
+    <value>Combo With Usb Token</value>
+  </data>
+  <data name="Menu_ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Menu_DGFTCertificate" xml:space="preserve">
+    <value>DGFT Certificate</value>
+  </data>
+  <data name="Menu_DGFTWithUsbToken" xml:space="preserve">
+    <value>DGFT With Usb Token</value>
+  </data>
+  <data name="Menu_Encryption" xml:space="preserve">
+    <value>Encryption</value>
+  </data>
+  <data name="Menu_EncryptionWithUsbToken" xml:space="preserve">
+    <value>Encryption With Usb Token</value>
+  </data>
   <data name="Menu_Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Menu_ImportAndExport" xml:space="preserve">
+    <value>Import &amp; Export</value>
+  </data>
+  <data name="Menu_Individual" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="Menu_Organisation" xml:space="preserve">
+    <value>Organisation</value>
+  </data>
+  <data name="Menu_Product" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Menu_ServicingAreas" xml:space="preserve">
+    <value>Servicing Areas</value>
+  </data>
+  <data name="Menu_Signature" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+  <data name="Menu_SignatureWithToken" xml:space="preserve">
+    <value>Signature With Usb Token</value>
+  </data>
+  <data name="Menu_UsbToken" xml:space="preserve">
+    <value>Usb Token</value>
   </data>
 </root>

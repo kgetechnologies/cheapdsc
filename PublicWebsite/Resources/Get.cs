@@ -48,7 +48,7 @@ namespace cheapdscin.Resources
 		private static string GetContent(string lang, string key)
 		{
 			ResourceManager rm = new ResourceManager($"cheapdscin.ResourceFile.{lang}", GetAssembly);
-			return rm.GetString("key");
+			return rm.GetString(key);
 		}
 	}
 }
