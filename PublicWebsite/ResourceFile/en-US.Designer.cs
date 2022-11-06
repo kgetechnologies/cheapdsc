@@ -61,11 +61,281 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cheap DSC is currently serving all over India serving all pin code in India..
+        /// </summary>
+        public static string AboutUs_ContentLine1 {
+            get {
+                return ResourceManager.GetString("AboutUs_ContentLine1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheap DSC &quot;An Award Winning Company&quot; is a licensed Registration Authority under Information Technology Act 2000 of India for issuance of Digital Signature Certificates in India. Cheap DSC is a leading PKI Solutions provider, Digital Signature Certificates, eSign Services, Document Signer Certificate, Code Signing Certificates, Signing Certificates, Encryption Certificates. We are a Chennai based Company established in 2017 with presence on PAN India Basis with 50+ partners. With in a short span of time we a [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AboutUs_ContentLine2 {
+            get {
+                return ResourceManager.GetString("AboutUs_ContentLine2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The first step is determining which Cheap DSC relationship best aligns with your company&apos;s products, services, expertise and business goals. Cheap DSC programs are available to help you resell our product related to Digital Signature Certificates, FIPS Certified USB Token and many more..
+        /// </summary>
+        public static string AboutUs_ContentLine3 {
+            get {
+                return ResourceManager.GetString("AboutUs_ContentLine3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheap DSC believes that partnership and the resulting synergies are the cornerstone of any successful business. Building mutually advantageous relationships that allow sustained business expansion and customer loyalty defines the broad scope of our Partner Program..
+        /// </summary>
+        public static string AboutUs_ContentLine4 {
+            get {
+                return ResourceManager.GetString("AboutUs_ContentLine4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only Place to get all digital Signature Product at cheap price with best service in India..
+        /// </summary>
+        public static string AboutUs_SubTitle {
+            get {
+                return ResourceManager.GetString("AboutUs_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string AboutUs_Title {
+            get {
+                return ResourceManager.GetString("AboutUs_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Over India.
+        /// </summary>
+        public static string Footer_AllOverIndia {
+            get {
+                return ResourceManager.GetString("Footer_AllOverIndia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string Footer_ContactUs {
+            get {
+                return ResourceManager.GetString("Footer_ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to © 2021 cheapdsc.com Designed &amp; Developed by.
+        /// </summary>
+        public static string Footer_CopyRights {
+            get {
+                return ResourceManager.GetString("Footer_CopyRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One Stop Place for All Digital Signature Certificate, DGFT, Usb Token at cheap price with best service..
+        /// </summary>
+        public static string Footer_Description {
+            get {
+                return ResourceManager.GetString("Footer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow Us on Above Social Media Platform.
+        /// </summary>
+        public static string Footer_FollowUsOnSocial {
+            get {
+                return ResourceManager.GetString("Footer_FollowUsOnSocial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How to Reach Us.
+        /// </summary>
+        public static string Footer_HowToReachUs {
+            get {
+                return ResourceManager.GetString("Footer_HowToReachUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy policy.
+        /// </summary>
+        public static string Footer_PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("Footer_PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string Menu_AboutUs {
+            get {
+                return ResourceManager.GetString("Menu_AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class 3.
+        /// </summary>
+        public static string Menu_Class3 {
+            get {
+                return ResourceManager.GetString("Menu_Class3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo.
+        /// </summary>
+        public static string Menu_Combo {
+            get {
+                return ResourceManager.GetString("Menu_Combo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo With Usb Token.
+        /// </summary>
+        public static string Menu_ComboWithUsbToken {
+            get {
+                return ResourceManager.GetString("Menu_ComboWithUsbToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string Menu_ContactUs {
+            get {
+                return ResourceManager.GetString("Menu_ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DGFT Certificate.
+        /// </summary>
+        public static string Menu_DGFTCertificate {
+            get {
+                return ResourceManager.GetString("Menu_DGFTCertificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DGFT With Usb Token.
+        /// </summary>
+        public static string Menu_DGFTWithUsbToken {
+            get {
+                return ResourceManager.GetString("Menu_DGFTWithUsbToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encryption.
+        /// </summary>
+        public static string Menu_Encryption {
+            get {
+                return ResourceManager.GetString("Menu_Encryption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encryption With Usb Token.
+        /// </summary>
+        public static string Menu_EncryptionWithUsbToken {
+            get {
+                return ResourceManager.GetString("Menu_EncryptionWithUsbToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Menu_Home {
             get {
                 return ResourceManager.GetString("Menu_Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import &amp; Export.
+        /// </summary>
+        public static string Menu_ImportAndExport {
+            get {
+                return ResourceManager.GetString("Menu_ImportAndExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Individual.
+        /// </summary>
+        public static string Menu_Individual {
+            get {
+                return ResourceManager.GetString("Menu_Individual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organisation.
+        /// </summary>
+        public static string Menu_Organisation {
+            get {
+                return ResourceManager.GetString("Menu_Organisation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string Menu_Product {
+            get {
+                return ResourceManager.GetString("Menu_Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Servicing Areas.
+        /// </summary>
+        public static string Menu_ServicingAreas {
+            get {
+                return ResourceManager.GetString("Menu_ServicingAreas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature.
+        /// </summary>
+        public static string Menu_Signature {
+            get {
+                return ResourceManager.GetString("Menu_Signature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature With Usb Token.
+        /// </summary>
+        public static string Menu_SignatureWithToken {
+            get {
+                return ResourceManager.GetString("Menu_SignatureWithToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usb Token.
+        /// </summary>
+        public static string Menu_UsbToken {
+            get {
+                return ResourceManager.GetString("Menu_UsbToken", resourceCulture);
             }
         }
     }

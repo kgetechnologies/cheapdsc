@@ -1,21 +1,23 @@
-﻿<nav class="menu-classic menu-fixed" data-menu-anima="fade-in">
+﻿@using cheapdscin.Resources
+<nav class="menu-classic menu-fixed" data-menu-anima="fade-in">
 	<div class="menu-mini scroll-hide">
 		<div class="container">
 			<ul>
-				<li><i class="im-phone"></i> (02) 1234556789</li>
-				<li><i class="im-envelope"></i> example@company.com</li>
+				<li><i class="im-phone"></i>(044)22416011</li>				
+				<li><i class="im-envelope"></i>enquiry@cheapdsc.com</li>
 			</ul>
 			<div class="menu-right">
 				<div class="icon-links icon-social social-colors-hover">
-					<a target="_blank" class="facebook" href="#"><i class="icon-facebook"></i></a>
-					<a target="_blank" class="twitter" href="#"><i class="icon-twitter"></i></a>
-					<a target="_blank" class="linkedin" href="#"><i class="icon-linkedin"></i></a>
+					<a target="_blank" class="facebook" href="https://www.facebook.com/cheapdsc?ref=cheapdsc.com"><i class="icon-facebook"></i></a>
+					<a target="_blank" class="twitter" href="https://www.twitter.com/cheapdsc?ref=cheapdsc.com"><i class="icon-twitter"></i></a>
+					<a target="_blank" class="linkedin" href="https://www.linkedin.com/company/cheap-dsc?ref=cheapdsc.com"><i class="icon-linkedin"></i></a>
 				</div>
 				<ul class="lan-menu">
 					<li class="dropdown">
-						<a href="#"><img src="/themekit/media/en.png" />EN </a>
+						<a href="#">EN</a>
 						<ul>
-							<li><a href="#"><img src="/themekit/media/it.png" />IT</a></li>
+							<li><a href="#">அஆ</a></li>
+							<li><a href="#">अआ</a></li>						
 						</ul>
 					</li>
 				</ul>
@@ -33,54 +35,54 @@
 		<div class="menu-cnt">
 			<ul>
 				<li>
-					<a href="/?ref=mainMenu">Home</a>
+					<a href="/?ref=mainMenu">@Get.Content("Menu_Home","Home1")</a>
 				</li>
 				<li class="dropdown">
-					<a href="#">Products</a>
+					<a href="#">@Get.Content("Menu_Products", "Products")</a>
 					<ul>
 						<li class="dropdown-submenu">
-							<a>Class 3</a>
+							<a>@Get.Content("Menu_Class3", "Class 3")</a>
 							<ul>
 								<li class="dropdown-submenu">
-									<a href="#">Individual</a>
+									<a href="#">@Get.Content("Menu_Individual", "Individual")</a>
 									<ul>
-										<li><a href="/cheap-class3-individual-signature">Signature</a></li>
-										<li><a href="#">Signature With Usb Token</a></li>
-										<li><a href="#">Encryption</a></li>
-										<li><a href="#">Encryption With Usb Token</a></li>
-										<li><a href="#">Combo</a></li>
-										<li><a href="#">Combo With Usb Token</a></li>
+										<li><a href="/cheap-class3-individual-signature">@Get.Content("Menu_Signature", "Signature")</a></li>
+										<li><a href="#">@Get.Content("Menu_SignatureWithToken", "Signature With Usb Token")</a></li>
+										<li><a href="#">@Get.Content("Menu_Encryption", "Encryption")</a></li>
+										<li><a href="#">@Get.Content("Menu_EncryptionWithUsbToken", "Encryption With Usb Token")</a></li>
+										<li><a href="#">@Get.Content("Menu_Combo", "Combo")</a></li>
+										<li><a href="#">@Get.Content("Menu_ComboWithUsbToken", "Combo With Usb Token")</a></li>
 
 									</ul>
 								</li>
 								<li class="dropdown-submenu">
-									<a href="#">Organisation</a>
+									<a href="#">@Get.Content("Menu_Organisation", "Organisation")</a>
 									<ul>
-										<li><a href="#">Signature</a></li>
-										<li><a href="#">Signature With Usb Token</a></li>
-										<li><a href="#">Encryption</a></li>
-										<li><a href="#">Encryption With Usb Token</a></li>
-										<li><a href="#">Combo</a></li>
-										<li><a href="#">Combo With Usb Token</a></li>
+										<li><a href="/cheap-class3-organisation-signature">@Get.Content("Menu_Signature", "Signature")</a></li>
+										<li><a href="#">@Get.Content("Menu_SignatureWithToken", "Signature With Usb Token")</a></li>
+										<li><a href="#">@Get.Content("Menu_Encryption", "Encryption")</a></li>
+										<li><a href="#">@Get.Content("Menu_EncryptionWithUsbToken", "Encryption With Usb Token")</a></li>
+										<li><a href="#">@Get.Content("Menu_Combo", "Combo")</a></li>
+										<li><a href="#">@Get.Content("Menu_ComboWithUsbToken", "Combo With Usb Token")</a></li>
 
 									</ul>
 								</li>
 							</ul>
 						</li>
 						<li class="dropdown-submenu">
-							<a>Import &amp; Export</a>
+							<a>@Get.Content("Menu_ImportAndExport", "Import & Export")</a>
 							<ul>
-								<li><a href="#">DGFT Certificate</a></li>
-								<li><a href="#">DGFT With Usb Token</a></li>
+								<li><a href="#">@Get.Content("Menu_DGFTCertificate", "DGFT Certificate")</a></li>
+								<li><a href="#">@Get.Content("Menu_DGFTWithUsbToken", "DGFT With Usb Token")</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Usb Token</a></li>
+						<li><a href="#">@Get.Content("Menu_UsbToken", "Usb Token")</a></li>
 					</ul>
 				</li>
 
 
 				<li class="mega-dropdown">
-					<a href="#">Servicing Areas</a>
+					<a href="#">@Get.Content("Menu_ServicingAreas", "Servicing Areas")</a>
 					<div class="mega-menu fade-in" style="transition-duration: 0ms; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms;">
 						<div class="col">
 							<h5></h5>
@@ -104,10 +106,10 @@
 					</div>
 				</li>
 				<li>
-					<a href="/AboutUs?ref=mainMenu">About Us</a>
+					<a href="/AboutUs?ref=mainMenu">@Get.Content("Menu_AboutUs", "About Us")</a>
 				</li>
 				<li>
-					<a href="/ContactUs?ref=mainMenu">Contact Us</a>
+					<a href="/ContactUs?ref=mainMenu">@Get.Content("Menu_ContactUs", "Contact Us")</a>
 				</li>
 
 			</ul>
