@@ -39,6 +39,19 @@ namespace cheapdscin.Controllers
 			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
 			return View();
 		}
+        [HttpPost]
+		public ActionResult ContactUsForm()
+		{
+			var req = this.Request;
+			var a = req.Form;
+			ViewBag.DisplayName = "Contact";
+			ViewBag.LinkValue = "Contact";
+
+			ViewBag.CanonicalUri = "contact";
+			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+			return View();
+		}
 
 		public ActionResult Error()
 		{

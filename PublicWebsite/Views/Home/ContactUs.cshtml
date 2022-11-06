@@ -53,7 +53,7 @@
 					<div class="title">
 						<h2>Reach Us</h2>
 					</div>
-					<form action="themekit/scripts/contact-form/contact-form.php" class="form-box form-ajax" method="post" data-email="example@domain.com">
+					<form id="contactForm" action="~/Home/ContactUsForm" class="form-box form-ajax" method="post" data-email="example@domain.com">
 						<div class="row">
 							<div class="col-lg-6">
 								<p>Name</p>
@@ -94,13 +94,13 @@
 								</select>						
 							</div>														
 						</div>
-						<p>Messagge</p>
+						<p>Message</p>
 						<textarea id="messagge" name="messagge" class="input-textarea" placeholder="Write something ..." required></textarea>
 						<div class="form-checkbox">
 							<input type="checkbox" id="check" name="check" value="check" required>
 							<label for="check">You accept the terms of service and the privacy policy</label>
 						</div>
-						<button class="btn btn-sm" type="submit">Send messagge</button>
+						<button class="btn btn-sm" type="submit">Send message</button>
 						<div class="success-box">
 							<div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
 						</div>
@@ -132,4 +132,31 @@
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript">
+		$(document).ready(function () {
+            $("#submitButton").click(function (ev) {
+                var form = $("#contactForm");
+                var url = form.attr('action');
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: form.serialize(),
+                    success: function (data) {
+
+                        // Ajax call completed successfully
+                        alert("Form Submited Successfully");
+                    },
+                    error: function (data) {
+
+                        // Some error in ajax call
+                        alert("some Error");
+                    }
+                });
+            });
+			$("#contactForm").submit((e) => {
+				var _this = e;
+			});
+
+		});
+	</script>
 </main>
