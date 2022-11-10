@@ -3,8 +3,10 @@ using cheapdscin.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.Caching;
 using System.Text.RegularExpressions;
 
@@ -12,7 +14,40 @@ namespace cheapdscin
 {
 	public class Helper
 	{
-		public static List<StateGroupByAlpha> StatesGroupedByAlphabet
+		public static string ReadAppSettings(string key, string value = "")
+		{
+			var val = ConfigurationManager.AppSettings[key];
+			if (string.IsNullOrEmpty(val))
+			{
+				//	Logger.Error($"AppSettings Value is Not Valid for {key}");
+			}
+			return val;
+		}
+
+		public static bool TriggerWhatsApp(string message)
+		{
+			try
+			{
+				var param = string.Format("https://api.callmebot.com/whatsapp.php?phone=+919498393812&apikey={0}&text={1}", ReadAppSettings("WhatsAppURLKey"), message);
+
+				using (var client = new HttpClient())
+				{
+					HttpResponseMessage response = client.GetAsync(param).Result;
+				}
+			}
+			catch (Exception ex)
+			{
+				// Logger.Error("TriggerWhatsApp", ex);
+				// _emailHelper.RunAsync(ex.GetExceptionMessages(), "Whatsapp Message Exception");
+			}
+			finally
+			{
+			}
+			return true;
+		}
+		
+
+	public static List<StateGroupByAlpha> StatesGroupedByAlphabet
 		{
 			get
 			{

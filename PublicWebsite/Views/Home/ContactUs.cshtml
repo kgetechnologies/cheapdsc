@@ -15,13 +15,14 @@
 						<h2>Reach Us</h2>
 					</div>
 					@using (Ajax.BeginForm("ContactUsForm", "Home",
-				   new AjaxOptions
-				   {
-					   OnSuccess = "OnSuccess",
-					   OnFailure = "OnFailure",
-					   LoadingElementId = "progress"
-				   }))
-					{
+                   new AjaxOptions
+                   {
+                       HttpMethod = "POST",
+                       OnSuccess = "OnSuccess",
+                       OnFailure = "OnFailure",
+                       LoadingElementId = "progress"
+                   }))
+                    {
 						@Html.AntiForgeryToken()
 						<div class="row">
 							<div class="col-lg-6">
@@ -54,14 +55,14 @@
 						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @placeholder = "How can we help you, please provide your need details", @required = "required" })
 
 						<div class="form-checkbox">
-							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required", @value = "check" })
+							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required"})
 							<label for="Agreed">You accept the terms of service and the privacy policy</label>
 						</div>
 
-						<div class="success-box">
+						<div class="success-box d-none">
 							<div class="alert alert-success">Congratulations. Enquriy Submitted Successfully</div>
 						</div>
-						<div class="error-box">
+						<div class="error-box d-none">
 							<div class="alert alert-warning">Error, Occurred Please call or whatsapp our Team.</div>
 						</div>
 
@@ -94,14 +95,17 @@
 	</section>
 	<script type="text/javascript">
 		function OnSuccess(response) {
-			var message = "Person Id: " + response.PersonId;
-			message += "\nName: " + response.Name;
-			message += "\nGender: " + response.Gender;
-			message += "\nCity: " + response.City;
-			alert(message);
+			alert("success>>" + response);
+		
+			$(".success-box").removeClass("d-none");
+			if (!$(".error-box").hasClass("d-none"))
+            $(".error-box").addClass("d-none");
 		}
 		function OnFailure(response) {
 			alert("Error occured.");
+			$(".error-box").removeClass("d-none");
+            if ($(".success-box").hasClass("d-none"))
+            $(".success-box").addClass("d-none");
 		}
 	</script>
 	<script type="text/javascript">
@@ -112,6 +116,7 @@
 				$.ajax({
 					type: "POST",
 					url: url,
+
 					data: form.serialize(),
 					success: function (data) {
 						if (data != null && date === "Success") {
