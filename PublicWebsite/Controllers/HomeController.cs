@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace cheapdscin.Controllers
@@ -14,13 +16,13 @@ namespace cheapdscin.Controllers
 			ViewBag.desc = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 			ViewBag.Title = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 
-		//	Resources.Get.Content();
+			//	Resources.Get.Content();
 			return View();
 		}
 
 		public ActionResult AboutUs()
 		{
-			
+
 			ViewBag.DisplayName = "About";
 			ViewBag.LinkValue = "About";
 
@@ -42,7 +44,7 @@ namespace cheapdscin.Controllers
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public JsonResult ContactUsForm()
+		public async Task<JsonResult> ContactUsForm()
 		{
 			var req = this.Request;
 			var form = req.Form;
@@ -58,9 +60,9 @@ namespace cheapdscin.Controllers
 				Product = (Models.Products)Convert.ToInt32(form["Product"].ToString())
 			};
 			var usbStatus = model.AlreadyHavingUsbToken ? "Yes" : "No";
-			var paymentMsg = ($"\n\n*Customer Details*" +
+			var paymentMsg = ($"\n\n*Cheap DSC Customer Details*" +
 		  $"\nName: {model?.Name}" +
-		  $"\nLooking for Product: *{model?.Product.ToString()}*" +
+		  $"\nLooking for Product: *{model?.Product}*" +
 		  $"\nContact Number: *{model?.ContactNumber}*" +
 			$"\nEmail: *{model?.Email}*" +
 		  $"\nMessage: {model?.Message}" +
@@ -69,14 +71,34 @@ namespace cheapdscin.Controllers
 			var whatsAppMsg =
 			$"CheapDSC New Enquired Via Website {paymentMsg}";
 
-			var sent = Helper.TriggerWhatsApp(whatsAppMsg);
-			ViewBag.DisplayName = "Contact";
-			ViewBag.LinkValue = "Contact";
+			var sent = await TriggerWhatsApp(whatsAppMsg);
 
-			ViewBag.CanonicalUri = "contact";
-			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+
 			return Json(new { Status = sent }, JsonRequestBehavior.AllowGet);
+		}
+
+		private async Task<bool> TriggerWhatsApp(string message)
+		{
+			try
+			{
+				var param = string.Format("https://api.callmebot.com/whatsapp.php?phone=+919498393812&apikey={0}&text={1}", Helper.ReadAppSettings("WhatsAppURLKey"), message);
+
+				using (var client = new HttpClient())
+				{
+					HttpResponseMessage response = await client.GetAsync(param);
+				}
+				return true;
+			}
+			catch (Exception ex)
+			{
+				//TODO: send email to kge gmail
+				return false;
+			}
+			finally
+			{
+
+			}
+
 		}
 
 		public ActionResult Error()

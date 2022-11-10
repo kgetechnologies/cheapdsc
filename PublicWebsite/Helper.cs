@@ -24,30 +24,8 @@ namespace cheapdscin
 			return val;
 		}
 
-		public static bool TriggerWhatsApp(string message)
-		{
-			try
-			{
-				var param = string.Format("https://api.callmebot.com/whatsapp.php?phone=+919498393812&apikey={0}&text={1}", ReadAppSettings("WhatsAppURLKey"), message);
 
-				using (var client = new HttpClient())
-				{
-					HttpResponseMessage response = client.GetAsync(param).Result;
-				}
-			}
-			catch (Exception ex)
-			{
-				// Logger.Error("TriggerWhatsApp", ex);
-				// _emailHelper.RunAsync(ex.GetExceptionMessages(), "Whatsapp Message Exception");
-			}
-			finally
-			{
-			}
-			return true;
-		}
-		
-
-	public static List<StateGroupByAlpha> StatesGroupedByAlphabet
+		public static List<StateGroupByAlpha> StatesGroupedByAlphabet
 		{
 			get
 			{
