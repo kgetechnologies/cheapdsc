@@ -1,72 +1,73 @@
-﻿@{
-
+﻿@using cheapdscin.Models
+@model ContactUs
+@{
+	var product = cheapdscin.Models.Products.Class3IndividualEncryption;
 }
 
 <main>
 	<section class="section-base">
 		<div class="container">
 			@*<div class="google-map" data-marker="/themekit/media/marker.png" data-coords="46.01049736894874,11.22314543457037"></div>
-			<hr class="space" />*@
+				<hr class="space" />*@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="title">
 						<h2>Reach Us</h2>
 					</div>
-					<form id="contactForm" action="~/Home/ContactUsForm" class="form-box form-ajax" method="post" data-email="example@domain.com">
+					@using (Ajax.BeginForm("ContactUsForm", "Home",
+				   new AjaxOptions
+				   {
+					   OnSuccess = "OnSuccess",
+					   OnFailure = "OnFailure",
+					   LoadingElementId = "progress"
+				   }))
+					{
+						@Html.AntiForgeryToken()
 						<div class="row">
 							<div class="col-lg-6">
 								<p>Name</p>
-								<input id="name" name="name" placeholder="Name" type="text" class="input-text" required>
+								@Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = "Name", @type = "text", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
 								<p>Email</p>
-								<input id="email" name="email" placeholder="Email" type="email" class="input-text" required>
+								@Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = "email", @type = "email", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
 								<p>Contact Number</p>
-								<input id="Mobile" name="Mobile" placeholder="Mobile" type="text" class="input-text" required>
+								@Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = "ContactNumber", @type = "ContactNumber", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
 								<p>Zip Code</p>
-								<input id="ZipCode" name="ZipCode" placeholder="Mobile" type="number" maxlength="6" class="input-text" required>
+								@Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = "ZipCode", @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
 								<p>Interested Product</p>
-								<select name="product" id="product" class="input-select">
-									<option value="0">Use Enum and Map Mvc</option>
-									<option value="1" selected="">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-								</select>
+								@Html.EnumDropDownListFor(m => m.Product, "Select a Product", new { @name = "product", @id = "product", @class = "input-select" })
 							</div>
 							<div class="col-lg-6">
-								<p>Already Using Any Usb Token Or DSC?</p>
-								<select name="product" id="product" class="input-select">
-									<option value="0" selected="">No</option>
-									<option value="1">Yes</option>									
-								</select>						
-							</div>														
+								<p>Already Using Any Usb Token?</p>
+								@Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
+
+							</div>
 						</div>
 						<p>Message</p>
-						<textarea id="messagge" name="messagge" class="input-textarea" placeholder="Write something ..." required></textarea>
+						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @placeholder = "How can we help you, please provide your need details", @required = "required" })
+
 						<div class="form-checkbox">
-							<input type="checkbox" id="check" name="check" value="check" required>
-							<label for="check">You accept the terms of service and the privacy policy</label>
+							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required", @value = "check" })
+							<label for="Agreed">You accept the terms of service and the privacy policy</label>
 						</div>
-						<button class="btn btn-sm" type="submit">Send message</button>
+
 						<div class="success-box">
-							<div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+							<div class="alert alert-success">Congratulations. Enquriy Submitted Successfully</div>
 						</div>
 						<div class="error-box">
-							<div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+							<div class="alert alert-warning">Error, Occurred Please call or whatsapp our Team.</div>
 						</div>
-					</form>
+
+						<button class="btn btn-sm" type="submit">Send message</button>
+					}
+
 				</div>
 				<div class="col-lg-4">
 					<div class="title">
@@ -92,26 +93,39 @@
 		</div>
 	</section>
 	<script type="text/javascript">
+		function OnSuccess(response) {
+			var message = "Person Id: " + response.PersonId;
+			message += "\nName: " + response.Name;
+			message += "\nGender: " + response.Gender;
+			message += "\nCity: " + response.City;
+			alert(message);
+		}
+		function OnFailure(response) {
+			alert("Error occured.");
+		}
+	</script>
+	<script type="text/javascript">
 		$(document).ready(function () {
-            $("#submitButton").click(function (ev) {
-                var form = $("#contactForm");
-                var url = form.attr('action');
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: form.serialize(),
-                    success: function (data) {
-
-                        // Ajax call completed successfully
-                        alert("Form Submited Successfully");
-                    },
-                    error: function (data) {
-
-                        // Some error in ajax call
-                        alert("some Error");
-                    }
-                });
-            });
+			$("#submitButton").click(function (ev) {
+				var form = $("#contactForm");
+				var url = form.attr('action');
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: form.serialize(),
+					success: function (data) {
+						if (data != null && date === "Success") {
+							alert('Success');
+						}
+						else {
+							alert('Failure');
+						}
+					},
+					error: function (data) {
+						alert("Error Occurred");
+					}
+				});
+			});
 			$("#contactForm").submit((e) => {
 				var _this = e;
 			});

@@ -40,6 +40,7 @@ namespace cheapdscin.Controllers
 			return View();
 		}
         [HttpPost]
+		[ValidateAntiForgeryToken]
 		public ActionResult ContactUsForm()
 		{
 			var req = this.Request;
@@ -50,7 +51,7 @@ namespace cheapdscin.Controllers
 			ViewBag.CanonicalUri = "contact";
 			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
 			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-			return View();
+			return Json("Success", JsonRequestBehavior.AllowGet);
 		}
 
 		public ActionResult Error()
