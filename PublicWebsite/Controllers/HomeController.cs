@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace cheapdscin.Controllers
@@ -14,13 +16,13 @@ namespace cheapdscin.Controllers
 			ViewBag.desc = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 			ViewBag.Title = "Cheap DSC, Cheap Class 3 DSC, Class 3 DSC, DGFT Certificate, Usb Token";
 
-		//	Resources.Get.Content();
+			//	Resources.Get.Content();
 			return View();
 		}
 
 		public ActionResult AboutUs()
 		{
-			
+
 			ViewBag.DisplayName = "About";
 			ViewBag.LinkValue = "About";
 
@@ -42,7 +44,7 @@ namespace cheapdscin.Controllers
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public JsonResult ContactUsForm()
+		public async Task<JsonResult> ContactUsForm()
 		{
 			var req = this.Request;
 			var form = req.Form;
@@ -85,6 +87,30 @@ namespace cheapdscin.Controllers
 				Helper.RunAsync(ex.Message, "Cheap DSC ContactUsForm Exception");			
             }
 			return Json(new { Status = false }, JsonRequestBehavior.AllowGet);
+		}
+
+		private async Task<bool> TriggerWhatsApp(string message)
+		{
+			try
+			{
+				var param = string.Format("https://api.callmebot.com/whatsapp.php?phone=+919498393812&apikey={0}&text={1}", Helper.ReadAppSettings("WhatsAppURLKey"), message);
+
+				using (var client = new HttpClient())
+				{
+					HttpResponseMessage response = await client.GetAsync(param);
+				}
+				return true;
+			}
+			catch (Exception ex)
+			{
+				//TODO: send email to kge gmail
+				return false;
+			}
+			finally
+			{
+
+			}
+
 		}
 
 		public ActionResult Error()
