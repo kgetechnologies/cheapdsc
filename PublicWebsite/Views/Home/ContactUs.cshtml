@@ -12,60 +12,52 @@
 					<div class="title">
 						<h2>Reach Us</h2>
 					</div>
-					@using (Ajax.BeginForm("ContactUsForm", "Home",
-				   new AjaxOptions
-				   {
-					   HttpMethod = "POST",
-					   OnSuccess = "OnSuccess",
-					   OnFailure = "OnFailure",
-					   LoadingElementId = "progress"
-				   }, new { @autocomplete = "false" }))
-					{
-						@Html.AntiForgeryToken()
-						<div class="row">
-							<div class="col-lg-6">
-								<p>Name</p>
-								@Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = "Name", @type = "text", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>Email</p>
-								@Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = "email", @type = "email", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>Contact Number</p>
-								@Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = "ContactNumber", @type = "ContactNumber", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>Zip Code</p>
-								@Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = "ZipCode", @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>Interested Product</p>
-								@Html.EnumDropDownListFor(m => m.Product, "Select a Product", new { @name = "product", @id = "product", @class = "input-select" })
-							</div>
-							<div class="col-lg-6">
-								<p>Already Using Any Usb Token?</p>
-								@Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
+                    <form action="/Home/ContactUsForm" method="post" id="contactForm">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>Name</p>
+                                @Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = "Name", @type = "text", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Email</p>
+                                @Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = "email", @type = "email", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Contact Number</p>
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = "ContactNumber", @type = "ContactNumber", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Zip Code</p>
+                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = "ZipCode", @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Interested Product</p>
+                                @Html.EnumDropDownListFor(m => m.Product, "Select a Product", new { @name = "product", @id = "product", @class = "input-select" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Already Using Any Usb Token?</p>
+                                @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
 
-							</div>
-						</div>
-						<p>Message</p>
-						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @placeholder = "How can we help you, please provide your need details", @required = "required" })
+                            </div>
+                        </div>
+                        <p>Message</p>
+                        @Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @placeholder = "How can we help you, please provide your need details", @required = "required" })
 
-						<div class="form-checkbox">
-							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
-							<label for="Agreed">You accept the terms of service and the privacy policy</label>
-						</div>
+                        <div class="form-checkbox">
+                            @Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
+                            <label for="Agreed">You accept the terms of service and the privacy policy</label>
+                        </div>
 
-						<div class="success-box d-none">
-							<div class="alert alert-success">Congratulations. Enquriy Submitted Successfully</div>
-						</div>
-						<div class="error-box d-none">
-							<div class="alert alert-warning">Error, Occurred Please call or whatsapp our Team.</div>
-						</div>
+                        <div class="success-box d-none">
+                            <div class="alert alert-success">Congratulations. Enquriy Submitted Successfully</div>
+                        </div>
+                        <div class="error-box d-none">
+                            <div class="alert alert-warning">Error, Occurred Please call or whatsapp our Team.</div>
+                        </div>
 
-						<button class="btn btn-sm" type="submit">Send message</button>
-					}
+                        <button class="btn btn-sm" id="submitButton" type="submit">Send message</button>
+                    </form>					
 
 				</div>
 				<div class="col-lg-4">
@@ -114,23 +106,31 @@
 				$.ajax({
 					type: "POST",
 					url: url,
-
+					datatype:"json",
 					data: form.serialize(),
 					success: function (data) {
-						if (data != null && date === "Success") {
-							alert('Success');
+						if (data) {
+                            $(".success-box").removeClass("d-none");
+                            if (!$(".error-box").hasClass("d-none"))
+                                $(".error-box").addClass("d-none");
 						}
 						else {
-							alert('Failure');
+                            $(".error-box").removeClass("d-none");
+                            if ($(".success-box").hasClass("d-none"))
+                                $(".success-box").addClass("d-none");
 						}
 					},
 					error: function (data) {
-						alert("Error Occurred");
+                        $(".error-box").removeClass("d-none");
+                        if ($(".success-box").hasClass("d-none"))
+                            $(".success-box").addClass("d-none");
 					}
 				});
 			});
 			$("#contactForm").submit((e) => {
 				var _this = e;
+				_this.preventDefault();
+				return false;
 			});
 
 		});

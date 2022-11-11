@@ -44,7 +44,7 @@ namespace cheapdscin.Controllers
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<JsonResult> ContactUsForm()
+		public JsonResult ContactUsForm()
 		{
 			var req = this.Request;
 			var form = req.Form;
@@ -80,13 +80,13 @@ namespace cheapdscin.Controllers
 				ViewBag.CanonicalUri = "contact";
 				ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
 				ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-				return Json(new { Status = sent }, JsonRequestBehavior.AllowGet);
+				return Json(sent , JsonRequestBehavior.AllowGet);
 			}
             catch (Exception ex)
             {
 				Helper.RunAsync(ex.Message, "Cheap DSC ContactUsForm Exception");			
             }
-			return Json(new { Status = false }, JsonRequestBehavior.AllowGet);
+			return Json( false , JsonRequestBehavior.AllowGet);
 		}
 
 		private async Task<bool> TriggerWhatsApp(string message)
