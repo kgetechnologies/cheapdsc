@@ -46,37 +46,45 @@ namespace cheapdscin.Controllers
 		{
 			var req = this.Request;
 			var form = req.Form;
-			var model = new Models.ContactUs()
-			{
-				Name = form["Name"]?.ToString() ?? "",
-				Email = form["Email"]?.ToString() ?? "",
-				ContactNumber = form["ContactNumber"]?.ToString() ?? "",
-				Message = form["Message"]?.ToString() ?? "",
-				ZipCode = Convert.ToInt32(form["ZipCode"]?.ToString() ?? "0"),
-				AlreadyHavingUsbToken = form["AlreadyHavingUsbToken"]?.ToString()?.ToLower()?.Contains("true") ?? false,
-				Agreed = form["Agreed"]?.ToString()?.ToLower()?.Contains("true") ?? false,
-				Product = (Models.Products)Convert.ToInt32(form["Product"].ToString())
-			};
-			var usbStatus = model.AlreadyHavingUsbToken ? "Yes" : "No";
-			var paymentMsg = ($"\n\n*Customer Details*" +
-		  $"\nName: {model?.Name}" +
-		  $"\nLooking for Product: *{model?.Product.ToString()}*" +
-		  $"\nContact Number: *{model?.ContactNumber}*" +
-			$"\nEmail: *{model?.Email}*" +
-		  $"\nMessage: {model?.Message}" +
-		  $"\nAlready Having USB Token: *{usbStatus}*" +
-		  $"\nZipCode: *{model?.ZipCode}*");
-			var whatsAppMsg =
-			$"CheapDSC New Enquired Via Website {paymentMsg}";
+            try
+            {
+				var model = new Models.ContactUs()
+				{
+					Name = form["Name"]?.ToString() ?? "",
+					Email = form["Email"]?.ToString() ?? "",
+					ContactNumber = form["ContactNumber"]?.ToString() ?? "",
+					Message = form["Message"]?.ToString() ?? "",
+					ZipCode = Convert.ToInt32(form["ZipCode"]?.ToString() ?? "0"),
+					AlreadyHavingUsbToken = form["AlreadyHavingUsbToken"]?.ToString()?.ToLower()?.Contains("true") ?? false,
+					Agreed = form["Agreed"]?.ToString()?.ToLower()?.Contains("true") ?? false,
+					Product = (Models.Products)Convert.ToInt32(form["Product"].ToString())
+				};
+				var usbStatus = model.AlreadyHavingUsbToken ? "Yes" : "No";
+				var paymentMsg = ($"\n\n*Customer Details*" +
+			  $"\nName: {model?.Name}" +
+			  $"\nLooking for Product: *{model?.Product.ToString()}*" +
+			  $"\nContact Number: *{model?.ContactNumber}*" +
+				$"\nEmail: *{model?.Email}*" +
+			  $"\nMessage: {model?.Message}" +
+			  $"\nAlready Having USB Token: *{usbStatus}*" +
+			  $"\nZipCode: *{model?.ZipCode}*");
+				var whatsAppMsg =
+				$"CheapDSC New Enquired Via Website {paymentMsg}";
+				Helper.RunAsync(paymentMsg, "Cheap DSC Enquiry");
+				var sent = Helper.TriggerWhatsApp(whatsAppMsg);
+				ViewBag.DisplayName = "Contact";
+				ViewBag.LinkValue = "Contact";
 
-			var sent = Helper.TriggerWhatsApp(whatsAppMsg);
-			ViewBag.DisplayName = "Contact";
-			ViewBag.LinkValue = "Contact";
-
-			ViewBag.CanonicalUri = "contact";
-			ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-			ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-			return Json(new { Status = sent }, JsonRequestBehavior.AllowGet);
+				ViewBag.CanonicalUri = "contact";
+				ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+				ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
+				return Json(new { Status = sent }, JsonRequestBehavior.AllowGet);
+			}
+            catch (Exception ex)
+            {
+				Helper.RunAsync(ex.Message, "Cheap DSC ContactUsForm Exception");			
+            }
+			return Json(new { Status = false }, JsonRequestBehavior.AllowGet);
 		}
 
 		public ActionResult Error()

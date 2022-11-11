@@ -7,6 +7,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Runtime.Caching;
 using System.Text.RegularExpressions;
 
@@ -38,16 +39,51 @@ namespace cheapdscin
 			catch (Exception ex)
 			{
 				// Logger.Error("TriggerWhatsApp", ex);
-				// _emailHelper.RunAsync(ex.GetExceptionMessages(), "Whatsapp Message Exception");
+				RunAsync(ex.Message, "Whatsapp Message Exception");
 			}
 			finally
 			{
 			}
 			return true;
 		}
-		
 
-	public static List<StateGroupByAlpha> StatesGroupedByAlphabet
+		public static bool RunAsync(string message, string subject, string To = "kgetechnologies@gmail.com", List<string> CCMail = null, List<string> BccMail = null)
+		{
+			try
+			{
+				using (SmtpClient SmtpServer = new SmtpClient("mail.kgetechnologies.com"))
+				{
+					MailMessage mail = new MailMessage();
+					mail.IsBodyHtml = true;
+					mail.From = new MailAddress("monitoring@kgetechnologies.com");
+					mail.To.Add(To);
+					if (CCMail != null && CCMail.Count > 0)
+						foreach (string cc in CCMail.Where(x => !string.IsNullOrEmpty(x)))
+							mail.CC.Add(cc);
+
+					if (BccMail != null && BccMail.Count > 0)
+						foreach (string Bcc in BccMail.Where(x => !string.IsNullOrEmpty(x)))
+							mail.Bcc.Add(Bcc);
+					
+					mail.Subject = subject;
+					mail.Body = message;
+
+					SmtpServer.Port = 587;
+					SmtpServer.Credentials = new System.Net.NetworkCredential("monitoring@kgetechnologies.com", "Test11!!");
+					SmtpServer.EnableSsl = false;
+
+
+					SmtpServer.Send(mail);//.Wait();
+				}
+			}
+			catch (Exception ex)
+			{
+				//Logger.Error("Email exception", ex);
+			}
+			return true;
+		}
+
+		public static List<StateGroupByAlpha> StatesGroupedByAlphabet
 		{
 			get
 			{
