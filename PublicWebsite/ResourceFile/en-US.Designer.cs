@@ -97,6 +97,60 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to e-Solutions offers PKI Solutions like Digital Signature Certificates, eSign Services, Document Signer Certificate, Code Signing Certificates, Signing Certificates, Encryption Certificates..
+        /// </summary>
+        public static string AboutUs_Statement1 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheap DSC was established in 2017 in Chennai to serve Digital Signature Certificates to various clients..
+        /// </summary>
+        public static string AboutUs_Statement2 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To help customers in transact securly over the web with his/her unique identify..
+        /// </summary>
+        public static string AboutUs_Statement3 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leading change, Integrity, Respect for the individual, Excellence, Learning and sharing..
+        /// </summary>
+        public static string AboutUs_Statement4 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recognized &amp; Licensed Registration Authority ( RA) Under e-Mudhra Limited.
+        /// </summary>
+        public static string AboutUs_Statement5 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5+ Years of Experience | Recognized RA | 70 + Associates | 50k+ DSC ISSUED | Team of Professionals.
+        /// </summary>
+        public static string AboutUs_Statement6 {
+            get {
+                return ResourceManager.GetString("AboutUs_Statement6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only Place to get all digital Signature Product at cheap price with best service in India..
         /// </summary>
         public static string AboutUs_SubTitle {
@@ -111,6 +165,69 @@ namespace cheapdscin.ResourceFile {
         public static string AboutUs_Title {
             get {
                 return ResourceManager.GetString("AboutUs_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What we Offer.
+        /// </summary>
+        public static string AboutUs_What_we_Offer {
+            get {
+                return ResourceManager.GetString("AboutUs_What we Offer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All India.
+        /// </summary>
+        public static string All_India {
+            get {
+                return ResourceManager.GetString("All India", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Business Name.
+        /// </summary>
+        public static string Business_Name {
+            get {
+                return ResourceManager.GetString("Business Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certifications.
+        /// </summary>
+        public static string Certifications {
+            get {
+                return ResourceManager.GetString("Certifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheap Dsc.
+        /// </summary>
+        public static string Cheap_Dsc {
+            get {
+                return ResourceManager.GetString("Cheap Dsc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client Count.
+        /// </summary>
+        public static string ClientCount {
+            get {
+                return ResourceManager.GetString("ClientCount", resourceCulture);
             }
         }
         
@@ -174,6 +291,24 @@ namespace cheapdscin.ResourceFile {
         public static string Footer_PrivacyPolicy {
             get {
                 return ResourceManager.GetString("Footer_PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lowest Price.
+        /// </summary>
+        public static string LowestPrice {
+            get {
+                return ResourceManager.GetString("LowestPrice", resourceCulture);
             }
         }
         
@@ -336,6 +471,69 @@ namespace cheapdscin.ResourceFile {
         public static string Menu_UsbToken {
             get {
                 return ResourceManager.GetString("Menu_UsbToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mission.
+        /// </summary>
+        public static string Mission {
+            get {
+                return ResourceManager.GetString("Mission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parent Cmp.
+        /// </summary>
+        public static string Parent_Cmp {
+            get {
+                return ResourceManager.GetString("Parent Cmp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Renewals.
+        /// </summary>
+        public static string Renewals {
+            get {
+                return ResourceManager.GetString("Renewals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales.
+        /// </summary>
+        public static string Sales {
+            get {
+                return ResourceManager.GetString("Sales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Servicing Area.
+        /// </summary>
+        public static string Servicing_Area {
+            get {
+                return ResourceManager.GetString("Servicing Area", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Values.
+        /// </summary>
+        public static string Values {
+            get {
+                return ResourceManager.GetString("Values", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WHY Cheap DSC.
+        /// </summary>
+        public static string WHY_Cheap_DSC {
+            get {
+                return ResourceManager.GetString("WHY Cheap DSC", resourceCulture);
             }
         }
     }

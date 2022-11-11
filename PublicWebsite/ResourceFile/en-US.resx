@@ -129,11 +129,50 @@
   <data name="AboutUs_ContentLine4" xml:space="preserve">
     <value>Cheap DSC believes that partnership and the resulting synergies are the cornerstone of any successful business. Building mutually advantageous relationships that allow sustained business expansion and customer loyalty defines the broad scope of our Partner Program.</value>
   </data>
+  <data name="AboutUs_Statement1" xml:space="preserve">
+    <value>e-Solutions offers PKI Solutions like Digital Signature Certificates, eSign Services, Document Signer Certificate, Code Signing Certificates, Signing Certificates, Encryption Certificates.</value>
+  </data>
+  <data name="AboutUs_Statement2" xml:space="preserve">
+    <value>Cheap DSC was established in 2017 in Chennai to serve Digital Signature Certificates to various clients.</value>
+  </data>
+  <data name="AboutUs_Statement3" xml:space="preserve">
+    <value>To help customers in transact securly over the web with his/her unique identify.</value>
+  </data>
+  <data name="AboutUs_Statement4" xml:space="preserve">
+    <value>Leading change, Integrity, Respect for the individual, Excellence, Learning and sharing.</value>
+  </data>
+  <data name="AboutUs_Statement5" xml:space="preserve">
+    <value>Recognized &amp; Licensed Registration Authority ( RA) Under e-Mudhra Limited</value>
+  </data>
+  <data name="AboutUs_Statement6" xml:space="preserve">
+    <value>5+ Years of Experience | Recognized RA | 70 + Associates | 50k+ DSC ISSUED | Team of Professionals</value>
+  </data>
   <data name="AboutUs_SubTitle" xml:space="preserve">
     <value>Only Place to get all digital Signature Product at cheap price with best service in India.</value>
   </data>
   <data name="AboutUs_Title" xml:space="preserve">
     <value>About Us</value>
+  </data>
+  <data name="AboutUs_What we Offer" xml:space="preserve">
+    <value>What we Offer</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="All India" xml:space="preserve">
+    <value>All India</value>
+  </data>
+  <data name="Business Name" xml:space="preserve">
+    <value>Business Name</value>
+  </data>
+  <data name="Certifications" xml:space="preserve">
+    <value>Certifications</value>
+  </data>
+  <data name="Cheap Dsc" xml:space="preserve">
+    <value>Cheap Dsc</value>
+  </data>
+  <data name="ClientCount" xml:space="preserve">
+    <value>Client Count</value>
   </data>
   <data name="Footer_AllOverIndia" xml:space="preserve">
     <value>All Over India</value>
@@ -155,6 +194,12 @@
   </data>
   <data name="Footer_PrivacyPolicy" xml:space="preserve">
     <value>Privacy policy</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="LowestPrice" xml:space="preserve">
+    <value>Lowest Price</value>
   </data>
   <data name="Menu_AboutUs" xml:space="preserve">
     <value>About Us</value>
@@ -209,5 +254,26 @@
   </data>
   <data name="Menu_UsbToken" xml:space="preserve">
     <value>Usb Token</value>
+  </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="Parent Cmp" xml:space="preserve">
+    <value>Parent Cmp</value>
+  </data>
+  <data name="Renewals" xml:space="preserve">
+    <value>Renewals</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="Servicing Area" xml:space="preserve">
+    <value>Servicing Area</value>
+  </data>
+  <data name="Values" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="WHY Cheap DSC" xml:space="preserve">
+    <value>WHY Cheap DSC</value>
   </data>
 </root>
