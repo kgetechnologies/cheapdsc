@@ -232,6 +232,150 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You Agree to Contact you back to your contact Details.
+        /// </summary>
+        public static string ContactUs_Agree_To_Contact {
+            get {
+                return ResourceManager.GetString("ContactUs_Agree To Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Already Using Any Usb Token?.
+        /// </summary>
+        public static string ContactUs_Already_Using_Product {
+            get {
+                return ResourceManager.GetString("ContactUs_Already Using Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email Address.
+        /// </summary>
+        public static string ContactUs_Email {
+            get {
+                return ResourceManager.GetString("ContactUs_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error, Occurred Please call or whatsapp our Team..
+        /// </summary>
+        public static string ContactUs_Error_Message {
+            get {
+                return ResourceManager.GetString("ContactUs_Error Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Interested In.
+        /// </summary>
+        public static string ContactUs_Interested_Product {
+            get {
+                return ResourceManager.GetString("ContactUs_Interested Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How can we help you, please provide your need details.
+        /// </summary>
+        public static string ContactUs_Message {
+            get {
+                return ResourceManager.GetString("ContactUs_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mobile Number.
+        /// </summary>
+        public static string ContactUs_Mobile {
+            get {
+                return ResourceManager.GetString("ContactUs_Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Name.
+        /// </summary>
+        public static string ContactUs_Name {
+            get {
+                return ResourceManager.GetString("ContactUs_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Pin Code.
+        /// </summary>
+        public static string ContactUs_PinCode {
+            get {
+                return ResourceManager.GetString("ContactUs_PinCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Your Email Address.
+        /// </summary>
+        public static string ContactUs_PlaceHolder_Email {
+            get {
+                return ResourceManager.GetString("ContactUs_PlaceHolder_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Your Number.
+        /// </summary>
+        public static string ContactUs_PlaceHolder_Mobile {
+            get {
+                return ResourceManager.GetString("ContactUs_PlaceHolder_Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Your Name.
+        /// </summary>
+        public static string ContactUs_PlaceHolder_Name {
+            get {
+                return ResourceManager.GetString("ContactUs_PlaceHolder_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Your Pin Code.
+        /// </summary>
+        public static string ContactUs_PlaceHolder_PinCode {
+            get {
+                return ResourceManager.GetString("ContactUs_PlaceHolder_PinCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Product Interested In.
+        /// </summary>
+        public static string ContactUs_PlaceHolder_ProductLookingFor {
+            get {
+                return ResourceManager.GetString("ContactUs_PlaceHolder_ProductLookingFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit Enquiry.
+        /// </summary>
+        public static string ContactUs_Submit_Button {
+            get {
+                return ResourceManager.GetString("ContactUs_Submit Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Congratulations. Enquriy Submitted Successfully..
+        /// </summary>
+        public static string ContactUs_Success_Message {
+            get {
+                return ResourceManager.GetString("ContactUs_Success Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Over India.
         /// </summary>
         public static string Footer_AllOverIndia {
@@ -489,6 +633,15 @@ namespace cheapdscin.ResourceFile {
         public static string Parent_Cmp {
             get {
                 return ResourceManager.GetString("Parent Cmp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reach Us.
+        /// </summary>
+        public static string Reach_Us {
+            get {
+                return ResourceManager.GetString("Reach Us", resourceCulture);
             }
         }
         

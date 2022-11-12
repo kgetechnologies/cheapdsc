@@ -1,4 +1,5 @@
 ﻿@using cheapdscin.Models
+@using cheapdscin.Resources
 @model ContactUs
 @{
 	var product = cheapdscin.Models.Products.Class3IndividualEncryption;
@@ -6,78 +7,77 @@
 
 <main>
 	<section class="section-base">
-		<div class="container">		
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="title">
-						<h2>Reach Us</h2>
+						<h2>@Get.Content("Reach Us", "Reach Us")</h2>
 					</div>
-                    <form action="/Home/ContactUsForm" method="post" id="contactForm">
-                        @Html.AntiForgeryToken()
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p>Name</p>
-                                @Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = "Name", @type = "text", @class = "input-text", @required = "required" })
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Email</p>
-                                @Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = "email", @type = "email", @class = "input-text", @required = "required" })
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Contact Number</p>
-                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = "ContactNumber", @type = "ContactNumber", @class = "input-text", @required = "required" })
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Zip Code</p>
-                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = "ZipCode", @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Interested Product</p>
-                                @Html.EnumDropDownListFor(m => m.Product, "Select a Product", new { @name = "product", @id = "product", @class = "input-select" })
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Already Using Any Usb Token?</p>
-                                @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
+					<form action="/Home/ContactUsForm" method="post" id="contactForm">
+						@Html.AntiForgeryToken()
+						<div class="row">
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_Name", "Your Name")</p>
+								@Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text", @required = "required" })
+							</div>
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_Email", "Email Address")</p>
+								@Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text", @required = "required" })
+							</div>
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_Mobile", "Mobile Number")</p>
+								@Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @class = "input-text", @required = "required" })
+							</div>
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_PinCode", "Pin Code")</p>
+								@Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
+							</div>
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_Interested Product", "Product Interested In")</p>
+								@Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select" })
+							</div>
+							<div class="col-lg-6">
+								<p>@Get.Content("ContactUs_Already Using Product", "Already Using Any Usb Token?")</p>
+								@Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
 
-                            </div>
-                        </div>
-                        <p>Message</p>
-                        @Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @placeholder = "How can we help you, please provide your need details", @required = "required" })
+							</div>
+						</div>
+						<p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details")</p>
+						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @required = "required" })
 
-                        <div class="form-checkbox">
-                            @Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
-                            <label for="Agreed">You accept the terms of service and the privacy policy</label>
-                        </div>
+						<div class="form-checkbox">
+							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
+							<label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details")</label>
+						</div>
 
-                        <div class="success-box d-none">
-                            <div class="alert alert-success">Congratulations. Enquriy Submitted Successfully</div>
-                        </div>
-                        <div class="error-box d-none">
-                            <div class="alert alert-warning">Error, Occurred Please call or whatsapp our Team.</div>
-                        </div>
+						<div class="success-box d-none">
+							<div class="alert alert-success">
+								@Get.Content("ContactUs_Success Message", "Congratulations. Enquriy Submitted Successfully.")
+							</div>
+						</div>
+						<div class="error-box d-none">
+							<div class="alert alert-warning">
+								@Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
+							</div>
+						</div>
 
-                        <button class="btn btn-sm" id="submitButton" type="submit">Send message</button>
-                    </form>					
+						<button class="btn btn-sm" id="submitButton" type="submit">@Get.Content("ContactUs_Submit Button", "Submit Enquiry")</button>
+					</form>
 
 				</div>
 				<div class="col-lg-4">
 					<div class="title">
-						<h2>Contacts</h2>
-						<p>Information</p>
+						<h2>@Get.Content("Footer_ContactUs", "Contact Us")</h2>
 					</div>
 					<ul class="text-list text-list-line">
-						<li><b>Address</b><hr /><p>Pellegrino, Veneto, Italy</p></li>
-						<li><b>Web</b><hr /><p>domain.com</p></li>
-						<li><b>Email</b><hr /><p>info@domain.com</p></li>
-						<li><b>Phone</b><hr /><p>(02) 123 456 789999</p></li>
-						<li><b>Skype</b><hr /><p>example.name</p></li>
+						<li><b>@Get.Content("Address", "Address")</b><hr /><p>@Get.Content("All India", "All India")</p></li>
+						<li><b>@Get.Content("ContactUs_Email", "Email Address")</b><hr /><p>enquiry@cheapdsc.com</p></li>
+						<li><b>@Get.Content("Menu_ContactUs", "Contact Us")</b><hr /><p>(044) 22 41 6011</p></li>
+						<li><b>@Get.Content("Servicing Area", "Servicing Area")</b><hr /><p>Any Pincode</p></li>
 					</ul>
 					<hr class="space-sm" />
 					<div class="icon-links">
-						<a class="facebook"><i class="icon-facebook"></i></a>
-						<a class="twitter"><i class="icon-twitter"></i></a>
-						<a class="instagram"><i class="icon-instagram"></i></a>
-						<a class="google"><i class="icon-google"></i></a>
+						@Html.Partial("NewTheme/_SocialShare")
 					</div>
 				</div>
 			</div>
@@ -106,24 +106,24 @@
 				$.ajax({
 					type: "POST",
 					url: url,
-					datatype:"json",
+					datatype: "json",
 					data: form.serialize(),
 					success: function (data) {
 						if (data) {
-                            $(".success-box").removeClass("d-none");
-                            if (!$(".error-box").hasClass("d-none"))
-                                $(".error-box").addClass("d-none");
+							$(".success-box").removeClass("d-none");
+							if (!$(".error-box").hasClass("d-none"))
+								$(".error-box").addClass("d-none");
 						}
 						else {
-                            $(".error-box").removeClass("d-none");
-                            if ($(".success-box").hasClass("d-none"))
-                                $(".success-box").addClass("d-none");
+							$(".error-box").removeClass("d-none");
+							if ($(".success-box").hasClass("d-none"))
+								$(".success-box").addClass("d-none");
 						}
 					},
 					error: function (data) {
-                        $(".error-box").removeClass("d-none");
-                        if ($(".success-box").hasClass("d-none"))
-                            $(".success-box").addClass("d-none");
+						$(".error-box").removeClass("d-none");
+						if ($(".success-box").hasClass("d-none"))
+							$(".success-box").addClass("d-none");
 					}
 				});
 			});
