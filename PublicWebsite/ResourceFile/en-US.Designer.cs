@@ -223,6 +223,15 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Class 3 Digital Signature Certificate.
+        /// </summary>
+        public static string Class_3_Digital_Signature_Certificate {
+            get {
+                return ResourceManager.GetString("Class 3 Digital Signature Certificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Client Count.
         /// </summary>
         public static string ClientCount {
@@ -439,11 +448,101 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to from 312 INR.
+        /// </summary>
+        public static string from_312_INR {
+            get {
+                return ResourceManager.GetString("from 312 INR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to History.
         /// </summary>
         public static string History {
             get {
                 return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overall Sales by Cheap Dsc Team in 2022 in Class 3 Digital Signature Certificate, DGFT, Usb Token..
+        /// </summary>
+        public static string Home_Page_Bottom {
+            get {
+                return ResourceManager.GetString("Home Page Bottom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All India Authorized Seller of E-mudhra, Capricon, and many more Digital Signature Certificate, Usb Token at cheapest price starting at 312*/-.
+        /// </summary>
+        public static string HomePage_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We are a Certifying Authority licensed by Controller of Certifying Authorities, under Government of India..
+        /// </summary>
+        public static string HomePage_Tilecard1Description {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard1Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multi Brand Dealer.
+        /// </summary>
+        public static string HomePage_Tilecard1Title {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 6 Years of Experience | Recognized RA | 50 + Associates | 50k+ DSC ISSUED | Team of Professionals.
+        /// </summary>
+        public static string HomePage_Tilecard2Description {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard2Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WHY Cheap DSC.
+        /// </summary>
+        public static string HomePage_Tilecard2Title {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To help customers in transact securely over the web with his/her unique identify at cheapest cost in India..
+        /// </summary>
+        public static string HomePage_Tilecard3Description {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard3Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mission.
+        /// </summary>
+        public static string HomePage_Tilecard3Title {
+            get {
+                return ResourceManager.GetString("HomePage_Tilecard3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to India&apos;s Cheapest DSC Seller.
+        /// </summary>
+        public static string HomePage_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Title", resourceCulture);
             }
         }
         
@@ -637,6 +736,15 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Price starting at 312*/-.
+        /// </summary>
+        public static string Price_Starting_at_312 {
+            get {
+                return ResourceManager.GetString("Price Starting at 312", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reach Us.
         /// </summary>
         public static string Reach_Us {
@@ -664,6 +772,15 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sales Count.
+        /// </summary>
+        public static string Sales_Count {
+            get {
+                return ResourceManager.GetString("Sales Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Servicing Area.
         /// </summary>
         public static string Servicing_Area {
@@ -673,11 +790,47 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Started Year.
+        /// </summary>
+        public static string Started_Year {
+            get {
+                return ResourceManager.GetString("Started Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting Price.
+        /// </summary>
+        public static string Starting_Price {
+            get {
+                return ResourceManager.GetString("Starting Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team Members.
+        /// </summary>
+        public static string Team_Members {
+            get {
+                return ResourceManager.GetString("Team Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Values.
         /// </summary>
         public static string Values {
             get {
                 return ResourceManager.GetString("Values", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What We Sold on.
+        /// </summary>
+        public static string What_We_Sold_on {
+            get {
+                return ResourceManager.GetString("What We Sold on", resourceCulture);
             }
         }
         

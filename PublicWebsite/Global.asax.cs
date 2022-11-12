@@ -5,6 +5,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Reflection;
 using cheapdscin.Models;
+using cheapdscin.Resources;
+using System.Text.RegularExpressions;
+
 namespace cheapdscin
 {
 	public class MvcApplication : System.Web.HttpApplication
@@ -27,5 +30,10 @@ namespace cheapdscin
 		//	Thread.CurrentThread.CurrentUICulture = ci;
 		//	Thread.CurrentThread.CurrentCulture = ci;
 		//}
+
+		protected void Session_Start(object sender,EventArgs e)
+		{
+			CultureHelper.CurrentCulture = 0;
+		}
 	}
 }

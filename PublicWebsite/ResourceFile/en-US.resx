@@ -171,6 +171,9 @@
   <data name="Cheap Dsc" xml:space="preserve">
     <value>Cheap Dsc</value>
   </data>
+  <data name="Class 3 Digital Signature Certificate" xml:space="preserve">
+    <value>Class 3 Digital Signature Certificate</value>
+  </data>
   <data name="ClientCount" xml:space="preserve">
     <value>Client Count</value>
   </data>
@@ -243,8 +246,38 @@
   <data name="Footer_PrivacyPolicy" xml:space="preserve">
     <value>Privacy policy</value>
   </data>
+  <data name="from 312 INR" xml:space="preserve">
+    <value>from 312 INR</value>
+  </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
+  </data>
+  <data name="Home Page Bottom" xml:space="preserve">
+    <value>Overall Sales by Cheap Dsc Team in 2022 in Class 3 Digital Signature Certificate, DGFT, Usb Token.</value>
+  </data>
+  <data name="HomePage_SubTitle" xml:space="preserve">
+    <value>All India Authorized Seller of E-mudhra, Capricon, and many more Digital Signature Certificate, Usb Token at cheapest price starting at 312*/-</value>
+  </data>
+  <data name="HomePage_Tilecard1Description" xml:space="preserve">
+    <value>We are a Certifying Authority licensed by Controller of Certifying Authorities, under Government of India.</value>
+  </data>
+  <data name="HomePage_Tilecard1Title" xml:space="preserve">
+    <value>Multi Brand Dealer</value>
+  </data>
+  <data name="HomePage_Tilecard2Description" xml:space="preserve">
+    <value>6 Years of Experience | Recognized RA | 50 + Associates | 50k+ DSC ISSUED | Team of Professionals</value>
+  </data>
+  <data name="HomePage_Tilecard2Title" xml:space="preserve">
+    <value>WHY Cheap DSC</value>
+  </data>
+  <data name="HomePage_Tilecard3Description" xml:space="preserve">
+    <value>To help customers in transact securely over the web with his/her unique identify at cheapest cost in India.</value>
+  </data>
+  <data name="HomePage_Tilecard3Title" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="HomePage_Title" xml:space="preserve">
+    <value>India's Cheapest DSC Seller</value>
   </data>
   <data name="LowestPrice" xml:space="preserve">
     <value>Lowest Price</value>
@@ -309,6 +342,9 @@
   <data name="Parent Cmp" xml:space="preserve">
     <value>Parent Cmp</value>
   </data>
+  <data name="Price Starting at 312" xml:space="preserve">
+    <value>Price starting at 312*/-</value>
+  </data>
   <data name="Reach Us" xml:space="preserve">
     <value>Reach Us</value>
   </data>
@@ -318,11 +354,26 @@
   <data name="Sales" xml:space="preserve">
     <value>Sales</value>
   </data>
+  <data name="Sales Count" xml:space="preserve">
+    <value>Sales Count</value>
+  </data>
   <data name="Servicing Area" xml:space="preserve">
     <value>Servicing Area</value>
   </data>
+  <data name="Started Year" xml:space="preserve">
+    <value>Started Year</value>
+  </data>
+  <data name="Starting Price" xml:space="preserve">
+    <value>Starting Price</value>
+  </data>
+  <data name="Team Members" xml:space="preserve">
+    <value>Team Members</value>
+  </data>
   <data name="Values" xml:space="preserve">
     <value>Values</value>
+  </data>
+  <data name="What We Sold on" xml:space="preserve">
+    <value>What We Sold on</value>
   </data>
   <data name="WHY Cheap DSC" xml:space="preserve">
     <value>WHY Cheap DSC</value>

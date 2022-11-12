@@ -1,4 +1,5 @@
-﻿@{
+﻿@using cheapdscin.Resources
+@{
 
 }
 <main>
@@ -7,14 +8,11 @@
 		<div class="container">
 			<div class="row  ">
 				<div class="col-lg-6">
-					<h1 data-anima="fade-left" data-time="2000" class="text-lg text-uppercase text-black">India's Cheapest DSC Seller</h1>
+					<h1 data-anima="fade-left" data-time="2000" class="text-lg text-uppercase text-black">@Get.Content("HomePage_Title", "India's Cheapest DSC Seller")</h1>
 					<hr class="space-sm" />
 					<p data-anima="fade-left" data-time="2000">
-						All India Authorized Seller of E-mudhra, Capricon, and many more Digital Signature Certificate, Usb Token at cheapest price starting at 312*/-
+						@Get.Content("HomePage_SubTitle", "All India Authorized Seller of E-mudhra, Capricon, and many more Digital Signature Certificate, Usb Token at cheapest price starting at 312*/-")
 					</p>
-					<hr class="space-sm" />
-					<a href="#" class="btn btn-sm btn-circle" data-anima="fade-left" data-time="3000">View services</a>
-					<a href="#" class="btn btn-sm btn-circle btn-border" data-anima="fade-left" data-time="3000">View team</a>
 				</div>
 				<div class="col-lg-6">
 					<hr class="space-sm visible-md" />
@@ -48,9 +46,9 @@
 					<div class="cnt-box cnt-box-top-icon boxed align-center">
 						<i class="im-chef-hat2"></i>
 						<div class="caption">
-							<h2>Multi Brand Dealer</h2>
+							<h2>@Get.Content("HomePage_Tilecard1Title", "Multi Brand Dealer")</h2>
 							<p>
-								We are a Certifying Authority licensed by Controller of Certifying Authorities, under Government of India.
+								@Get.Content("HomePage_Tilecard1Description", "We are a Certifying Authority licensed by Controller of Certifying Authorities, under Government of India.")
 							</p>
 						</div>
 					</div>
@@ -59,9 +57,9 @@
 					<div class="cnt-box cnt-box-top-icon boxed align-center">
 						<i class="im-shop-4"></i>
 						<div class="caption">
-							<h2>WHY Cheap DSC</h2>
+							<h2>@Get.Content("HomePage_Tilecard2Title", "WHY Cheap DSC")</h2>
 							<p>
-								6 Years of Experience | Recognized RA | 50 + Associates | 50k+ DSC ISSUED | Team of Professionals
+								@Get.Content("HomePage_Tilecard2Description", "6 Years of Experience | Recognized RA | 50 + Associates | 50k+ DSC ISSUED | Team of Professionals")
 							</p>
 						</div>
 					</div>
@@ -70,9 +68,9 @@
 					<div class="cnt-box cnt-box-top-icon boxed align-center">
 						<i class="im-heart"></i>
 						<div class="caption">
-							<h2>Mission</h2>
+							<h2>@Get.Content("HomePage_Tilecard3Title", "Mission")</h2>
 							<p>
-								To help customers in transact securely over the web with his/her unique identify at cheapest cost in India.
+								@Get.Content("HomePage_Tilecard3Description", "To help customers in transact securely over the web with his/her unique identify at cheapest cost in India.")
 							</p>
 						</div>
 					</div>
@@ -86,31 +84,31 @@
 			<div class="row align-items-center">
 				<div class="col-lg-4">
 					<div class="title">
-						<h2>About us</h2>
-						<p>Only Place to get all digital Signature Product at cheap price with best service in India.</p>
+						<h2>@Get.Content("AboutUs_Title", "About Us")</h2>
+						<p>@Get.Content("AboutUs_SubTitle", "Only Place to get all digital Signature Product at cheap price with best service in India.")</p>
 					</div>
 					<hr class="space-xs">
 					<p>
-						Cheap DSC is currently serving all over India serving all pin code in India.
-					</p><hr class="space-xs">
+						@Get.Content("AboutUs_ContentLine1", "Cheap DSC is currently serving all over India serving all pin code in India.")
+					</p>
+					<hr class="space-xs">
 					<p>
-						Price starting at 312*/-
-						</p>
+						@Get.Content("Price Starting at 312", "Price starting at 312*/-")
+					</p>
 				</div>
 				<div class="col-lg-4 no-margin-md">
 					<p>
-						Cheap DSC "An Award Winning Company" is a licensed Registration Authority under Information Technology Act 2000 of India for issuance of Digital Signature Certificates in India. Cheap DSC is a leading PKI Solutions provider, Digital Signature Certificates, eSign Services, Document Signer Certificate, Code Signing Certificates, Signing Certificates, Encryption Certificates.
+						@Get.Content("AboutUs_ContentLine2", "Cheap DSC \"An Award Winning Company\" is a licensed Registration Authority under Information Technology Act 2000 of India for issuance of Digital Signature Certificates in India. Cheap DSC is a leading PKI Solutions provider, Digital Signature Certificates, eSign Services, Document Signer Certificate, Code Signing Certificates, Signing Certificates, Encryption Certificates. We are a Chennai based Company established in 2017 with presence on PAN India Basis with 50+ partners. With in a short span of time we are serving people in more then 50 cities and around 30 towns and we are increasing day by day with help of our clients those who get support from us very quickly. We have issued more than 5k DSC till date & having 50+ DSC Associates on PAN India.")
 					</p>
 				</div>
 				<div class="col-lg-4">
 					<ul class="text-list text-list-line line-4">
-						<li><b>Foundation</b><hr><p>2015</p></li>
-						<li><b>Address</b><hr><p>All India</p></li>
-						<li><b>Email</b><hr><p>enquiry@cheapdsc.com</p></li>
-						<li><b>Phone and fax</b><hr><p>(044)22416011</p></li>
-						<li><b>Team members</b><hr><p>50+</p></li>
-						<li><b>Serving PinCodes</b><hr><p>15k+</p></li>
-						<li><b>Starting price</b><hr><p>from 312 INR</p></li>
+						<li><b>@Get.Content("Started Year", "Started Year")</b><hr><p>2015</p></li>
+						<li><b>@Get.Content("Address", "Address")</b><hr><p>@Get.Content("All India", "All India")</p></li>
+						<li><b>@Get.Content("ContactUs_Email", "Email Address")</b><hr><p>enquiry@cheapdsc.com</p></li>
+						<li><b>@Get.Content("Menu_ContactUs", "Contact Us")</b><hr><p>(044)22416011</p></li>
+						<li><b>@Get.Content("Team members", "Team members")</b><hr><p>50+</p></li>
+						<li><b>@Get.Content("Starting Price", "Starting Price")</b><hr><p>@Get.Content("from 312 INR", "from 312 INR")</p></li>
 					</ul>
 				</div>
 			</div>
@@ -122,7 +120,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="progress-bar">
-						<h4>Class 3 Digital Signature Certificate</h4>
+						<h4>@Get.Content("Class 3 Digital Signature Certificate", "Class 3 Digital Signature Certificate")</h4>
 						<div>
 							<div data-progress="95" data-trigger="null" style="width: 50%;">
 								<span class="counter" data-to="95" data-speed="2000" data-unit="%" data-trigger="null">9580</span>
@@ -131,7 +129,7 @@
 					</div>
 					<hr class="space-sm">
 					<div class="progress-bar">
-						<h4>Usb Token</h4>
+						<h4>@Get.Content("Menu_UsbToken", "Usb Token")</h4>
 						<div>
 							<div data-progress="61" data-trigger="null" style="width: 100%;">
 								<span class="counter" data-to="61" data-speed="2000" data-unit="%" data-trigger="null">6116</span>
@@ -150,10 +148,11 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="title">
-						<h2>2022 Sales Count</h2>
-						<p>What We Sold on 2022</p>
-					</div>
-					<p>Overall Sales by Cheap Dsc Team in 2022 in Class 3 Digital Signature Certificate, DGFT, Usb Token.</p>
+						<h2>
+							2022 @Get.Content("Sales Count", "Sales Count")</h2>
+							<p>@Get.Content("What We Sold on", "What We Sold on") 2022</p>
+</div>
+					<p>@Get.Content("Home Page Bottom", "")</p>
 				</div>
 			</div>
 		</div>
