@@ -412,7 +412,7 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to © 2021 cheapdsc.com Designed &amp; Developed by.
+        ///   Looks up a localized string similar to © 2023 cheapdsc.com Designed &amp; Developed by.
         /// </summary>
         public static string Footer_CopyRights {
             get {
