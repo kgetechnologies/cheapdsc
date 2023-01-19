@@ -1,5 +1,10 @@
-﻿using System.Globalization;
+﻿using System.Drawing;
+using System;
+using System.Globalization;
+using System.IO;
 using System.Web.Mvc;
+using System.Net;
+using System.Security.Policy;
 
 namespace cheapdscin.Controllers
 {
@@ -33,6 +38,7 @@ namespace cheapdscin.Controllers
 			var title = "Class 3 Dsc in {0} | Class 3 Dsc Sales in {0} | Class 3 Dsc near {0}";
 			ViewBag.pageType = "Dsc";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Class3.jpg", Color.DarkViolet, 30, 250, 225);
 			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
@@ -43,6 +49,7 @@ namespace cheapdscin.Controllers
 			var title = "Cheap Class 3 Dsc in {0} | Cheap Class 3 Dsc Sales in {0} | Cheap Class 3 Dsc near {0}";
 			ViewBag.pageType = "Dsc";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Class3.jpg", Color.DarkViolet, 30, 250, 225);
 			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
@@ -54,6 +61,7 @@ namespace cheapdscin.Controllers
 			var title = "DGFT in {0} | DGFT Sales in {0} | DGFT near {0}";
 			ViewBag.pageType = "Dgft";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Dgft.jpg", Color.DarkBlue, 30, 270, 350);
 			return Process(prefix, desc, title, stateName, "Index", "999*");
 		}
 
@@ -64,6 +72,7 @@ namespace cheapdscin.Controllers
 			var title = "Cheap DGFT in {0} | Cheap DGFT Sales in {0} | Cheap DGFT near {0}";
 			ViewBag.pageType = "Dgft";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Dgft.jpg", Color.DarkBlue, 30, 270, 350);
 			return Process(prefix, desc, title, stateName, "Index", "999*");
 		}
 
@@ -75,6 +84,7 @@ namespace cheapdscin.Controllers
 			var title = "Usb Token in {0} | Usb Token Sales in {0} | Usb Token near {0}";
 			ViewBag.pageType = "Usb";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/UsbToken.jpg", Color.DarkBlue, 30, 250, 235);
 			return Process(prefix, desc, title, stateName, "Index", "312*");
 		}
 
@@ -85,6 +95,7 @@ namespace cheapdscin.Controllers
 			var title = "Cheap Usb Token in {0} | Cheap Usb Token Sales in {0} | Cheap Usb Token near {0}";
 			ViewBag.pageType = "Usb";
 			ViewBag.CdnFolder = "Class3Individual";
+			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/UsbToken.jpg", Color.DarkBlue, 30, 250, 235);
 			return Process(prefix, desc, title, stateName, "Index", "312*");
 		}
 
@@ -94,6 +105,7 @@ namespace cheapdscin.Controllers
 
 		private ActionResult Process(string prefix, string desc, string title, string stateName, string viewName, string price)
 		{
+
 			ViewBag.UriPrefix = prefix;
 			ViewBag.PageTitle = CultureInfo.CurrentCulture.TextInfo.ToTitleCase((prefix + stateName)?.Replace("-", " "));
 
@@ -115,6 +127,79 @@ namespace cheapdscin.Controllers
 
 
 			return View(viewName);
+		}
+
+
+		public string CreateDemoCertificate(string sText, string sampleFilePath, Color color, int fontSize = 30, int x = 250, int y = 225)
+		{
+			try
+			{
+				sampleFilePath = Helper.LoadCdn(sampleFilePath);
+
+				using (var client = new WebClient())
+				{
+					var content = client.DownloadData(sampleFilePath);
+					using (var stream = new MemoryStream(content))
+					{
+
+						using (Bitmap oBitmap = new Bitmap(Image.FromStream(stream)))
+						{
+							Graphics oGraphic = Graphics.FromImage(oBitmap);
+
+							PointF oPoint = default(PointF);
+							SolidBrush oBrushBlack = new SolidBrush(color);
+							Font oFont = new Font("Arial", fontSize, FontStyle.Bold);
+
+							oPoint = new PointF(x, y);
+							oGraphic.DrawString(sText, oFont, oBrushBlack, oPoint);
+
+							using (MemoryStream memory = new MemoryStream())
+							{
+								oBitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Jpeg);
+								byte[] bytesArray = memory.ToArray();
+								return Convert.ToBase64String(bytesArray, 0, bytesArray.Length);
+							}
+						}
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				return sampleFilePath;
+			}
+			return string.Empty;
+		}
+
+		private static string Left(string str, int length)
+		{
+			return str.Substring(0, Math.Min(length, str.Length));
+		}
+
+		private static string Mid(string input, char newChar)
+		{
+
+			if (input == null)
+			{
+
+				throw new ArgumentNullException("input");
+
+			}
+
+			char[] chars = input.ToCharArray();
+
+			//chars[index - 1] = newChar;
+
+			return new string(chars);
+
+		}
+
+		private static string Mid(string s, int a)
+		{
+
+			string temp = s.Substring(a);
+
+			return temp;
+
 		}
 	}
 }

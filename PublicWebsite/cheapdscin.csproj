@@ -309,6 +309,7 @@
     <EmbeddedResource Include="ResourceFile\en-US.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

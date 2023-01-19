@@ -60,7 +60,11 @@
 								@Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
 							</div>
 						</div>
-
+						<div class="ButtonClick d-none" id="ButtonClick">
+							<div class="alert alert">
+								Please Wait for Response
+							</div>
+						</div>
 						<button class="btn btn-sm" id="submitButton" type="submit">@Get.Content("ContactUs_Submit Button", "Submit Enquiry")</button>
 					</form>
 
@@ -102,7 +106,9 @@
 		$(document).ready(function () {
 			$("#submitButton").click(function (ev) {
 				var form = $("#contactForm");
-				var url = form.attr('action');
+				var url = form.attr('action');				
+				$(".ButtonClick").removeClass("d-none");
+				$(".btn").addClass("d-none");
 				$.ajax({
 					type: "POST",
 					url: url,
@@ -110,24 +116,28 @@
 					data: form.serialize(),
 					success: function (data) {
 						if (data) {
-							$(".success-box").removeClass("d-none");
+							$(".success-box").removeClass("d-none");							
 							if (!$(".error-box").hasClass("d-none"))
 								$(".error-box").addClass("d-none");
 						}
 						else {
 							$(".error-box").removeClass("d-none");
-							if ($(".success-box").hasClass("d-none"))
+							if (!$(".success-box").hasClass("d-none"))
 								$(".success-box").addClass("d-none");
+							$(".btn").removeClass("d-none");
 						}
 					},
 					error: function (data) {
 						$(".error-box").removeClass("d-none");
-						if ($(".success-box").hasClass("d-none"))
+						if (!$(".success-box").hasClass("d-none"))
 							$(".success-box").addClass("d-none");
+						$(".btn").removeClass("d-none");
 					}
 				});
+				$(".ButtonClick").addClass("d-none");
+
 			});
-			$("#contactForm").submit((e) => {
+			$("#contactForm").submit((e) => {				
 				var _this = e;
 				_this.preventDefault();
 				return false;
