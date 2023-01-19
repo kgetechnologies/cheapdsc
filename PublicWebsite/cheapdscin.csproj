@@ -113,6 +113,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\sitemapController.cs" />
     <Compile Include="Controllers\StateController.cs" />
@@ -193,7 +194,6 @@
     <Content Include="themekit\media\video-poster.png" />
     <Content Include="themekit\media\video.mp4" />
     <Content Include="themekit\media\wide-empty.png" />
-    <Content Include="themekit\media\wide.png" />
     <Content Include="themekit\scripts\contact-form.js" />
     <Content Include="themekit\scripts\contact-form\contact-form.js" />
     <Content Include="themekit\scripts\contact-form\datepicker.min.js" />
@@ -249,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Image\" />
     <Folder Include="Views\sitemap\" />
   </ItemGroup>
   <ItemGroup>

@@ -13,9 +13,15 @@ namespace cheapdscin
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-			//routes.RouteExistingFiles = true;
 
-			//	routes.IgnoreRoute("");
+			routes.MapRoute(
+			name: "Image",
+			url: "Image/{product}/{location}",
+			defaults: new { controller = "Image", action = "Index", product = UrlParameter.Optional, location = UrlParameter.Optional },
+		 new[] { "cheapdscin.Controllers" }
+		);
+
+
 
 			routes.MapRoute(
 			name: "contact",

@@ -170,36 +170,6 @@ namespace cheapdscin.Controllers
 			return string.Empty;
 		}
 
-		private static string Left(string str, int length)
-		{
-			return str.Substring(0, Math.Min(length, str.Length));
-		}
-
-		private static string Mid(string input, char newChar)
-		{
-
-			if (input == null)
-			{
-
-				throw new ArgumentNullException("input");
-
-			}
-
-			char[] chars = input.ToCharArray();
-
-			//chars[index - 1] = newChar;
-
-			return new string(chars);
-
-		}
-
-		private static string Mid(string s, int a)
-		{
-
-			string temp = s.Substring(a);
-
-			return temp;
-
-		}
+	
 	}
 }
