@@ -122,7 +122,7 @@ MAGNIFIC POPUP - MAGNIFIC-POPUP.CSS
     display: inline-block;
 }
 .mfp-preloader {
-    content: url(../media/loader.svg);
+    content: url(https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/themekit/media/loader.svg);
 }
 
 .mfp-s-ready .mfp-preloader {

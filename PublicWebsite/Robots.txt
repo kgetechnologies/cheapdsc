@@ -2,4 +2,4 @@
 Disallow: 
 Disallow: /bin
 Disallow: /web.config
-Sitemap: https://www.card2cash.in/sitemap.xml
+Sitemap: https://www.cheapdsc.com/sitemap.xml

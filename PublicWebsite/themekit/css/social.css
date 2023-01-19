@@ -23,16 +23,16 @@ Table of contents
     position: relative;
 }
 
-.feeds-loading:before {
-    content: url(../media/loader.svg);
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-}
+    .feeds-loading:before {
+        content: url(https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/themekit/media/loader.svg);
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -15px;
+    }
 
 .slider .social-feed li {
     margin-bottom: 0;

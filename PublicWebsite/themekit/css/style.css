@@ -52,7 +52,7 @@ body, textarea {
 	}
 
 #preloader:before {
-	content: url(../media/loader.svg);
+	content: url(https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/themekit/media/loader.svg);
 	position: absolute;
 	width: 15px;
 	height: 15px;
