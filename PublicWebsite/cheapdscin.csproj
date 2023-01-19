@@ -123,6 +123,7 @@
     <Compile Include="Models\CityStateModel.cs" />
     <Compile Include="Models\ContactUs.cs" />
     <Compile Include="Models\Languages.cs" />
+    <Compile Include="Models\ProductList.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceFile\en-GB.Designer.cs">
@@ -297,6 +298,8 @@
     <Content Include="Views\Shared\NewTheme\_Footer.cshtml" />
     <Content Include="Views\Product\CheapClass3IndividualSignature.cshtml" />
     <Content Include="Views\Shared\NewTheme\_SocialShare.cshtml" />
+    <Content Include="Views\Shared\NewTheme\_OurProducts.cshtml" />
+    <Content Include="Views\Product\CheapDgftNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ResourceFile\en-GB.resx">

@@ -1,0 +1,47 @@
+﻿@{
+	var products = Helper.ProductList;
+}
+<section class="section-base">
+	<div class="container">
+		<h3>Our Products</h3>
+		<div class="grid-list" data-columns="4" data-columns-md="2" data-columns-sm="1" data-gap="60">
+			<div class="grid-box">
+				@foreach (var eachProduct in products)
+				{
+					<div class="grid-item">
+						<div class="cnt-box cnt-box-team lightbox" data-href="#@eachProduct.HrefId" data-lightbox-anima="fade-in">
+							@*<img src="/themekit/media/user.png" alt="" />*@
+							<div class="caption">
+								<h2>@eachProduct.H2</h2>
+								<span>@eachProduct.Title</span>
+								<span class="icon-links">
+									@Html.Partial("NewTheme/_SocialShare")
+								</span>
+								<p>
+									@eachProduct.Description
+								</p>
+							</div>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+		@foreach (var eachProduct in products)
+		{
+			<div id="@eachProduct.HrefId" class="box-lightbox-md">
+				<h2>@eachProduct.H2</h2>
+				<h4>@eachProduct.Title at @eachProduct.Price</h4>
+				<hr class="space-sm" />
+				<p>
+					@eachProduct.Description
+				</p>
+				<hr class="space-sm" />
+				<span class="icon-links">
+					@Html.Partial("NewTheme/_SocialShare")
+				</span>
+			</div>
+		}
+	
+	</div>
+</section>

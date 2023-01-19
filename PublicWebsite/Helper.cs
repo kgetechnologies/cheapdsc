@@ -65,7 +65,7 @@ namespace cheapdscin
 					if (BccMail != null && BccMail.Count > 0)
 						foreach (string Bcc in BccMail.Where(x => !string.IsNullOrEmpty(x)))
 							mail.Bcc.Add(Bcc);
-					
+
 					mail.Subject = subject;
 					mail.Body = message;
 
@@ -260,6 +260,95 @@ namespace cheapdscin
 		public static string LoadCdn(string uri)
 		{
 			return string.Format(CdnDomain, uri);
+		}
+
+		public static List<ProductList> ProductList
+		{
+			get
+			{
+				return new List<ProductList>()
+				{
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Individual Signature",
+						  Description="Cheap Class 3 Individual Signature Certificate",
+						   Details="Cheap Class 3 Individual Signature Certificate",
+							HrefId="Class3-Indi-Sign",
+							 Price="₹599.00"
+					},
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Individual Encryption",
+						  Description="Cheap Class 3 Individual Encryption",
+						   Details="Cheap Class 3 Individual Encryption",
+							HrefId="Class3-Indi-Encrypt",
+							 Price="₹599.00"
+					},
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Individual Combo",
+						  Description="Cheap Class 3 Individual Combo",
+						   Details="Cheap Class 3 Individual Combo",
+							HrefId="Class3-Indi-Combo",
+							 Price="₹999.00"
+					},
+
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Organization Signature",
+						  Description="Cheap Class 3 Organization Signature Certificate",
+						   Details="Cheap Class 3 Organization Signature Certificate",
+							HrefId="Class3-Org-Sign",
+							 Price="₹599.00"
+					},
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Organization Encryption",
+						  Description="Cheap Class 3 Organization Encryption",
+						   Details="Cheap Class 3 Organization Encryption",
+							HrefId="Class3-Org-Encrypt",
+							 Price="₹599.00"
+					},
+					new ProductList()
+					{
+						 H2="Class 3",
+						 Title="Organization Combo",
+						  Description="Cheap Class 3 Organization Combo",
+						   Details="Cheap Class 3 Organization Combo",
+							HrefId="Class3-Org-Combo",
+							 Price="₹999.00"
+					},
+
+
+					new ProductList()
+					{
+						 H2="DGFT",
+						 Title="Import & Export",
+						  Description="Cheap DGFT Certificate",
+						   Details="Cheap Class 3 Individual Signature Certificate",
+							HrefId="Dgft",
+							 Price="₹999.00"
+					},
+
+
+					new ProductList()
+					{
+						 H2="Usb Token",
+						 Title="USB Token",
+						  Description="Usb Token For Storing Certificate",
+						   Details="Usb Token For Storing Certificate",
+							HrefId="Usb-token",
+							 Price="₹312.00"
+					},
+
+				};
+			}
+
 		}
 	}
 }
