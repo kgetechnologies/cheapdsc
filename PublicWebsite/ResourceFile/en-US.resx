@@ -162,6 +162,9 @@
   <data name="All India" xml:space="preserve">
     <value>All India</value>
   </data>
+  <data name="at just" xml:space="preserve">
+    <value>at just</value>
+  </data>
   <data name="Business Name" xml:space="preserve">
     <value>Business Name</value>
   </data>
@@ -338,6 +341,9 @@
   </data>
   <data name="Mission" xml:space="preserve">
     <value>Mission</value>
+  </data>
+  <data name="One Stop Place for" xml:space="preserve">
+    <value>One Stop Place for </value>
   </data>
   <data name="Parent Cmp" xml:space="preserve">
     <value>Parent Cmp</value>

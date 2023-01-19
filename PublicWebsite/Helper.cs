@@ -15,6 +15,7 @@ namespace cheapdscin
 {
 	public class Helper
 	{
+		private const string CdnDomain = "https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main{0}";
 		public static string ReadAppSettings(string key, string value = "")
 		{
 			var val = ConfigurationManager.AppSettings[key];
@@ -254,6 +255,11 @@ namespace cheapdscin
 				cache.Add(CacheKey, availableStocks, cacheItemPolicy);
 				return availableStocks;
 			}
+		}
+
+		public static string LoadCdn(string uri)
+		{
+			return string.Format(CdnDomain, uri);
 		}
 	}
 }

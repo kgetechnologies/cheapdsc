@@ -196,6 +196,15 @@ namespace cheapdscin.ResourceFile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to at just.
+        /// </summary>
+        public static string at_just {
+            get {
+                return ResourceManager.GetString("at just", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Business Name.
         /// </summary>
         public static string Business_Name {
@@ -723,6 +732,15 @@ namespace cheapdscin.ResourceFile {
         public static string Mission {
             get {
                 return ResourceManager.GetString("Mission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One Stop Place for .
+        /// </summary>
+        public static string One_Stop_Place_for {
+            get {
+                return ResourceManager.GetString("One Stop Place for", resourceCulture);
             }
         }
         
