@@ -31,17 +31,19 @@ namespace cheapdscin.Resources
 		//public static string Content(string key, string defaultvalue, string lang)
 		public static string Content(string key, string defaultValue, string userLanguage = "")
 		{
-			userLanguage = string.IsNullOrEmpty(userLanguage) ? (CultureInfo.CurrentCulture?.Name ?? "en-US") : userLanguage;
+			return defaultValue;
 
-			var val = GetContent(userLanguage, key);
-			if (userLanguage != "en-US" && string.IsNullOrEmpty(val))
-			{
-				val = GetContent("en-US", key);
-			}
-			if (string.IsNullOrEmpty(val))
-				return defaultValue;
+			//userLanguage = string.IsNullOrEmpty(userLanguage) ? (CultureInfo.CurrentCulture?.Name ?? "en-US") : userLanguage;
 
-			return val;
+			//var val = GetContent(userLanguage, key);
+			//if (userLanguage != "en-US" && string.IsNullOrEmpty(val))
+			//{
+			//	val = GetContent("en-US", key);
+			//}
+			//if (string.IsNullOrEmpty(val))
+			//	return defaultValue;
+
+			//return val;
 
 		}
 
