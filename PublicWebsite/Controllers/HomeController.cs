@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -48,45 +49,56 @@ namespace cheapdscin.Controllers
 		{
 			var req = this.Request;
 			var form = req.Form;
-            try
-            {
-				var model = new Models.ContactUs()
+			try
+			{
+				var _product = ReadFormPropertyValue(form, "Product");
+				bool sent = false;
+				if (!string.IsNullOrEmpty(_product) && Enum.TryParse(_product, out Models.Products product))
 				{
-					Name = form["Name"]?.ToString() ?? "",
-					Email = form["Email"]?.ToString() ?? "",
-					ContactNumber = form["ContactNumber"]?.ToString() ?? "",
-					Message = form["Message"]?.ToString() ?? "",
-					ZipCode = Convert.ToInt32(form["ZipCode"]?.ToString() ?? "0"),
-					AlreadyHavingUsbToken = form["AlreadyHavingUsbToken"]?.ToString()?.ToLower()?.Contains("true") ?? false,
-					Agreed = form["Agreed"]?.ToString()?.ToLower()?.Contains("true") ?? false,
-					Product = (Models.Products)Convert.ToInt32(form["Product"].ToString())
-				};
-				var usbStatus = model.AlreadyHavingUsbToken ? "Yes" : "No";
-				var paymentMsg = ($"\n\n*Customer Details*" +
-			  $"\nName: {model?.Name}" +
-			  $"\nLooking for Product: *{model?.Product.ToString()}*" +
-			  $"\nContact Number: *{model?.ContactNumber}*" +
-				$"\nEmail: *{model?.Email}*" +
-			  $"\nMessage: {model?.Message}" +
-			  $"\nAlready Having USB Token: *{usbStatus}*" +
-			  $"\nZipCode: *{model?.ZipCode}*");
-				var whatsAppMsg =
-				$"CheapDSC New Enquired Via Website {paymentMsg}";
-				Helper.RunAsync(paymentMsg, "Cheap DSC Enquiry");
-				var sent = Helper.TriggerWhatsApp(whatsAppMsg);
+					var model = new Models.ContactUs()
+					{
+						Name = ReadFormPropertyValue(form, "Name"),
+						Email = ReadFormPropertyValue(form, "Email"),
+						ContactNumber = ReadFormPropertyValue(form, "ContactNumber"),
+						Message = ReadFormPropertyValue(form, "Message"),
+						ZipCode = Convert.ToInt32(ReadFormPropertyValue(form, "ZipCode", "0")),
+						AlreadyHavingUsbToken = ReadFormPropertyValue(form, "AlreadyHavingUsbToken", "false").ToLower()?.Contains("true") ?? false,
+						Agreed = ReadFormPropertyValue(form, "Agreed", "false").ToLower()?.Contains("true") ?? false,
+						Product = product
+					};
+					var usbStatus = model.AlreadyHavingUsbToken ? "Yes" : "No";
+					var paymentMsg = ($"\n\n*Customer Details*" +
+				  $"\nName: {model?.Name}" +
+				  $"\nLooking for Product: *{model?.Product.ToString()}*" +
+				  $"\nContact Number: *{model?.ContactNumber}*" +
+					$"\nEmail: *{model?.Email}*" +
+				  $"\nMessage: {model?.Message}" +
+				  $"\nAlready Having USB Token: *{usbStatus}*" +
+				  $"\nZipCode: *{model?.ZipCode}*");
+					var whatsAppMsg =
+					$"CheapDSC New Enquired Via Website {paymentMsg}";
+					Helper.RunAsync(paymentMsg, "Cheap DSC Enquiry");
+					sent = Helper.TriggerWhatsApp(whatsAppMsg);
+				}
+
 				ViewBag.DisplayName = "Contact";
 				ViewBag.LinkValue = "Contact";
 
 				ViewBag.CanonicalUri = "contact";
 				ViewBag.desc = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
 				ViewBag.Title = "Contact Instant Dsc | Contact Spot DSC | Contact Class 3 DSC | Contact DGFT | Contact USB Token";
-				return Json(sent , JsonRequestBehavior.AllowGet);
+				return Json(sent, JsonRequestBehavior.AllowGet);
 			}
-            catch (Exception ex)
-            {
-				Helper.RunAsync(ex.Message, "Cheap DSC ContactUsForm Exception");			
-            }
-			return Json( false , JsonRequestBehavior.AllowGet);
+			catch (Exception ex)
+			{
+				Helper.RunAsync(ex.Message, "Cheap DSC ContactUsForm Exception");
+			}
+			return Json(false, JsonRequestBehavior.AllowGet);
+		}
+
+		private string ReadFormPropertyValue(NameValueCollection form, string key, string defaultValue = "")
+		{
+			return form[key]?.ToString() ?? defaultValue;
 		}
 
 		private async Task<bool> TriggerWhatsApp(string message)

@@ -190,21 +190,21 @@ COLOR 2
 
 h1, h2, h3, h4, h5, h6, .btn.btn-border, .btn-text, .input-text, .input-select, .input-textarea, .icon-list span, .icon-list span a, .social-links a i, a, .glide__arrow, .search-bar input[type=submit],
 .menu-cnt .tab-nav > li a, .menu-cnt > ul > li a.menu-cnt > ul > li a {
-	color: #379cf4;
+	color: #008000;
 }
 
 .icon-circle li:before, .icon-circle span:before, .icon-line li:before, .icon-line span:before, .progress-bar > div > div, .progress-bar > div span, .breadcrumb li a:after, .glide__bullets > button {
-	background-color: #379cf4;
+	background-color: #008000;
 }
 
 .btn, .tab-nav li.active a, .tab-nav li:hover a, .icon-links-grid a:hover, .icon-links-button a {
-	background-color: #379cf4;
-	border-color: #379cf4;
+	background-color: #008000;
+	border-color: #008000;
 }
 
 .tab-nav li a {
-	color: #379cf4;
-	border-color: #379cf4;
+	color: #008000;
+	border-color: #008000;
 }
 
 /*
