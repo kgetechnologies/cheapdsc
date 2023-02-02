@@ -26,6 +26,7 @@ Table of contents
 
 .form-box > .space.xs {
     height: 12px;
+    color:#2aa768;
 }
 
 .form-box.text-center input, .form-box.text-center textarea, .form-box.text-center select {
@@ -34,11 +35,13 @@ Table of contents
 
 .form-box p {
     margin: 0 0 10px 0;
+    color:#2aa768;
 }
 
 .form-box textarea, .form-box select, .form-box input {
     margin: 0 0 20px 0;
     transition: all .5s;
+    color:#2aa768;
 }
 
 form.form-box textarea {
@@ -92,6 +95,7 @@ form.form-box textarea {
 .form-box.align-center .form-checkbox label {
     float: none;
     width: auto;
+    color:#2aa768;
 }
 
 .form-box.align-center .form-checkbox {
@@ -100,7 +104,7 @@ form.form-box textarea {
 
 .error-box, .success-box {
     padding: 15px;
-    color: #fff;
+    color: #2aa768;
     border-radius: 3px;
     padding: 10px 15px;
     font-size: 13px;
@@ -139,6 +143,7 @@ form.form-box textarea {
     direction: ltr !important;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+    color:#2aa768;
 }
 
 .datepicker-container:before,
@@ -188,12 +193,12 @@ form.form-box textarea {
 .datepicker-top-left:after,
 .datepicker-top-right:after {
     top: -4px;
-    border-bottom-color: #fff;
+    border-bottom-color: #2aa768;
 }
 
 .datepicker-bottom-left,
 .datepicker-bottom-right {
-    border-bottom-color: #379cf4;
+    border-bottom-color: #2aa768;
 }
 
 .datepicker-bottom-left:before,
@@ -258,7 +263,7 @@ form.form-box textarea {
 
 .datepicker-panel > ul > li.muted,
 .datepicker-panel > ul > li.muted:hover {
-    color: #999;
+    color: #2aa768;
 }
 
 .datepicker-panel > ul > li.picked,
@@ -270,7 +275,7 @@ form.form-box textarea {
 .datepicker-panel > ul > li.disabled:hover {
     color: #ccc;
     cursor: default;
-    background-color: #fff;
+    background-color: #2aa768;
 }
 
 .datepicker-panel > ul > li[data-view="years prev"],
@@ -299,7 +304,7 @@ form.form-box textarea {
 .datepicker-panel > ul[data-view="week"] > li,
 .datepicker-panel > ul[data-view="week"] > li:hover {
     cursor: default;
-    background-color: #fff;
+    background-color: #2aa768;
 }
 
 .datepicker-hide {

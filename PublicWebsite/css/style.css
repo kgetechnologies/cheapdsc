@@ -3,9 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:forestgreen;
 }
 .site-text-center {
 text-align:center;
+color:forestgreen;
 }
 .site-top {
     background: #0cbaa4 !important;
@@ -19,12 +21,13 @@ text-align:center;
 
 .site-text {
     padding: 5px 0px 5px 5px;
+
 }
 
 
     .site-text span, .site-text-tel, .site-text-email, .fa {
         font-size: 15px;
-        color: white;
+        color: forestgreen;
     }
 
 .fa {
@@ -51,7 +54,7 @@ a:hover {
     margin: 0 0 0 10px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #656565;
+    color: forestgreen;
 }
 
     .nav-link:hover {
@@ -175,7 +178,7 @@ ul li {
 .btn {
     border: 1px solid black;
     border-radius: 0;
-    background: #0cbaa4;
+    background: white;
     font-size: 13px;
     color: white;
     text-transform: uppercase;
@@ -210,10 +213,14 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 0;
+    }
+    .main{
+        font-display:auto;
+        color:forestgreen;
     }
 
 
@@ -259,6 +266,7 @@ form, .address {
 
 p {
     margin: 0 0 10px;
+    color:forestgreen;
 }
 
 address {
@@ -416,7 +424,7 @@ article {
 }
 
 a:hover {
-    color: black;
+    color:forestgreen;
     text-decoration: none;
 }
 
@@ -439,7 +447,7 @@ a:hover {
 }
 
     .nav-link:hover {
-        color: #0cbaa4;
+        color: blue;
     }
 
 .dropdown-toggle::after {
@@ -573,10 +581,10 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 3px;
     }
 
 
@@ -625,7 +633,7 @@ ul li {
     }
 
     .bottom-about ul li .fa-user, .fa-eye {
-        color: #656565;
+        color:forestgreen;
         padding: 0 5px 0 5px;
     }
 
@@ -899,10 +907,10 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 3px;
     }
 
 
@@ -1065,16 +1073,18 @@ ul li {
         padding: 0;
         box-sizing: border-box;
     }
+
     .site-text-center {
-        text-align: none !important;
+        text-align:  !important;
     }
+
     .site-top {
         background: #0cbaa4 !important;
-        text-align: none !important;
+        text-align: !important;
     }
 
     .site-text {
-        padding: 5px 0 5px 100px;      
+        padding: 5px 0 5px 100px;
     }
 
         .site-text span, .site-text-tel, .site-text-email, .fa {
@@ -1265,10 +1275,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 
@@ -1306,7 +1316,7 @@ ul li {
         font-family: 'Open Sans',Arial,sans-serif;
         font-size: 14px;
         font-weight: 300;
-        color: #656565;
+        color: forestgreen;
         padding: 8px;
         margin-bottom: 10px;
         border-radius: 1px;
@@ -1320,6 +1330,7 @@ ul li {
         margin-bottom: 20px;
         font-style: normal;
         line-height: 1.428571429;
+        color: forestgreen;
     }
 
     .address .fa, .p .fa {
@@ -1460,12 +1471,12 @@ ul li {
     /***********************      product css       **********************/
 
     /*   header css start  */
-   
 
-        .site-text span, .site-text-tel, .site-text-email, .fa {
-            font-size: 15px;
-            color: white;
-        }
+
+    .site-text span, .site-text-tel, .site-text-email, .fa {
+        font-size: 15px;
+        color: white;
+    }
 
     .fa {
         padding: 0 5px 0 0;
@@ -1629,10 +1640,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 
@@ -1730,7 +1741,7 @@ ul li {
     /*   product css end  */
 
     .cat-list {
-        color: #656565;
+        color: forestgreen;
         font-family: 'Open Sans',Arial,sans-serif;
         font-size: 14px;
         font-weight: 300;
@@ -1778,22 +1789,22 @@ ul li {
             font-size: 16px;
             font-weight: 600;
         }
-    /***********************   service    csss      ********************/
+    /***********************   service    css     ********************/
 
 
     /*   header css start  */
- 
-        .site-text span, .site-text-tel, .site-text-email, .fa {
-            font-size: 15px;
-            color: white;
-        }
+
+    .site-text span, .site-text-tel, .site-text-email, .fa {
+        font-size: 15px;
+        color: white;
+    }
 
     .fa {
         padding: 0 5px 0 0;
     }
 
     a:hover {
-        color: black;
+        color:black;
         text-decoration: none;
     }
 
@@ -1816,7 +1827,7 @@ ul li {
     }
 
         .nav-link:hover {
-            color: #0cbaa4;
+            color: blue;
         }
 
     .dropdown-toggle::after {
@@ -1862,7 +1873,7 @@ ul li {
     }
 
         #Breadcrumb, .breadcrumb .active {
-            color: white;
+            color: forestgreen;
             font-size: 15px;
             font-weight: 300;
         }
@@ -1901,15 +1912,20 @@ ul li {
     .address-location, a {
         text-decoration: none;
         font-size: 14px;
-        color: white;
+        color: forestgreen;
     }
 
         a:hover {
-            color: #656565;
+            color: forestgreen;
         }
 
     ul li {
         list-style: none;
+        color: forestgreen;
+    }
+
+    .div1 {
+        color: forestgreen;
     }
 
     .btn {
@@ -1950,10 +1966,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 
@@ -1993,11 +2009,11 @@ ul li {
             font-family: 'Open Sans',Arial,sans-serif;
             font-size: 14px;
             font-weight: 300;
-            color: #656565;
+            color: forestgreen;
         }
 
         .bottom-about ul li .fa-user, .fa-eye {
-            color: #656565;
+            color: forestgreen;
             padding: 0 5px 0 5px;
         }
 
@@ -2019,7 +2035,7 @@ ul li {
     }
 
     .about-icon-facebook {
-        background: #3B5998;
+        background: #09125c;
         color: white;
     }
 
@@ -2086,8 +2102,9 @@ ul li {
         .btn:hover {
             color: black;
             background: #fff;
-        }
 
+        }
+    
     /*   servicescc order form css end  */
 
     .related {
@@ -2107,7 +2124,13 @@ ul li {
         margin-left: 5px;
         margin-right: 5px;
     }
-    /*   servicescc css end  */
+   
+    }
+.about-text {
+    color: forestgreen;
 }
+    
+        /*   servicescc css end  */
+    
 
 

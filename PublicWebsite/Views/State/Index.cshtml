@@ -17,241 +17,249 @@
 
 
 <main>
-	<section class="section-base">
-		<div class="container">
-			<div class="title align-center">
-				<h1>@displayName</h1>
-			</div>
-			@*https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Page/CheapClass3Dsc.jpg*@
-		<div class="row">
-			<img src="data:image/jpeg;base64,@ViewBag.TestImage" alt="@displayName">
-			@*<img data-lazysrc1="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Banner/Class3.jpg" alt="@displayName" />*@
-		</div>
-			<div class="title align-center">
-				<h2>Get @displayName from CheapDsc.com with Paperless Process.</h2>
-				<h3>CheapDsc.com allows users who are located in and around @location to buy @prefix online for Just @price</h3>
-				<h4>Are you looking for @prefix at the very low cost of @price  in @location @displayName at @price Helps you to do at your location.</h4>
-			</div>
+	
+    <section class="section-base">
+        
+
+        <div class="container">
+            <div class="title align-center">
+                <h1>@displayName</h1>
+            </div>
+            @*https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Page/CheapClass3Dsc.jpg*@
+            <div class="row">
+                <img src="data:image/jpeg;base64,@ViewBag.TestImage" alt="@displayName">
+                @*<img data-lazysrc1="https://raw.githubusercontent.com/kgetechnologies/cdn.cheapdsc.com/main/Banner/Class3.jpg" alt="@displayName" />*@
+            </div>
+            <div class="title align-center">
+                <h2>Get @displayName from CheapDsc.com with Paperless Process.</h2>
+                <h3>CheapDsc.com allows users who are located in and around @location to buy @prefix online for Just @price</h3>
+                <h4>Are you looking for @prefix at the very low cost of @price  in @location @displayName at @price Helps you to do at your location.</h4>
+            </div>
 
 
-			<ul>
-				@foreach (var eachTitle in seoTitle.Split('|'))
-				{
-					var val = @eachTitle.Trim();
-					<li>
-						<font color="#0000ff">
-							<span style="font-weight: 700;">@val</span>
-						</font>
-					</li>
-					<li>
-						<font color="#0000ff">
-							<span style="font-weight: 700;">@val at @price Only</span>
-						</font>
-					</li>
-				}
-			</ul>
+            <ul>
+                @foreach (var eachTitle in seoTitle.Split('|'))
+                {
+                    var val = @eachTitle.Trim();
+                    <li>
+                        <font color="forestgreen">
+                            <span style="font-weight: 700;">@val</span>
+                        </font>
+                    </li>
+                    <li>
+                        <font color="forestgreen">
+                            <span style="font-weight: 700;">@val at @price Only</span>
+                        </font>
+                    </li>
+                }
+            </ul>
 
 
-			<div class="title align-center">
-				<h2>You can use your <b>@prefix</b> for below</h2>
-			</div>
-
-			@if (pageType == "Dsc")
-			{
-				<table class="table table-grid table-border table-6-md">
-					<tbody>
-						<tr>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>MCA e-filing</h3>
-										<p>e-filing all Forms for compliance in MCA portal</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Income Tax e-filing</h3>
-										<p>Authorise the income Tax Filing in govt website</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Pvt, LLP Registration</h3>
-										<p>New Pvt, LLP Registeration requires to use Digital Signature</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>GST Application</h3>
-										<p>At the time of GST Registeration, Modification or Filing</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>IE Code Registration</h3>
-										<p>IE Certitificate Registeration</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Patent and TM e-filing</h3>
-										<p>When Applying for Patent and Trade mark Filing</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Customs e-filing</h3>
-										<p>During income tax e-filing</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Form 16, etc</h3>
-										<p>Digitally Sign the PDF document</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			}
-			else if (pageType == "Dgft")
-			{
-				<table class="table table-grid table-border table-6-md">
-					<tbody>
-						<tr>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Import &nbsp; Export</h3>
-										<p>All Import or Export Activities Require DGFT Certificate</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Wordwide Trade Business</h3>
-										<p>Extend the Trade globally across the Globe</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			}
-			else if (pageType == "Usb")
-			{
-				<table class="table table-grid table-border table-6-md">
-					<tbody>
-						<tr>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Store Class 3 DSC</h3>
-										<p>Can Store Multiple Certificate in Token</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Store DGFT DSC</h3>
-										<p>Can Store Multiple DGFT in Token</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="icon-box icon-box-top align-center">
-									<div class="caption">
-										<h3>Multiple Certificate</h3>
-										<p>Store minimum 1 and Max 10* Certificate in each Usb Token</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			}
-
-			<div class="title align-center">
-
-				<h1 class="site-text-center"><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">We do Sell </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@prefix </span><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">in </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@location</span></h1>
-			</div>
-
-			<iframe class="video"
-					src="//www.youtube-nocookie.com/embed/KoOSplSYmF4?ref=cheapdsc.com/@ViewBag.CanonicalUri"
-					frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope;"
-					allowfullscreen></iframe>
+            <div class="title align-center">
+                <h2>You can use your <b>@prefix</b> for below</h2>
+            </div>
 
 
-			<ul>
-				<li>
-					<a href="https://www.justdial.com/jdmart/chennai/Cheap-Dsc/044PXX44-XX44-190316080520-X6F9_BZDET/catalogue?ref=cheapdsc.com/@ViewBag.CanonicalUri"
-					   target="_blank" style="font-size: 0.87rem; background-color: white;">
-						<font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for @prefix</b></font>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.indiamart.com/cheap-dsc/?ref=cheapdsc.com/@ViewBag.CanonicalUri" target="_blank">
-						<font face="Times New Roman" color="#0000ff">
-							<b>India Mart Reference for @prefix</b>
-						</font>
-					</a>
-				</li>
-			</ul>
+            @if (pageType == "Dsc")
+            {
+                <table class="table table-grid table-border table-6-md">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>MCA e-filing</h3>
+                                        <p>e-filing all Forms for compliance in MCA portal</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Income Tax e-filing</h3>
+                                        <p>Authorise the income Tax Filing in govt website</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Pvt, LLP Registration</h3>
+                                        <p>New Pvt, LLP Registeration requires to use Digital Signature</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>GST Application</h3>
+                                        <p>At the time of GST Registeration, Modification or Filing</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>IE Code Registration</h3>
+                                        <p>IE Certitificate Registeration</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Patent and TM e-filing</h3>
+                                        <p>When Applying for Patent and Trade mark Filing</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Customs e-filing</h3>
+                                        <p>During income tax e-filing</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Form 16, etc</h3>
+                                        <p>Digitally Sign the PDF document</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+            else if (pageType == "Dgft")
+            {
+                <table class="table table-grid table-border table-6-md">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Import &nbsp; Export</h3>
+                                        <p>All Import or Export Activities Require DGFT Certificate</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Wordwide Trade Business</h3>
+                                        <p>Extend the Trade globally across the Globe</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+            else if (pageType == "Usb")
+            {
+                <table class="table table-grid table-border table-6-md">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Store Class 3 DSC</h3>
+                                        <p>Can Store Multiple Certificate in Token</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Store DGFT DSC</h3>
+                                        <p>Can Store Multiple DGFT in Token</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="icon-box icon-box-top align-center">
+                                    <div class="caption">
+                                        <h3>Multiple Certificate</h3>
+                                        <p>Store minimum 1 and Max 10* Certificate in each Usb Token</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
 
-			@{
-				var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
-				Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key, @uriPrefix);
+            <div class="title align-center">
 
-			}
-			<div class="title align-center">
-				<h2>@SD.Value</h2>
-			</div>
-			<div class="container">
-				<div class="row">
-					@foreach (var eachState in citiesList.OrderBy(f => f.Value.ToString().Length))
-					{
-						<div class="col-4">
-							<a class="dropdown-item" title="@eachState.Value.name"
-							   href="@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value.name</a>
-						</div>
-					}
-				</div>
-			</div>
-			<div class="title align-center">
-				<h2>Servicing States</h2>
-			</div>
+                <h1 class="site-text-center"><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">We do Sell </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@prefix </span><span style="color: rgb(73, 73, 73); font-family: Raleway, sans-serif; font-size: 40px; text-align: center;">in </span><span class="text-red font-weight-500" style="font-family: Raleway, sans-serif; font-size: 40px; text-align: center; box-sizing: border-box; transition-timing-function: initial; transition-duration: 0s; color: rgb(203, 52, 43);">@location</span></h1>
+            </div>
 
-			<div class="container">
-				<div class="row">
-					@foreach (var eachState in cheapdscin.Helper.States.OrderBy(f => f.Value))
-					{
-						<div class="col-4">
-							<a class="dropdown-item" title="@eachState.Value" href="/@uriPrefix@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value</a>
-						</div>
-					}
-				</div>
-			</div>
+            <iframe class="video"
+                    src="//www.youtube-nocookie.com/embed/KoOSplSYmF4?ref=cheapdsc.com/@ViewBag.CanonicalUri"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                    allowfullscreen></iframe>
 
-		</div>
-	</section>
+
+            <ul>
+                <li>
+                    <a href="https://www.justdial.com/jdmart/chennai/Cheap-Dsc/044PXX44-XX44-190316080520-X6F9_BZDET/catalogue?ref=cheapdsc.com/@ViewBag.CanonicalUri"
+                       target="_blank" style="font-size: 0.87rem; background-color: white;">
+                        <font face="Times New Roman" color="#0000ff"><b style="">Just Dial Reference for @prefix</b></font>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.indiamart.com/cheap-dsc/?ref=cheapdsc.com/@ViewBag.CanonicalUri" target="_blank">
+                        <font face="Times New Roman" color="#0000ff">
+                            <b>India Mart Reference for @prefix</b>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+
+            @{
+                var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
+                Dictionary<string, cheapdscin.Models.City> citiesList = cheapdscin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key, @uriPrefix);
+
+            }
+            <div1 class="title align-center">
+                <h2>@SD.Value</h2>
+            </div1>
+            <div class="container">
+                <div class="row">
+                    @foreach (var eachState in citiesList.OrderBy(f => f.Value.ToString().Length))
+                    {
+                        <div class="col-4">
+                            <a class="dropdown-item" title="@eachState.Value.name"
+                               href="@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value.name</a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="title align-center">
+                <h2 >Servicing States</h2>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    
+                    @foreach (var eachState in cheapdscin.Helper.States.OrderBy(f => f.Value))
+                    {
+                        <div class="col-4">
+
+                            <a class="dropdown-item" title="@eachState.Value" href="/@uriPrefix@eachState.Key?utm_medium=seo&utm_source=google&utm_term=@displayName">@eachState.Value</a>
+
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 </main>
