@@ -17,24 +17,24 @@
 						@Html.AntiForgeryToken()
 						<div class="row">
 							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Name", "Your Name")</p>
+								<p>@Get.Content("ContactUs_Name", "Your Name*")</p>
 								@Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Email", "Email Address")</p>
+								<p>@Get.Content("ContactUs_Email", "Email Address*")</p>
 								@Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Mobile", "Mobile Number")</p>
+								<p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
 								@Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_PinCode", "Pin Code")</p>
+								<p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
 								@Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
 							</div>
 							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Interested Product", "Product Interested In")</p>
-								@Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select" })
+								<p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
+								@Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
 							</div>
 							<div class="col-lg-6">
 								<p>@Get.Content("ContactUs_Already Using Product", "Already Using Any Usb Token?")</p>
@@ -42,12 +42,12 @@
 
 							</div>
 						</div>
-						<p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details")</p>
+						<p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details*")</p>
 						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @required = "required" })
 
 						<div class="form-checkbox">
 							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
-							<label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details")</label>
+							<label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details*")</label>
 						</div>
 
 						<div class="success-box d-none">
