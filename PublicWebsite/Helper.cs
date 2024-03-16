@@ -275,7 +275,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Signature Certificate",
 						   Details="Cheap Class 3 Individual Signature Certificate",
 							HrefId="Class3-Indi-Sign",
-							 Price="₹599.00"
+							 Price="₹312.00"
 					},
 					new ProductList()
 					{
@@ -284,7 +284,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Encryption",
 						   Details="Cheap Class 3 Individual Encryption",
 							HrefId="Class3-Indi-Encrypt",
-							 Price="₹599.00"
+							 Price="₹312.00"
 					},
 					new ProductList()
 					{
@@ -293,8 +293,8 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Combo",
 						   Details="Cheap Class 3 Individual Combo",
 							HrefId="Class3-Indi-Combo",
-							 Price="₹999.00"
-					},
+							 Price="₹312.00"
+                    },
 
 					new ProductList()
 					{
@@ -303,8 +303,8 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Signature Certificate",
 						   Details="Cheap Class 3 Organization Signature Certificate",
 							HrefId="Class3-Org-Sign",
-							 Price="₹599.00"
-					},
+							 Price="₹312.00"
+                    },
 					new ProductList()
 					{
 						 H2="Class 3",
@@ -312,8 +312,8 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Encryption",
 						   Details="Cheap Class 3 Organization Encryption",
 							HrefId="Class3-Org-Encrypt",
-							 Price="₹599.00"
-					},
+							 Price="₹312.00"
+                    },
 					new ProductList()
 					{
 						 H2="Class 3",
@@ -321,8 +321,8 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Combo",
 						   Details="Cheap Class 3 Organization Combo",
 							HrefId="Class3-Org-Combo",
-							 Price="₹999.00"
-					},
+							 Price="₹312.00"
+                    },
 
 
 					new ProductList()
@@ -332,8 +332,8 @@ namespace cheapdscin
 						  Description="Cheap DGFT Certificate",
 						   Details="Cheap Class 3 Individual Signature Certificate",
 							HrefId="Dgft",
-							 Price="₹999.00"
-					},
+							 Price="₹312.00"
+                    },
 
 
 					new ProductList()
