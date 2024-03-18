@@ -332,7 +332,7 @@ namespace cheapdscin
 						  Description="Cheap DGFT Certificate",
 						   Details="Cheap Class 3 Individual Signature Certificate",
 							HrefId="Dgft",
-							 Price="₹312.00"
+							 Price="₹1199.00"
                     },
 
 

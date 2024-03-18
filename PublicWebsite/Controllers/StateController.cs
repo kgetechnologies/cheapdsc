@@ -62,7 +62,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Dgft";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Dgft.jpg", Color.DarkBlue, 30, 270, 350);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "1199*");
 		}
 
 		public ActionResult CheapDgft(string stateName)
@@ -73,7 +73,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Dgft";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Dgft.jpg", Color.DarkBlue, 30, 270, 350);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "1199*");
 		}
 
 
