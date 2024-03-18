@@ -117,6 +117,7 @@ form.form-box textarea {
 
 .success-box {
     background: #2aa768;
+    color:white;
 }
 
 /*
@@ -321,4 +322,11 @@ form.form-box textarea {
     .form-box.align-center .form-checkbox label {
         text-align: left;
     }
+}
+.token-position {
+    margin-left: -157px;
+}
+
+.token-ml {
+    margin-left: -152px;
 }

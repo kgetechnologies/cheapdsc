@@ -36,14 +36,13 @@
 								<p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
 								@Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
 							</div>
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Already Using Product", "Already Using Any Usb Token?")</p>
-								@Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select" })
-
-							</div>
+                            <div class="col-lg-6">
+                                @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select token-ml", })
+                                <label  class="token-position" for="AlreadyHavingUsbToken">@Get.Content("ContactUs_Already Using Product", "Already Using Any Usb Token?")</label>
+                            </div>
 						</div>
 						<p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details*")</p>
-						@Html.TextAreaFor(m => m.Message, new { @id = "messagge", @name = "messagge", @class = "input-textarea", @required = "required" })
+						@Html.TextAreaFor(m => m.Message, new { @id = "Message", @name = "Message", @class = "input-textarea", @required = "required" })
 
 						<div class="form-checkbox">
 							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
@@ -107,8 +106,8 @@
 			$("#submitButton").click(function (ev) {
 				var form = $("#contactForm");
 				var url = form.attr('action');				
-				$(".ButtonClick").removeClass("d-none");
-				$(".btn").addClass("d-none");
+			//	$(".ButtonClick").removeClass("d-none");
+			//	$(".btn").addClass("d-none");
 				$.ajax({
 					type: "POST",
 					url: url,
@@ -134,7 +133,7 @@
 						$(".btn").removeClass("d-none");
 					}
 				});
-				$(".ButtonClick").addClass("d-none");
+			//	$(".ButtonClick").addClass("d-none");
 
 			});
 			$("#contactForm").submit((e) => {				
