@@ -275,7 +275,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Signature Certificate",
 						   Details="Cheap Class 3 Individual Signature Certificate",
 							HrefId="Class3-Indi-Sign",
-							 Price="₹312.00"
+							 Price="₹599.00"
 					},
 					new ProductList()
 					{
@@ -284,7 +284,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Encryption",
 						   Details="Cheap Class 3 Individual Encryption",
 							HrefId="Class3-Indi-Encrypt",
-							 Price="₹312.00"
+							 Price="₹599.00"
 					},
 					new ProductList()
 					{
@@ -293,7 +293,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Combo",
 						   Details="Cheap Class 3 Individual Combo",
 							HrefId="Class3-Indi-Combo",
-							 Price="₹312.00"
+							 Price="₹599.00"
                     },
 
 					new ProductList()
@@ -303,7 +303,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Signature Certificate",
 						   Details="Cheap Class 3 Organization Signature Certificate",
 							HrefId="Class3-Org-Sign",
-							 Price="₹312.00"
+							 Price="₹599.00"
                     },
 					new ProductList()
 					{
@@ -312,7 +312,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Encryption",
 						   Details="Cheap Class 3 Organization Encryption",
 							HrefId="Class3-Org-Encrypt",
-							 Price="₹312.00"
+							 Price="₹599.00"
                     },
 					new ProductList()
 					{

@@ -39,7 +39,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Dsc";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Class3.jpg", Color.DarkViolet, 30, 250, 225);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
 		public ActionResult CheapClassDscIn(string stateName)
@@ -50,7 +50,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Dsc";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/Class3.jpg", Color.DarkViolet, 30, 250, 225);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "599*");
 		}
 
 
