@@ -124,6 +124,7 @@
     <Compile Include="Models\CityStateModel.cs" />
     <Compile Include="Models\ContactUs.cs" />
     <Compile Include="Models\Languages.cs" />
+    <Compile Include="Models\PriceList.cs" />
     <Compile Include="Models\ProductList.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
