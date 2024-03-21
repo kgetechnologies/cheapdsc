@@ -5,8 +5,7 @@
 
 <header class="header-image ken-burn-center" data-parallax="true" data-natural-height="1080" data-natural-width="1920" data-bleed="0" data-image-src='@cheapdscin.Helper.LoadCdn("/Page/HomeSlider/Banner1.jpg")' data-offset="0">
 	<div class="container">
-		<h1>@Get.Content("AboutUs_Title", "About Us")</h1>
-		<h2>@Get.Content("AboutUs_SubTitle", "Only Place to get all digital Signature Product at cheap price with best service in India.")</h2>
+		
 	</div>
 </header>
 
@@ -14,16 +13,18 @@
 	<section class="section-base">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<p>@Get.Content("AboutUs_ContentLine1", "AboutUs_ContentLine1")</p>
-					<p>@Get.Content("AboutUs_ContentLine2", "AboutUs_ContentLine2")</p>
-					<p>@Get.Content("AboutUs_ContentLine3", "AboutUs_ContentLine3")</p>
-					<p>@Get.Content("AboutUs_ContentLine4", "AboutUs_ContentLine4")</p>					
-				</div>
+                <div class="col-lg-12">
+                    <h1>@Get.Content("AboutUs_Title", "About Us")</h1>
+                    <h2>@Get.Content("AboutUs_SubTitle", "Only Place to get all digital Signature Product at cheap price with best service in India.")</h2>
+                    <p>@Get.Content("AboutUs_ContentLine1", "AboutUs_ContentLine1")</p>
+                    <p>@Get.Content("AboutUs_ContentLine2", "AboutUs_ContentLine2")</p>
+                    <p>@Get.Content("AboutUs_ContentLine3", "AboutUs_ContentLine3")</p>
+                    <p>@Get.Content("AboutUs_ContentLine4", "AboutUs_ContentLine4")</p>
+                </div>
 			</div>
 		</div>
 	</section>
-	<section class="section-image" data-parallax="scroll" data-bleed="100" data-image-src="media/hd-empty.png">
+	<section class="section-image" data-parallax="scroll" data-bleed="100" @*data-image-src="media/hd-empty.png"*@ style="background-color:#fff;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-6">
