@@ -13,59 +13,59 @@
 					<div class="title">
 						<h2>@Get.Content("Reach Us", "Reach Us")</h2>
 					</div>
-					<form action="/Home/ContactUsForm" method="post" id="contactForm">
-						@Html.AntiForgeryToken()
-						<div class="row">
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Name", "Your Name*")</p>
-								@Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Email", "Email Address*")</p>
-								@Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
-								@Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
-								@Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
-							</div>
-							<div class="col-lg-6">
-								<p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
-								@Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
-							</div>
+                    <form action="/Home/ContactUsForm" method="post" id="contactForm">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>@Get.Content("ContactUs_Name", "Your Name*")</p>
+                                @Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>@Get.Content("ContactUs_Email", "Email Address*")</p>
+                                @Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
+                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
+                            </div>
+                            <div class="col-lg-6">
+                                <p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
+                                @Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
+                            </div>
                             <div class="col-lg-6">
                                 @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select token-ml", })
                                 <label  class="token-position" for="AlreadyHavingUsbToken">@Get.Content("ContactUs_Already Using Product", "Already Using Any Usb Token?")</label>
                             </div>
-						</div>
-						<p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details*")</p>
-						@Html.TextAreaFor(m => m.Message, new { @id = "Message", @name = "Message", @class = "input-textarea", @required = "required" })
+                        </div>
+                        <p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details*")</p>
+                        @*@Html.TextAreaFor(m => m.Message, new { @id = "Message", @name = "Message", @class = "input-textarea", @required = "required" })*@
+                        <textarea id="Message" cols="20" name="Message" class="input-textarea" rows="2" required></textarea>
+                        <div class="form-checkbox">
+                            @Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
+                            <label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details*")</label>
+                        </div>
 
-						<div class="form-checkbox">
-							@Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
-							<label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details*")</label>
-						</div>
-
-						<div class="success-box d-none">
-							<div class="alert alert-success">
-								@Get.Content("ContactUs_Success Message", "Congratulations. Enquriy Submitted Successfully.")
-							</div>
-						</div>
-						<div class="error-box d-none">
-							<div class="alert alert-warning">
-								@Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
-							</div>
-						</div>
-						<div class="ButtonClick d-none" id="ButtonClick">
-							<div class="alert alert">
-								Please Wait for Response
-							</div>
-						</div>
-						<button class="btn btn-sm" id="submitButton" type="submit">@Get.Content("ContactUs_Submit Button", "Submit Enquiry")</button>
-					</form>
+                        @*<div class="success-box d-none">
+                            <div class="alert alert-success">
+                                @Get.Content("ContactUs_Success Message", "Congratulations. Enquriy Submitted Successfully.")
+                            </div>
+                        </div>*@
+                        @*<div class="error-box d-none">
+                        <div class="alert alert-warning">
+                        @Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
+                        </div>
+                        </div>*@
+                        <div class="ButtonClick d-none" id="ButtonClick">
+                            <div class="alert alert">
+                                Please Wait for Response
+                            </div>
+                        </div>
+                        <button class="btn btn-sm" id="submitButton" type="submit">@Get.Content("ContactUs_Submit Button", "Submit Enquiry")</button>
+                    </form>
 
 				</div>
 				<div class="col-lg-4">
