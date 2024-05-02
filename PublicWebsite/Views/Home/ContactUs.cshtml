@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
-                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @maxlength = "10", @class = "input-text", @required = "required" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
