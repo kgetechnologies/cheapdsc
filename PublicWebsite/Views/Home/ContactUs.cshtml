@@ -26,15 +26,15 @@
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
-                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "ContactNumber", @maxlength = "10", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "number", @class = "input-text", @required = "required", @maxlength = "10" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
-                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "ZipCode", @maxlength = "6", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "number", @maxlength = "6", @class = "input-text", @required = "required" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
-                                @Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Product Interested In"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
+                                @Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Select Option"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
                             </div>
                             <div class="col-lg-6">
                                 @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select token-ml", })
@@ -49,16 +49,16 @@
                             <label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details*")</label>
                         </div>
 
-                        @*<div class="success-box d-none">
+                        <div class="success-box d-none">
                             <div class="alert alert-success">
                                 @Get.Content("ContactUs_Success Message", "Congratulations. Enquriy Submitted Successfully.")
                             </div>
-                        </div>*@
-                        @*<div class="error-box d-none">
+                        </div>
+                        <div class="error-box d-none">
                         <div class="alert alert-warning">
                         @Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
                         </div>
-                        </div>*@
+                        </div>
                         <div class="ButtonClick d-none" id="ButtonClick">
                             <div class="alert alert">
                                 Please Wait for Response
@@ -145,3 +145,14 @@
 		});
 	</script>
 </main>
+<script>
+    function restrictInputLength(element) {
+        element.addEventListener("input", function () {
+            if (this.value.length > this.maxLength) {
+                this.value = this.value.slice(0, this.maxLength);
+            }
+        });
+    }
+    restrictInputLength(document.getElementById("ContactNumber"));
+    restrictInputLength(document.getElementById("ZipCode"));
+</script>
