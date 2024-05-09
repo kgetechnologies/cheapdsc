@@ -18,23 +18,23 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Name", "Your Name*")</p>
-                                @Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.Name, new { @id = "name", @name = "name", @placeholder = @Get.Content("ContactUs_PlaceHolder_Name", "Enter Your Name"), @type = "text", @class = "input-text" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Email", "Email Address*")</p>
-                                @Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.Email, new { @id = "email", @name = "email", @placeholder = @Get.Content("ContactUs_PlaceHolder_Email", "Enter Your Email Address"), @type = "email", @class = "input-text" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Mobile", "Mobile Number*")</p>
-                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "number", @class = "input-text", @required = "required", @maxlength = "10" })
+                                @Html.TextBoxFor(m => m.ContactNumber, new { @id = "ContactNumber", @name = "ContactNumber", @placeholder = @Get.Content("ContactUs_PlaceHolder_Mobile", "Enter Your Number"), @type = "number", @class = "input-text", @maxlength = "10" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_PinCode", "Pin Code*")</p>
-                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "number", @maxlength = "6", @class = "input-text", @required = "required" })
+                                @Html.TextBoxFor(m => m.ZipCode, new { @id = "ZipCode", @name = "ZipCode", @placeholder = @Get.Content("ContactUs_PlaceHolder_PinCode", "Enter Your Pin Code"), @type = "number", @maxlength = "6", @class = "input-text" })
                             </div>
                             <div class="col-lg-6">
                                 <p>@Get.Content("ContactUs_Interested Product", "Product Interested In*")</p>
-                                @Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Select Option"), new { @name = "product", @id = "product", @class = "input-select", @required = "required" })
+                                @Html.EnumDropDownListFor(m => m.Product, @Get.Content("ContactUs_PlaceHolder_ProductLookingFor", "Select Option"), new { @name = "product", @id = "product", @class = "input-select" })
                             </div>
                             <div class="col-lg-6">
                                 @Html.CheckBoxFor(m => m.AlreadyHavingUsbToken, new { @name = "AlreadyHavingUsbToken", @id = "AlreadyHavingUsbToken", @class = "input-select token-ml", })
@@ -42,10 +42,10 @@
                             </div>
                         </div>
                         <p> @Get.Content("ContactUs_Message", "How can we help you, please provide your need details*")</p>
-                        @*@Html.TextAreaFor(m => m.Message, new { @id = "Message", @name = "Message", @class = "input-textarea", @required = "required" })*@
-                        <textarea id="Message" cols="20" name="Message" class="input-textarea" rows="2" required></textarea>
+                        @Html.TextAreaFor(m => m.Message, new { @id = "Message", @name = "Message", @class = "input-textarea" })
+                        @*<textarea id="Message" cols="20" name="Message" class="input-textarea" rows="2" required></textarea>*@
                         <div class="form-checkbox">
-                            @Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed", @required = "required" })
+                            @Html.CheckBoxFor(m => m.Agreed, new { @name = "Agreed", @id = "Agreed" })
                             <label for="Agreed">@Get.Content("ContactUs_Agree To Contact", "You Agree to Contact you back to your contact Details*")</label>
                         </div>
 
@@ -54,11 +54,11 @@
                                 @Get.Content("ContactUs_Success Message", "Congratulations. Enquriy Submitted Successfully.")
                             </div>
                         </div>
-                        <div class="error-box d-none">
+                        @*<div class="error-box d-none">
                         <div class="alert alert-warning">
                         @Get.Content("ContactUs_Error Message", "Error, Occurred Please call or whatsapp our Team.")
                         </div>
-                        </div>
+                        </div>*@
                         <div class="ButtonClick d-none" id="ButtonClick">
                             <div class="alert alert">
                                 Please Wait for Response
@@ -155,4 +155,56 @@
     }
     restrictInputLength(document.getElementById("ContactNumber"));
     restrictInputLength(document.getElementById("ZipCode"));
+</script>
+<script>
+
+    $(document).ready(function () {
+        $("#submitButton").click(function (ev) {
+            var form = $("#contactForm");
+            // Perform validation checks
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var contactNumber = document.getElementById("ContactNumber").value;
+            var zipCode = document.getElementById("ZipCode").value;
+            var product = document.getElementById("product").value;
+            var message = document.getElementById("Message").value;
+            var agreed = document.getElementById("Agreed").checked;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            if (email.trim() === "") {
+                alert("Please enter your email.");
+                return;
+            }
+            if (contactNumber.trim() === "") {
+                alert("Please enter your contactNumber.");
+                return;
+            }
+            if (zipCode.trim() === "") {
+                alert("Please enter your zipCode.");
+                return;
+            }
+            if (product.trim() === "") {
+                alert("Please enter your product.");
+                return;
+            }
+            if (message.trim() === "") {
+                alert("Please enter your message.");
+                return;
+            }
+            if (agreed.trim() === "") {
+                alert("Please enter your agreed.");
+                return;
+            }           
+            form.submit();
+        });
+        $("#contactForm").submit((e) => {
+            var _this = e;
+            _this.preventDefault();
+            return false;
+        });
+    });
+
 </script>

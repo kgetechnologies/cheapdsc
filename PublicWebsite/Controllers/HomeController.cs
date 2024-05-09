@@ -92,8 +92,8 @@ namespace cheapdscin.Controllers
             }
             catch (Exception ex)
             {
-                var msg = $"{ex.Message}</br/>{Newtonsoft.Json.JsonConvert.SerializeObject(model)}<br />{Newtonsoft.Json.JsonConvert.SerializeObject(form)}";
-                Helper.RunAsync(msg, "Cheap DSC ContactUsForm Exception");
+                //var msg = $"{ex.Message}</br/>{Newtonsoft.Json.JsonConvert.SerializeObject(model)}<br />{Newtonsoft.Json.JsonConvert.SerializeObject(form)}";
+                //Helper.RunAsync(msg, "Cheap DSC ContactUsForm Exception");
             }
             return Json(false, JsonRequestBehavior.AllowGet);
         }
