@@ -85,7 +85,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Usb";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/UsbToken.jpg", Color.DarkBlue, 30, 250, 235);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "399*");
 		}
 
 		public ActionResult CheapUsb(string stateName)
@@ -96,7 +96,7 @@ namespace cheapdscin.Controllers
 			ViewBag.pageType = "Usb";
 			ViewBag.CdnFolder = "Class3Individual";
 			ViewBag.TestImage = CreateDemoCertificate(stateName, "/Banner/UsbToken.jpg", Color.DarkBlue, 30, 250, 235);
-			return Process(prefix, desc, title, stateName, "Index", "312*");
+			return Process(prefix, desc, title, stateName, "Index", "399*");
 		}
 
 
