@@ -293,7 +293,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Individual Combo",
 						   Details="Cheap Class 3 Individual Combo",
 							HrefId="Class3-Indi-Combo",
-							 Price="₹599.00"
+							 Price="₹1199.00"
                     },
 
 					new ProductList()
@@ -321,7 +321,7 @@ namespace cheapdscin
 						  Description="Cheap Class 3 Organization Combo",
 						   Details="Cheap Class 3 Organization Combo",
 							HrefId="Class3-Org-Combo",
-							 Price="₹312.00"
+							 Price="₹1199.00"
                     },
 
 
@@ -343,7 +343,7 @@ namespace cheapdscin
 						  Description="Usb Token For Storing Certificate",
 						   Details="Usb Token For Storing Certificate",
 							HrefId="Usb-token",
-							 Price="₹312.00"
+							 Price="₹399.00"
 					},
 
 				};
