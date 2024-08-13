@@ -1,9 +1,11 @@
 ﻿using cheapdscin.Models;
 using System;
+
 using System.Collections.Specialized;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+
 
 namespace cheapdscin.Controllers
 {
@@ -61,7 +63,7 @@ namespace cheapdscin.Controllers
                     model.Email = ReadFormPropertyValue(form, "Email");
                     model.ContactNumber = ReadFormPropertyValue(form, "ContactNumber");
                     model.Message = ReadFormPropertyValue(form, "Message");
-                    model.ZipCode = Convert.ToInt32(ReadFormPropertyValue(form, "ZipCode", "0"));
+                    model.ZipCode = int.TryParse(ReadFormPropertyValue(form, "ZipCode", "0"), out int zipCode) ? zipCode : 0;
                     model.AlreadyHavingUsbToken = ReadFormPropertyValue(form, "AlreadyHavingUsbToken", "false").ToLower()?.Contains("true") ?? false;
                     model.Agreed = ReadFormPropertyValue(form, "Agreed", "false").ToLower()?.Contains("true") ?? false;
                     model.Product = product;
